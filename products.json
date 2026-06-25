@@ -1,0 +1,238 @@
+{
+  "site": {
+    "brand": "cekuu Store",
+    "tagline": "Dijital ürünler, anında teslim",
+    "description": "Hazır şablonlar, dijital araçlar ve indirilebilir ürünler. Gumroad'un güvenli ödeme altyapısıyla anında teslimat.",
+    "gumroadProfile": "https://gumroad.com/cekuu",
+    "contactEmail": "ornek@eposta.com",
+    "currency": "$",
+    "social": {
+      "twitter": "",
+      "instagram": "",
+      "youtube": ""
+    }
+  },
+  "categories": ["Tümü", "Şablon", "E-Kitap", "Araç", "Tasarım"],
+  "products": [
+    {
+      "id": "p1",
+      "title": "Örnek Ürün 1",
+      "description": "Buraya ürününün kısa ve net açıklamasını yaz. Müşteri ne kazanacak?",
+      "price": 9,
+      "oldPrice": 19,
+      "category": "Şablon",
+      "badge": "Çok Satan",
+      "image": "https://placehold.co/600x400/4f46e5/ffffff?text=Urun+1",
+      "gumroadUrl": "https://cekuu.gumroad.com/l/urun1"
+    },
+    {
+      "id": "p2",
+      "title": "Örnek Ürün 2",
+      "description": "Kısa fayda odaklı açıklama. Sorun + çözüm = satış.",
+      "price": 12,
+      "oldPrice": null,
+      "category": "E-Kitap",
+      "badge": "Yeni",
+      "image": "https://placehold.co/600x400/0ea5e9/ffffff?text=Urun+2",
+      "gumroadUrl": "https://cekuu.gumroad.com/l/urun2"
+    },
+    {
+      "id": "p3",
+      "title": "Örnek Ürün 3",
+      "description": "Açıklama metni buraya gelecek.",
+      "price": 15,
+      "oldPrice": 25,
+      "category": "Araç",
+      "badge": "",
+      "image": "https://placehold.co/600x400/10b981/ffffff?text=Urun+3",
+      "gumroadUrl": "https://cekuu.gumroad.com/l/urun3"
+    },
+    {
+      "id": "p4",
+      "title": "Örnek Ürün 4",
+      "description": "Açıklama metni buraya gelecek.",
+      "price": 7,
+      "oldPrice": null,
+      "category": "Tasarım",
+      "badge": "",
+      "image": "https://placehold.co/600x400/f59e0b/ffffff?text=Urun+4",
+      "gumroadUrl": "https://cekuu.gumroad.com/l/urun4"
+    },
+    {
+      "id": "p5",
+      "title": "Örnek Ürün 5",
+      "description": "Açıklama metni buraya gelecek.",
+      "price": 19,
+      "oldPrice": 29,
+      "category": "Şablon",
+      "badge": "İndirimde",
+      "image": "https://placehold.co/600x400/ef4444/ffffff?text=Urun+5",
+      "gumroadUrl": "https://cekuu.gumroad.com/l/urun5"
+    },
+    {
+      "id": "p6",
+      "title": "Örnek Ürün 6",
+      "description": "Açıklama metni buraya gelecek.",
+      "price": 5,
+      "oldPrice": null,
+      "category": "E-Kitap",
+      "badge": "",
+      "image": "https://placehold.co/600x400/8b5cf6/ffffff?text=Urun+6",
+      "gumroadUrl": "https://cekuu.gumroad.com/l/urun6"
+    },
+    {
+      "id": "p7",
+      "title": "Örnek Ürün 7",
+      "description": "Açıklama metni buraya gelecek.",
+      "price": 24,
+      "oldPrice": null,
+      "category": "Araç",
+      "badge": "",
+      "image": "https://placehold.co/600x400/ec4899/ffffff?text=Urun+7",
+      "gumroadUrl": "https://cekuu.gumroad.com/l/urun7"
+    },
+    {
+      "id": "p8",
+      "title": "Örnek Ürün 8",
+      "description": "Açıklama metni buraya gelecek.",
+      "price": 9,
+      "oldPrice": 14,
+      "category": "Tasarım",
+      "badge": "",
+      "image": "https://placehold.co/600x400/14b8a6/ffffff?text=Urun+8",
+      "gumroadUrl": "https://cekuu.gumroad.com/l/urun8"
+    },
+    {
+      "id": "p9",
+      "title": "Örnek Ürün 9",
+      "description": "Açıklama metni buraya gelecek.",
+      "price": 11,
+      "oldPrice": null,
+      "category": "Şablon",
+      "badge": "",
+      "image": "https://placehold.co/600x400/6366f1/ffffff?text=Urun+9",
+      "gumroadUrl": "https://cekuu.gumroad.com/l/urun9"
+    },
+    {
+      "id": "p10",
+      "title": "Örnek Ürün 10",
+      "description": "Açıklama metni buraya gelecek.",
+      "price": 29,
+      "oldPrice": 49,
+      "category": "Araç",
+      "badge": "Paket",
+      "image": "https://placehold.co/600x400/0891b2/ffffff?text=Urun+10",
+      "gumroadUrl": "https://cekuu.gumroad.com/l/urun10"
+    },
+    {
+      "id": "p11",
+      "title": "Örnek Ürün 11",
+      "description": "Açıklama metni buraya gelecek.",
+      "price": 8,
+      "oldPrice": null,
+      "category": "E-Kitap",
+      "badge": "",
+      "image": "https://placehold.co/600x400/65a30d/ffffff?text=Urun+11",
+      "gumroadUrl": "https://cekuu.gumroad.com/l/urun11"
+    },
+    {
+      "id": "p12",
+      "title": "Örnek Ürün 12",
+      "description": "Açıklama metni buraya gelecek.",
+      "price": 16,
+      "oldPrice": null,
+      "category": "Tasarım",
+      "badge": "",
+      "image": "https://placehold.co/600x400/db2777/ffffff?text=Urun+12",
+      "gumroadUrl": "https://cekuu.gumroad.com/l/urun12"
+    },
+    {
+      "id": "p13",
+      "title": "Örnek Ürün 13",
+      "description": "Açıklama metni buraya gelecek.",
+      "price": 13,
+      "oldPrice": 22,
+      "category": "Şablon",
+      "badge": "",
+      "image": "https://placehold.co/600x400/2563eb/ffffff?text=Urun+13",
+      "gumroadUrl": "https://cekuu.gumroad.com/l/urun13"
+    },
+    {
+      "id": "p14",
+      "title": "Örnek Ürün 14",
+      "description": "Açıklama metni buraya gelecek.",
+      "price": 6,
+      "oldPrice": null,
+      "category": "E-Kitap",
+      "badge": "",
+      "image": "https://placehold.co/600x400/7c3aed/ffffff?text=Urun+14",
+      "gumroadUrl": "https://cekuu.gumroad.com/l/urun14"
+    },
+    {
+      "id": "p15",
+      "title": "Örnek Ürün 15",
+      "description": "Açıklama metni buraya gelecek.",
+      "price": 21,
+      "oldPrice": null,
+      "category": "Araç",
+      "badge": "",
+      "image": "https://placehold.co/600x400/059669/ffffff?text=Urun+15",
+      "gumroadUrl": "https://cekuu.gumroad.com/l/urun15"
+    },
+    {
+      "id": "p16",
+      "title": "Örnek Ürün 16",
+      "description": "Açıklama metni buraya gelecek.",
+      "price": 18,
+      "oldPrice": 28,
+      "category": "Tasarım",
+      "badge": "İndirimde",
+      "image": "https://placehold.co/600x400/d97706/ffffff?text=Urun+16",
+      "gumroadUrl": "https://cekuu.gumroad.com/l/urun16"
+    },
+    {
+      "id": "p17",
+      "title": "Örnek Ürün 17",
+      "description": "Açıklama metni buraya gelecek.",
+      "price": 10,
+      "oldPrice": null,
+      "category": "Şablon",
+      "badge": "",
+      "image": "https://placehold.co/600x400/dc2626/ffffff?text=Urun+17",
+      "gumroadUrl": "https://cekuu.gumroad.com/l/urun17"
+    },
+    {
+      "id": "p18",
+      "title": "Örnek Ürün 18",
+      "description": "Açıklama metni buraya gelecek.",
+      "price": 14,
+      "oldPrice": null,
+      "category": "E-Kitap",
+      "badge": "",
+      "image": "https://placehold.co/600x400/9333ea/ffffff?text=Urun+18",
+      "gumroadUrl": "https://cekuu.gumroad.com/l/urun18"
+    },
+    {
+      "id": "p19",
+      "title": "Örnek Ürün 19",
+      "description": "Açıklama metni buraya gelecek.",
+      "price": 27,
+      "oldPrice": 39,
+      "category": "Araç",
+      "badge": "Paket",
+      "image": "https://placehold.co/600x400/0d9488/ffffff?text=Urun+19",
+      "gumroadUrl": "https://cekuu.gumroad.com/l/urun19"
+    },
+    {
+      "id": "p20",
+      "title": "Örnek Ürün 20",
+      "description": "Açıklama metni buraya gelecek.",
+      "price": 17,
+      "oldPrice": null,
+      "category": "Tasarım",
+      "badge": "",
+      "image": "https://placehold.co/600x400/4338ca/ffffff?text=Urun+20",
+      "gumroadUrl": "https://cekuu.gumroad.com/l/urun20"
+    }
+  ]
+}

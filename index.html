@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>cekuu Store — Dijital Ürünler, Anında Teslim</title>
+  <meta name="description" content="Hazır şablonlar, dijital araçlar ve indirilebilir ürünler. Gumroad'un güvenli ödeme altyapısıyla anında teslimat." />
+  <meta name="theme-color" content="#4f46e5" />
+
+  <!-- Open Graph / sosyal paylaşım -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="cekuu Store — Dijital Ürünler" />
+  <meta property="og:description" content="Hazır şablonlar, dijital araçlar ve indirilebilir ürünler. Güvenli ödeme, anında teslimat." />
+  <meta property="og:image" content="https://placehold.co/1200x630/4f46e5/ffffff?text=cekuu+Store" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛍️</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/styles.css" />
+
+  <!-- Gumroad overlay: ödeme penceresi sitede açılır -->
+  <script src="https://gumroad.com/js/gumroad.js"></script>
+</head>
+<body>
+  <header class="site-header" id="top">
+    <div class="container nav">
+      <a href="#top" class="brand" id="brand">🛍️ <span>cekuu Store</span></a>
+      <nav class="nav-links">
+        <a href="#urunler">Ürünler</a>
+        <a href="#neden">Neden Biz?</a>
+        <a href="#sss">SSS</a>
+        <a class="btn btn-ghost" id="profileLink" href="#" target="_blank" rel="noopener">Gumroad Profili</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <span class="pill">⚡ Anında dijital teslimat</span>
+        <h1 id="heroTitle">Dijital ürünler, <span class="grad">saniyeler içinde</span> senin olsun</h1>
+        <p class="lead" id="heroLead">Hazır şablonlar, araçlar ve e-kitaplar. Ödemeni Gumroad'un güvenli altyapısıyla yap, dosyanı hemen indir.</p>
+        <div class="hero-cta">
+          <a href="#urunler" class="btn btn-primary btn-lg">Ürünleri Gör</a>
+          <a href="#neden" class="btn btn-ghost btn-lg">Nasıl çalışır?</a>
+        </div>
+        <div class="trust-row">
+          <span>🔒 Güvenli ödeme (Gumroad)</span>
+          <span>💳 Kart & PayPal</span>
+          <span>📩 E-posta ile teslim</span>
+          <span>↩️ İade güvencesi</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="urunler">
+      <div class="container">
+        <div class="section-head">
+          <h2>Ürünler</h2>
+          <p class="muted">Kategori seç, beğendiğin ürüne tıkla, güvenli ödemeyle hemen indir.</p>
+        </div>
+        <div class="toolbar">
+          <div class="filters" id="filters"></div>
+          <input type="search" id="search" class="search" placeholder="Ürün ara..." aria-label="Ürün ara" />
+        </div>
+        <div class="grid" id="productGrid" aria-live="polite"></div>
+        <p class="empty" id="emptyState" hidden>Aramana uygun ürün bulunamadı.</p>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="neden">
+      <div class="container">
+        <div class="section-head">
+          <h2>Neden buradan almalısın?</h2>
+        </div>
+        <div class="features">
+          <div class="feature">
+            <div class="feature-ic">🔒</div>
+            <h3>Güvenli ödeme</h3>
+            <p>Ödemeler Gumroad üzerinden alınır. Kart bilgilerin bizimle değil, dünyaca tanınan altyapıyla işlenir.</p>
+          </div>
+          <div class="feature">
+            <div class="feature-ic">⚡</div>
+            <h3>Anında teslim</h3>
+            <p>Ödeme sonrası ürün dosyan e-postana ve indirme ekranına anında gelir. Bekleme yok.</p>
+          </div>
+          <div class="feature">
+            <div class="feature-ic">↩️</div>
+            <h3>İade güvencesi</h3>
+            <p>Memnun kalmazsan Gumroad'un iade politikası kapsamında talepte bulunabilirsin.</p>
+          </div>
+          <div class="feature">
+            <div class="feature-ic">🔄</div>
+            <h3>Ücretsiz güncelleme</h3>
+            <p>Ürün güncellendiğinde yeni sürüme erişimin devam eder.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="bulten">
+      <div class="container">
+        <div class="newsletter">
+          <div>
+            <h2>İndirim ve yeni ürünlerden haberdar ol</h2>
+            <p class="muted">E-postanı bırak, yeni ürün ve indirimleri ilk sen öğren. Spam yok.</p>
+          </div>
+          <form class="news-form" id="newsForm" action="#" method="post">
+            <input type="email" required placeholder="E-posta adresin" aria-label="E-posta adresin" />
+            <button class="btn btn-primary" type="submit">Abone Ol</button>
+          </form>
+        </div>
+        <p class="news-note" id="newsNote" hidden>Teşekkürler! (Not: Bu formu Gumroad takip linkine ya da Mailchimp/Formspree'ye bağlamayı unutma.)</p>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="sss">
+      <div class="container narrow">
+        <div class="section-head">
+          <h2>Sıkça Sorulan Sorular</h2>
+        </div>
+        <details><summary>Ödeme güvenli mi?</summary><p>Evet. Tüm ödemeler Gumroad'un güvenli altyapısı üzerinden alınır; kart bilgilerin bu sitede saklanmaz.</p></details>
+        <details><summary>Ürünü ne zaman alırım?</summary><p>Ödeme tamamlanır tamamlanmaz indirme linki ekrana gelir ve e-postana gönderilir.</p></details>
+        <details><summary>İade yapabilir miyim?</summary><p>Gumroad'un iade politikası kapsamında satıcı ile iletişime geçerek iade talebinde bulunabilirsin.</p></details>
+        <details><summary>Fatura alabilir miyim?</summary><p>Gumroad satın alma sonrası makbuz/fatura e-postası gönderir.</p></details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <strong id="footerBrand">🛍️ cekuu Store</strong>
+        <p class="muted" id="footerTagline">Dijital ürünler, anında teslim.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#urunler">Ürünler</a>
+        <a href="#sss">SSS</a>
+        <a id="footerProfile" href="#" target="_blank" rel="noopener">Gumroad</a>
+      </div>
+    </div>
+    <p class="copyright">© <span id="year"></span> cekuu Store. Ödemeler Gumroad ile güvenle alınır.</p>
+  </footer>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>
