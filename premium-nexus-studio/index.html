@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Premium Nexus Studio — Cinematic 3D Next.js Template</title>
+  <meta name="description" content="An editable Next.js and 3D starting point for agencies that want to show a premium visual direction sooner, then focus on the client’s brand, content and experience. $250 one-time.">
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#07080d">
+  <link rel="canonical" href="https://cekuu35.github.io/premium-nexus-studio/">
+
+  <meta property="og:title" content="Premium Nexus Studio — Cinematic 3D Next.js Template">
+  <meta property="og:description" content="Show a premium 3D direction live without starting every pitch or build from a blank page. Editable source, $250 one-time.">
+  <meta property="og:type" content="product">
+  <meta property="og:url" content="https://cekuu35.github.io/premium-nexus-studio/">
+  <meta property="og:image" content="https://cekuu35.github.io/premium-nexus-studio/og-cover.svg">
+  <meta property="og:image:type" content="image/svg+xml">
+  <meta property="og:image:width" content="1600">
+  <meta property="og:image:height" content="900">
+  <meta property="og:image:alt" content="Premium Nexus Studio, an editable cinematic 3D Next.js starting point for agencies">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Premium Nexus Studio — Cinematic 3D Next.js Template">
+  <meta name="twitter:description" content="A live premium direction you can adapt to the client instead of starting from a blank page.">
+  <meta name="twitter:image" content="https://cekuu35.github.io/premium-nexus-studio/og-cover.svg">
+  <meta name="twitter:image:alt" content="Premium Nexus Studio, an editable cinematic 3D Next.js starting point for agencies">
+
+  <style>
+    :root{
+      color-scheme:dark;
+      --bg:#07080d;
+      --panel:#10131b;
+      --panel-2:#151a24;
+      --text:#f6f3ed;
+      --muted:#aaaeb8;
+      --line:#2b303b;
+      --gold:#e8c88a;
+      --gold-2:#fff0be;
+      --ink:#17130d;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      background:
+        radial-gradient(circle at 78% 0,rgba(232,200,138,.17),transparent 28rem),
+        radial-gradient(circle at 8% 38%,rgba(96,112,170,.12),transparent 30rem),
+        var(--bg);
+      color:var(--text);
+      font:16px/1.65 Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    }
+    a{color:inherit}
+    main{width:min(1080px,calc(100% - 32px));margin:auto;padding:30px 0 64px}
+    nav{display:flex;align-items:center;justify-content:space-between;padding:8px 0 60px}
+    .wordmark{font-size:.78rem;font-weight:850;letter-spacing:.16em;text-transform:uppercase;text-decoration:none}
+    .price{color:var(--gold-2);font-size:.88rem;font-weight:800}
+    .hero{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(280px,.75fr);gap:54px;align-items:end;padding:44px 0 72px}
+    .eyebrow{color:var(--gold);font-size:.76rem;font-weight:850;letter-spacing:.14em;text-transform:uppercase}
+    h1{font-size:clamp(2.8rem,7.7vw,6.7rem);line-height:.98;letter-spacing:-.064em;margin:.55rem 0 1.35rem;max-width:880px}
+    .lead{max-width:770px;color:#c8cad0;font-size:clamp(1.05rem,2.1vw,1.32rem)}
+    .hero-aside{border:1px solid var(--line);border-radius:22px;background:linear-gradient(160deg,rgba(255,255,255,.065),rgba(255,255,255,.018));padding:24px}
+    .product-name{font-size:1.1rem;font-weight:850;margin:0 0 6px}
+    .one-time{font-size:2.4rem;font-weight:900;letter-spacing:-.04em;color:var(--gold-2);margin:.15rem 0}
+    .small{font-size:.88rem;color:var(--muted)}
+    .demo-link{display:inline-flex;align-items:center;gap:7px;margin:12px 0 22px;color:var(--gold-2);font-weight:780;text-underline-offset:4px}
+    .cta{display:block;text-align:center;padding:14px 18px;border-radius:12px;background:linear-gradient(135deg,var(--gold-2),var(--gold));color:var(--ink);font-weight:900;text-decoration:none;box-shadow:0 14px 45px rgba(232,200,138,.14)}
+    .cta:hover{filter:brightness(1.06);transform:translateY(-1px)}
+    .cta:focus-visible,.demo-link:focus-visible,.wordmark:focus-visible{outline:3px solid var(--gold-2);outline-offset:4px}
+    .strip{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line);border-radius:20px;overflow:hidden;background:rgba(255,255,255,.02)}
+    .strip article{padding:24px}
+    .strip article+article{border-left:1px solid var(--line)}
+    .strip h2{font-size:1.06rem;margin:0 0 7px}
+    .strip p{margin:0;color:var(--muted)}
+    section{padding:76px 0;border-bottom:1px solid var(--line)}
+    section:last-of-type{border-bottom:0}
+    .section-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:72px}
+    h2{font-size:clamp(1.8rem,4vw,3.25rem);line-height:1.08;letter-spacing:-.035em;margin:.3rem 0 1rem}
+    .copy{color:#c0c3ca;font-size:1.05rem}
+    .list{display:grid;gap:14px}
+    .item{padding:20px;border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,.025)}
+    .item strong{display:block;margin-bottom:4px;color:var(--text)}
+    .item span{color:var(--muted)}
+    .disclosure{border:1px solid rgba(232,200,138,.36);background:linear-gradient(140deg,rgba(232,200,138,.105),rgba(255,255,255,.018));border-radius:22px;padding:26px}
+    .disclosure h2{font-size:1.55rem}
+    .disclosure p{color:#cec5b2;margin-bottom:0}
+    .purchase{display:flex;align-items:center;justify-content:space-between;gap:28px}
+    .purchase p{color:var(--muted);max-width:660px;margin:0}
+    footer{display:flex;justify-content:space-between;gap:18px;padding-top:28px;color:var(--muted);font-size:.88rem}
+    footer a{text-underline-offset:4px}
+    @media(max-width:780px){
+      nav{padding-bottom:28px}
+      .hero{grid-template-columns:1fr;gap:28px;padding-top:28px}
+      .strip{grid-template-columns:1fr}
+      .strip article+article{border-left:0;border-top:1px solid var(--line)}
+      .section-grid{grid-template-columns:1fr;gap:28px}
+      section{padding:54px 0}
+      .purchase{align-items:flex-start;flex-direction:column}
+      footer{flex-direction:column}
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Product",
+    "name":"Premium Website Template — Cinematic 3D Next.js",
+    "description":"An editable Next.js and 3D starting point designed for agencies and developers to present a premium visual direction, then adapt the source to the client’s brand, content and experience.",
+    "category":"Website template",
+    "brand":{"@type":"Brand","name":"Cenk Kurtoğlu"},
+    "image":"https://cekuu35.github.io/premium-nexus-studio/og-cover.svg",
+    "url":"https://cekuu35.github.io/premium-nexus-studio/",
+    "offers":{
+      "@type":"Offer",
+      "price":"250",
+      "priceCurrency":"USD",
+      "availability":"https://schema.org/InStock",
+      "itemCondition":"https://schema.org/NewCondition",
+      "url":"https://cengokurtoglu.gumroad.com/l/kbwlkv?wanted=true&utm_source=github_pages&utm_medium=owned&utm_campaign=nexus250_wrapper"
+    }
+  }
+  </script>
+</head>
+<body>
+  <main>
+    <nav aria-label="Primary">
+      <a class="wordmark" href="/">Cenk Kurtoğlu</a>
+      <div class="price">$250 · one-time</div>
+    </nav>
+
+    <header class="hero">
+      <div>
+        <div class="eyebrow">Editable Next.js + 3D starting point</div>
+        <h1>Show the premium direction live before you build every detail.</h1>
+        <p class="lead">Premium Nexus Studio is designed to give agencies and developers a cinematic starting point—so the next pitch or build can begin with a working visual direction and leave more room for the client’s brand, content and experience.</p>
+      </div>
+
+      <aside class="hero-aside" aria-label="Product summary">
+        <p class="product-name">Premium Nexus Studio</p>
+        <p class="one-time">$250</p>
+        <p class="small">One-time Gumroad purchase</p>
+        <a class="demo-link" href="https://21-ultra-premium.vercel.app/">Open the live demo <span aria-hidden="true">↗</span></a>
+        <a class="cta" href="https://cengokurtoglu.gumroad.com/l/kbwlkv?wanted=true&amp;utm_source=github_pages&amp;utm_medium=owned&amp;utm_campaign=nexus250_wrapper">Continue to checkout — $250</a>
+      </aside>
+    </header>
+
+    <div class="strip" aria-label="Product positioning">
+      <article>
+        <h2>A live visual direction</h2>
+        <p>Show the cinematic approach in the browser instead of relying on a verbal description alone.</p>
+      </article>
+      <article>
+        <h2>An editable foundation</h2>
+        <p>Use the Next.js and 3D template as a starting point, then shape it around the actual brief.</p>
+      </article>
+      <article>
+        <h2>A focused purchase</h2>
+        <p>One product, one-time $250 price, and a direct Gumroad checkout.</p>
+      </article>
+    </div>
+
+    <section class="section-grid">
+      <div>
+        <div class="eyebrow">Built for adaptation</div>
+        <h2>Keep the strong foundation. Replace the generic story.</h2>
+      </div>
+      <div class="list">
+        <div class="item">
+          <strong>For an upcoming pitch</strong>
+          <span>Use the live scene to make a premium 3D direction tangible before committing to a fully custom build.</span>
+        </div>
+        <div class="item">
+          <strong>For an agency or studio showcase</strong>
+          <span>Start from a cinematic structure, then replace the identity, work, copy and imagery with verified studio content.</span>
+        </div>
+        <div class="item">
+          <strong>For a client-specific build</strong>
+          <span>Adapt the source as a starting point while keeping implementation, content review and production testing in your own workflow.</span>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="disclosure">
+        <div class="eyebrow">Demo disclosure</div>
+        <h2>The demo is a fictional presentation environment, not a client case study.</h2>
+        <p>Names, client references, portfolio items, metrics, testimonials, awards, pricing, service claims, contact details and imagery shown in the demo are placeholders. They do not represent verified customers, results or endorsements. Replace and verify all demo content before any commercial publication.</p>
+      </div>
+    </section>
+
+    <section class="purchase">
+      <div>
+        <div class="eyebrow">Premium Nexus Studio</div>
+        <h2>A stronger place to begin.</h2>
+        <p>Review the live demo, then use the published Gumroad checkout for the current $250 USD purchase path.</p>
+      </div>
+    </section>
+
+    <footer>
+      <span>Built by Cenk Kurtoğlu.</span>
+      <span><a href="https://21-ultra-premium.vercel.app/">Live demo</a> · <a href="/">All products</a></span>
+    </footer>
+  </main>
+</body>
+</html>
