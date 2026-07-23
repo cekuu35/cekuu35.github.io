@@ -1,24 +1,32 @@
-# Cenk Kurtoglu — Next.js Template Bundle
+# Cenk Kurtoglu — Verified Next.js Digital Products
 
-> A $79 collection of 20 adaptable Next.js and Tailwind CSS starter templates for developers, freelancers, and agencies that want a visual head start without beginning from a blank page.
+> Two digital source products for developers, freelancers, and agencies that want an adaptable visual starting point instead of a blank canvas.
 
-## Verified product
+## 20 Next.js + Tailwind CSS Template Bundle
 
-- Product: 20 Next.js + Tailwind CSS Template Bundle
 - Current price: $79 USD
+- Includes: 20 niche-specific editable starter sites
 - Stack represented by the inspected package: Next.js 15.1, React 19, Tailwind CSS 3.4, TypeScript
 - Delivery: digital source ZIPs through Gumroad after purchase
-- Intended use: adaptable starting points for business sites and client work
+- Intended use: adaptable starting points for business sites, agency pitches, and client work
 - Important: demo content, third-party services, forms, authentication, payments, CMS, and production integrations require buyer configuration where applicable
-- No guaranteed revenue, conversion, or client-acquisition outcomes are claimed
+- Clean overview: https://cekuu35.github.io/nextjs-template-bundle/
+- Public catalog: https://github.com/cekuu35/nextjs-website-templates#all-20-templates
+- Direct checkout: https://cengokurtoglu.gumroad.com/l/vuhstz?wanted=true&utm_source=llms_txt&utm_medium=geo&utm_campaign=bundle79
 
-## Review before purchase
+## Premium Nexus Studio
 
-- Clean product overview: https://cekuu35.github.io/nextjs-template-bundle/
-- Public catalog with all 20 demo links: https://github.com/cekuu35/nextjs-website-templates#all-20-templates
-- Direct checkout: https://cengokurtoglu.gumroad.com/l/vuhstz?utm_source=llms_txt&utm_medium=geo&utm_campaign=bundle79
+- Current price: $250 USD
+- Product type: editable cinematic 3D Next.js studio template
+- Intended use: help a studio or developer present a premium visual direction from a working starting point
+- Important: client names, metrics, testimonials, awards, and availability claims shown inside the visual demo are fictional placeholders and are not product results or endorsements
+- Clean buyer page: https://cekuu35.github.io/premium-nexus-studio/
+- Visual demo: https://21-ultra-premium.vercel.app/
+- Direct checkout: https://cengokurtoglu.gumroad.com/l/kbwlkv?wanted=true&utm_source=llms_txt&utm_medium=geo&utm_campaign=premium_nexus
 
 ## Free sample
 
 - Free MIT-licensed Next.js CV template: https://github.com/cekuu35/free-nextjs-cv-template
 - Live free demo: https://free-nextjs-cv-template.vercel.app
+
+No guaranteed revenue, conversion, client-acquisition, or business outcome is claimed for either product.
