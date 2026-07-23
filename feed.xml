@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cenk Kurtoğlu — Next.js Template Releases</title>
+    <link>https://cekuu35.github.io/nextjs-template-bundle/</link>
+    <description>Editable Next.js and Tailwind CSS website starters for freelancers and agencies.</description>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 23 Jul 2026 21:32:14 GMT</lastBuildDate>
+    <atom:link href="https://cekuu35.github.io/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>20 Next.js Website Templates for Agencies and Freelancers</title>
+      <link>https://cengokurtoglu.gumroad.com/l/vuhstz?wanted=true&amp;utm_source=rss&amp;utm_medium=syndication&amp;utm_campaign=bundle79</link>
+      <guid isPermaLink="true">https://cekuu35.github.io/nextjs-template-bundle/</guid>
+      <pubDate>Thu, 23 Jul 2026 21:32:14 GMT</pubDate>
+      <description>Twenty editable niche-focused website starters built with Next.js 15.1, React 19, TypeScript, and Tailwind CSS 3.4. One-time price: $79 USD.</description>
+    </item>
+  </channel>
+</rss>
