@@ -42,7 +42,9 @@
       "status": "live",
       "price": "$50 USD one-time",
       "demo": "https://22-basic-tier.vercel.app/",
-      "checkout": "https://cengokurtoglu.gumroad.com/l/vbfqge?wanted=true&utm_source=product_catalog&utm_medium=owned&utm_campaign=all_products"
+      "checkout": "https://cengokurtoglu.gumroad.com/l/vbfqge?wanted=true&utm_source=product_catalog&utm_medium=owned&utm_campaign=all_products",
+      "landing_page": "https://cekuu35.github.io/clean-studio/",
+      "disclosure": "Visual demo contains fictional placeholder business claims that must be replaced."
     },
     {
       "name": "Meridian",
@@ -50,7 +52,9 @@
       "status": "live",
       "price": "$100 USD one-time",
       "demo": "https://23-standard-tier.vercel.app/",
-      "checkout": "https://cengokurtoglu.gumroad.com/l/fkeylc?wanted=true&utm_source=product_catalog&utm_medium=owned&utm_campaign=all_products"
+      "checkout": "https://cengokurtoglu.gumroad.com/l/fkeylc?wanted=true&utm_source=product_catalog&utm_medium=owned&utm_campaign=all_products",
+      "landing_page": "https://cekuu35.github.io/meridian/",
+      "disclosure": "Visual demo contains fictional placeholder business claims that must be replaced."
     },
     {
       "name": "Premium Nexus Studio",
