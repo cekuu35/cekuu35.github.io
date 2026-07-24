@@ -7,7 +7,11 @@
   <meta name="description" content="An editable Next.js and 3D starting point for agencies that want to show a premium visual direction sooner, then focus on the client’s brand, content and experience. $250 one-time.">
   <meta name="robots" content="index,follow">
   <meta name="theme-color" content="#07080d">
-  <link rel="canonical" href="https://cekuu35.github.io/premium-nexus-studio/">\n  <link rel="preconnect" href="https://cengokurtoglu.gumroad.com">\n  <link rel="dns-prefetch" href="//cengokurtoglu.gumroad.com">\n  <link rel="preconnect" href="https://21-ultra-premium.vercel.app">\n  <link rel="dns-prefetch" href="//21-ultra-premium.vercel.app">
+  <link rel="canonical" href="https://cekuu35.github.io/premium-nexus-studio/">
+  <link rel="preconnect" href="https://cengokurtoglu.gumroad.com">
+  <link rel="dns-prefetch" href="//cengokurtoglu.gumroad.com">
+  <link rel="preconnect" href="https://21-ultra-premium.vercel.app">
+  <link rel="dns-prefetch" href="//21-ultra-premium.vercel.app">
   <link rel="alternate" type="application/rss+xml" title="Cenk Kurtoglu — Next.js Product Releases" href="https://cekuu35.github.io/feed.xml">
 
   <meta property="og:title" content="Premium Nexus Studio — Cinematic 3D Next.js Template">
@@ -91,6 +95,10 @@
     .disclosure{border:1px solid rgba(232,200,138,.36);background:linear-gradient(140deg,rgba(232,200,138,.105),rgba(255,255,255,.018));border-radius:22px;padding:26px}
     .disclosure h2{font-size:1.55rem}
     .disclosure p{color:#cec5b2;margin-bottom:0}
+    .faq{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:28px}
+    .faq article{padding:22px;border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,.025)}
+    .faq h3{margin:0 0 7px;font-size:1.05rem}
+    .faq p{margin:0;color:var(--muted)}
     .purchase{display:flex;align-items:center;justify-content:space-between;gap:28px}
     .purchase p{color:var(--muted);max-width:660px;margin:0}
     .purchase-action{flex:0 0 min(100%,280px)}
@@ -106,6 +114,7 @@
       .preview-head{align-items:flex-start;flex-direction:column}
       .browser-shell iframe{height:72vh;min-height:480px}
       .section-grid{grid-template-columns:1fr;gap:28px}
+      .faq{grid-template-columns:1fr}
       section{padding:54px 0}
       .purchase{align-items:flex-start;flex-direction:column}
       .mobile-buy{position:fixed;z-index:50;right:0;bottom:0;left:0;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px max(16px,env(safe-area-inset-right)) calc(10px + env(safe-area-inset-bottom)) max(16px,env(safe-area-inset-left));border-top:1px solid var(--line);background:rgba(7,8,13,.93);box-shadow:0 -14px 42px rgba(0,0,0,.35);backdrop-filter:blur(16px)}
@@ -135,6 +144,35 @@
     }
   }
   </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"Who is Premium Nexus Studio for?",
+        "acceptedAnswer":{"@type":"Answer","text":"It is designed for agencies and developers who want an editable cinematic 3D starting point for an upcoming pitch, studio showcase or client-specific build."}
+      },
+      {
+        "@type":"Question",
+        "name":"Can I review the visual direction before buying?",
+        "acceptedAnswer":{"@type":"Answer","text":"Yes. The public live demo can be explored before checkout so buyers can evaluate the working 3D direction in the browser."}
+      },
+      {
+        "@type":"Question",
+        "name":"Does the demo show verified client work?",
+        "acceptedAnswer":{"@type":"Answer","text":"No. Names, client references, portfolio items, metrics, testimonials, awards, pricing, service claims, contact details and imagery in the demo are fictional placeholders that must be replaced and verified before commercial publication."}
+      },
+      {
+        "@type":"Question",
+        "name":"What is the current price?",
+        "acceptedAnswer":{"@type":"Answer","text":"Premium Nexus Studio is $250 USD as a one-time purchase through the published Gumroad checkout."}
+      }
+    ]
+  }
+  </script>
+
 </head>
 <body>
   <main>
@@ -225,6 +263,29 @@
         <div class="eyebrow">Demo disclosure</div>
         <h2>The demo is a fictional presentation environment, not a client case study.</h2>
         <p>Names, client references, portfolio items, metrics, testimonials, awards, pricing, service claims, contact details and imagery shown in the demo are placeholders. They do not represent verified customers, results or endorsements. Replace and verify all demo content before any commercial publication.</p>
+      </div>
+    </section>
+
+    <section aria-labelledby="faq-title">
+      <div class="eyebrow">Before checkout</div>
+      <h2 id="faq-title">Questions buyers usually need answered.</h2>
+      <div class="faq">
+        <article>
+          <h3>Who is it for?</h3>
+          <p>Agencies and developers who want an editable cinematic 3D starting point for an upcoming pitch, studio showcase or client-specific build.</p>
+        </article>
+        <article>
+          <h3>Can I review it first?</h3>
+          <p>Yes. Explore the public live demo above to evaluate the working visual direction in the browser before checkout.</p>
+        </article>
+        <article>
+          <h3>Is the demo verified client work?</h3>
+          <p>No. Its names, projects, metrics, testimonials and awards are fictional placeholders. Replace and verify them before commercial publication.</p>
+        </article>
+        <article>
+          <h3>What is the current price?</h3>
+          <p><strong>$250 USD</strong> as a one-time purchase through the published Gumroad checkout.</p>
+        </article>
       </div>
     </section>
 
