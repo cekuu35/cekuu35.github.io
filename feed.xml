@@ -1,25 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Cenk Kurtoğlu — Next.js Product Releases</title>
+    <title>Cenk Kurtoğlu — Digital Product Releases</title>
     <link>https://cekuu35.github.io/</link>
-    <description>Editable Next.js and Tailwind CSS website starters for freelancers and agencies.</description>
+    <description>Verified apps, AI automation, downloadable kits, and editable source products by Cenk Kurtoğlu.</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 23 Jul 2026 21:40:00 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 24 Jul 2026 05:30:00 GMT</lastBuildDate>
     <atom:link href="https://cekuu35.github.io/feed.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Abonem — Subscription Tracker for iPhone and iPad</title>
+      <link>https://apps.apple.com/tr/app/abonem-subscription-tracker/id6776748341?utm_source=rss&amp;utm_medium=syndication&amp;utm_campaign=all_products</link>
+      <guid isPermaLink="true">https://apps.apple.com/tr/app/abonem-subscription-tracker/id6776748341</guid>
+      <pubDate>Fri, 24 Jul 2026 05:30:00 GMT</pubDate>
+      <description>A free subscription and recurring-bill tracker with optional Premium in-app purchases. Regional pricing is shown by Apple.</description>
+    </item>
+    <item>
+      <title>llms.txt Generator — Apify Actor and API Automation</title>
+      <link>https://apify.com/nacred_corner/llms-txt-generator?utm_source=rss&amp;utm_medium=syndication&amp;utm_campaign=all_products</link>
+      <guid isPermaLink="true">https://apify.com/nacred_corner/llms-txt-generator</guid>
+      <pubDate>Fri, 24 Jul 2026 05:30:00 GMT</pubDate>
+      <description>Generate llms.txt, llms-full.txt, and an exportable page dataset. Public price starts at $5 per 1,000 results.</description>
+    </item>
+    <item>
+      <title>SaaS Launch Swipe File</title>
+      <link>https://cengokurtoglu.gumroad.com/l/nsxvw?wanted=true&amp;utm_source=rss&amp;utm_medium=syndication&amp;utm_campaign=all_products</link>
+      <guid isPermaLink="true">https://cengokurtoglu.gumroad.com/l/nsxvw</guid>
+      <pubDate>Fri, 24 Jul 2026 05:30:00 GMT</pubDate>
+      <description>A downloadable kit with 40+ fill-in launch templates, a seven-day plan, Product Hunt materials, channel-specific copy, and a checklist. One-time price: $19 USD.</description>
+    </item>
+    <item>
       <title>Premium Nexus Studio — Cinematic 3D Next.js Template</title>
-      <link>https://cengokurtoglu.gumroad.com/l/kbwlkv?wanted=true&amp;utm_source=rss&amp;utm_medium=syndication&amp;utm_campaign=premium_nexus</link>
+      <link>https://cengokurtoglu.gumroad.com/l/kbwlkv?wanted=true&amp;utm_source=rss&amp;utm_medium=syndication&amp;utm_campaign=all_products</link>
       <guid isPermaLink="true">https://cekuu35.github.io/premium-nexus-studio/</guid>
       <pubDate>Thu, 23 Jul 2026 21:40:00 GMT</pubDate>
       <description>An editable cinematic 3D Next.js studio starting point for agencies and developers. One-time price: $250 USD. Demo names, claims, metrics, awards, and testimonials are placeholders.</description>
     </item>
     <item>
       <title>20 Next.js Website Templates for Agencies and Freelancers</title>
-      <link>https://cengokurtoglu.gumroad.com/l/vuhstz?wanted=true&amp;utm_source=rss&amp;utm_medium=syndication&amp;utm_campaign=bundle79</link>
+      <link>https://cengokurtoglu.gumroad.com/l/vuhstz?wanted=true&amp;utm_source=rss&amp;utm_medium=syndication&amp;utm_campaign=all_products</link>
       <guid isPermaLink="true">https://cekuu35.github.io/nextjs-template-bundle/</guid>
       <pubDate>Thu, 23 Jul 2026 21:32:14 GMT</pubDate>
       <description>Twenty editable niche-focused website starters built with Next.js 15.1, React 19, TypeScript, and Tailwind CSS 3.4. One-time price: $79 USD.</description>
+    </item>
+    <item>
+      <title>Meridian — Animated Next.js Agency Source</title>
+      <link>https://cengokurtoglu.gumroad.com/l/fkeylc?wanted=true&amp;utm_source=rss&amp;utm_medium=syndication&amp;utm_campaign=all_products</link>
+      <guid isPermaLink="true">https://cengokurtoglu.gumroad.com/l/fkeylc</guid>
+      <pubDate>Thu, 23 Jul 2026 21:20:00 GMT</pubDate>
+      <description>An animated standalone Next.js agency starting point. One-time price: $100 USD.</description>
+    </item>
+    <item>
+      <title>Clean Studio — Minimal Next.js Agency Source</title>
+      <link>https://cengokurtoglu.gumroad.com/l/vbfqge?wanted=true&amp;utm_source=rss&amp;utm_medium=syndication&amp;utm_campaign=all_products</link>
+      <guid isPermaLink="true">https://cengokurtoglu.gumroad.com/l/vbfqge</guid>
+      <pubDate>Thu, 23 Jul 2026 21:10:00 GMT</pubDate>
+      <description>A focused standalone Next.js agency starting point. One-time price: $50 USD.</description>
     </item>
   </channel>
 </rss>
