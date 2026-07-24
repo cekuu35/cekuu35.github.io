@@ -17,8 +17,10 @@
     main{width:min(900px,calc(100% - 32px));margin:auto;padding:72px 0}.eyebrow{color:var(--accent);font-weight:800;letter-spacing:.11em;text-transform:uppercase;font-size:.78rem}
     h1{font-size:clamp(2.5rem,8vw,5.5rem);line-height:1;letter-spacing:-.055em;margin:.4rem 0 1rem}.lead{font-size:1.2rem;color:var(--muted);max-width:760px}
     .panel{margin:36px 0;background:rgba(255,255,255,.045);border:1px solid var(--line);border-radius:22px;padding:28px}.price{font-size:1.12rem;font-weight:800;color:var(--accent)}
-    ul,p{color:var(--muted)}code{color:#dbe2ff}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}.button{display:inline-block;text-decoration:none;font-weight:800;padding:12px 16px;border-radius:10px;background:var(--accent);color:#0b1230}.secondary{background:transparent;color:var(--text);border:1px solid var(--line)}
+    h2{font-size:clamp(1.55rem,4vw,2.35rem);line-height:1.15;margin:.2rem 0 .8rem}.starter{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(280px,.95fr);gap:24px;align-items:start}.steps{display:grid;gap:11px;margin:22px 0}.step{display:grid;grid-template-columns:30px 1fr;gap:10px;align-items:start;color:var(--muted)}.step strong{display:grid;place-items:center;width:27px;height:27px;border:1px solid var(--line);border-radius:50%;color:var(--accent)}.code-wrap{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:#070913}.code-head{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 12px;border-bottom:1px solid var(--line);color:var(--muted);font-size:.82rem}.copy{border:1px solid var(--line);border-radius:8px;background:transparent;color:var(--text);font:inherit;font-weight:750;padding:7px 10px;cursor:pointer}.copy:hover,.copy:focus-visible{border-color:var(--accent);outline:none}pre{margin:0;padding:18px;overflow:auto;color:#dbe2ff;font:13px/1.55 ui-monospace,SFMono-Regular,Consolas,monospace}.boundary{margin-top:18px;padding:14px 16px;border-left:3px solid var(--accent);background:rgba(166,184,255,.07);color:var(--muted);font-size:.9rem}
+    ul,p{color:var(--muted)}code{color:#dbe2ff}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}.hero-actions{margin-top:20px}.button{display:inline-block;text-decoration:none;font-weight:800;padding:12px 16px;border-radius:10px;background:var(--accent);color:#0b1230}.secondary{background:transparent;color:var(--text);border:1px solid var(--line)}
     footer{border-top:1px solid var(--line);margin-top:48px;padding-top:24px;color:var(--muted)}footer a{color:var(--text)}
+    @media(max-width:720px){.starter{grid-template-columns:1fr}.panel{padding:22px}}
   </style>
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"SoftwareApplication","name":"llms.txt Generator","applicationCategory":"DeveloperApplication","operatingSystem":"Web, API","description":"Crawl a website and generate llms.txt, llms-full.txt, and an exportable per-page dataset.","url":"https://cekuu35.github.io/llms-txt-generator/","offers":{"@type":"Offer","price":"5","priceCurrency":"USD","description":"From $5 per 1,000 results","url":"https://apify.com/nacred_corner/llms-txt-generator"}}
@@ -28,6 +30,10 @@
   <div class="eyebrow">AI-readiness automation</div>
   <h1>Turn a website into structured LLM input.</h1>
   <p class="lead">Point the Actor at a domain. It discovers same-domain pages, extracts useful main content, and writes AI-readable outputs that can be reviewed before publishing.</p>
+  <div class="actions hero-actions">
+    <a class="button" href="https://console.apify.com/actors/bIHMOeKWrz2LgflXM?addFromActorId=bIHMOeKWrz2LgflXM&amp;utm_source=github_pages&amp;utm_medium=owned&amp;utm_campaign=llms_generator_first_run">Start a first run on Apify</a>
+    <a class="button secondary" href="#starter-input">See the starter input</a>
+  </div>
   <section class="panel">
     <div class="price">From $5 / 1,000 results</div>
     <ul>
@@ -41,7 +47,47 @@
       <a class="button secondary" href="https://github.com/cekuu35/llms-txt-generator">Review the public source</a>
     </div>
   </section>
+  <section class="panel starter" id="starter-input">
+    <div>
+      <div class="eyebrow">First-run path</div>
+      <h2>Start with 10 pages and inspect every output.</h2>
+      <p>Use a site you control, keep the first crawl small, and review the generated files before publishing them at a domain root.</p>
+      <div class="steps" aria-label="First-run steps">
+        <div class="step"><strong>1</strong><span>Replace <code>example.com</code> with the public website you want to process.</span></div>
+        <div class="step"><strong>2</strong><span>Paste the starter input into the Actor and run it through Apify.</span></div>
+        <div class="step"><strong>3</strong><span>Review <code>llms.txt</code>, <code>llms-full.txt</code>, and the page dataset in the run storage.</span></div>
+      </div>
+      <p class="boundary">Apify handles execution, usage billing, run history, and output storage. The public Actor listing is the source of truth for current pricing. This page does not sell a separate source-code licence; the implementation can be inspected in the linked public repository.</p>
+    </div>
+    <div class="code-wrap">
+      <div class="code-head">
+        <span>Starter input · 10-page review run</span>
+        <button class="copy" type="button" data-copy-input>Copy input</button>
+      </div>
+      <pre id="starter-json"><code>{
+  "websiteUrl": "https://example.com",
+  "maxPages": 10,
+  "includeFullText": true,
+  "maxContentCharsPerPage": 12000
+}</code></pre>
+    </div>
+  </section>
   <p>The generated files are drafts for review. No ranking, citation, traffic, or AI-discovery outcome is promised.</p>
   <footer><a href="/">All products</a> · <a href="mailto:cnkkurtoglu@gmail.com">Contact</a></footer>
-</main></body>
+</main>
+<script>
+  const copyButton = document.querySelector("[data-copy-input]");
+  const starterInput = document.querySelector("#starter-json");
+  copyButton?.addEventListener("click", async () => {
+    const originalLabel = copyButton.textContent;
+    try {
+      await navigator.clipboard.writeText(starterInput.innerText.trim());
+      copyButton.textContent = "Copied";
+    } catch {
+      copyButton.textContent = "Select and copy";
+    }
+    window.setTimeout(() => { copyButton.textContent = originalLabel; }, 1800);
+  });
+</script>
+</body>
 </html>
