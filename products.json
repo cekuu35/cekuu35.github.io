@@ -8,6 +8,7 @@
       "type": "ios_app",
       "status": "live",
       "price": "Free download with optional regional Premium in-app purchases",
+      "landing_page": "https://cekuu35.github.io/abonem/",
       "url": "https://apps.apple.com/tr/app/abonem-subscription-tracker/id6776748341"
     },
     {
@@ -15,6 +16,7 @@
       "type": "apify_actor",
       "status": "live",
       "price": "$5 USD / 1,000 results",
+      "landing_page": "https://cekuu35.github.io/llms-txt-generator/",
       "url": "https://apify.com/nacred_corner/llms-txt-generator",
       "source": "https://github.com/cekuu35/llms-txt-generator"
     },
@@ -23,6 +25,7 @@
       "type": "downloadable_launch_kit",
       "status": "live",
       "price": "$19 USD one-time",
+      "landing_page": "https://cekuu35.github.io/saas-launch-swipe-file/",
       "checkout": "https://cengokurtoglu.gumroad.com/l/nsxvw?wanted=true&utm_source=product_catalog&utm_medium=owned&utm_campaign=all_products"
     },
     {
