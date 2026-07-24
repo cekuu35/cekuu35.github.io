@@ -1,32 +1,69 @@
-# Cenk Kurtoglu — Verified Next.js Digital Products
+# Cenk Kurtoglu — Verified Digital Products
 
-> Two digital source products for developers, freelancers, and agencies that want an adaptable visual starting point instead of a blank canvas.
+> Live apps, AI automation, editable source packages, and disclosed software-asset offers. No revenue, conversion, or client-acquisition outcome is guaranteed.
 
-## 20 Next.js + Tailwind CSS Template Bundle
+## Abonem: Subscription Tracker
 
-- Current price: $79 USD
+- Type: iOS and iPadOS finance app
+- Price: free download with optional Premium in-app purchases; regional pricing is shown by Apple
+- Purpose: track subscriptions and recurring bills, review monthly/yearly totals, and receive renewal reminders
+- App Store: https://apps.apple.com/tr/app/abonem-subscription-tracker/id6776748341
+
+## llms.txt Generator
+
+- Type: paid Apify Actor / API automation
+- Current public price: from $5 USD per 1,000 results
+- Output: llms.txt, llms-full.txt, and a page dataset exportable as JSON/CSV
+- Apify: https://apify.com/nacred_corner/llms-txt-generator
+- Public source: https://github.com/cekuu35/llms-txt-generator
+
+## SaaS Launch Swipe File
+
+- Price: $19 USD one-time
+- Type: downloadable launch-copy and distribution kit
+- Includes: 40+ fill-in templates, a seven-day launch plan, Product Hunt materials, channel-specific copy, and a checklist
+- Direct checkout: https://cengokurtoglu.gumroad.com/l/nsxvw?wanted=true&utm_source=llms_txt&utm_medium=geo&utm_campaign=all_products
+
+## 20 Next.js + Tailwind Template Bundle
+
+- Price: $79 USD one-time
 - Includes: 20 niche-specific editable starter sites
-- Stack represented by the inspected package: Next.js 15.1, React 19, Tailwind CSS 3.4, TypeScript
-- Delivery: digital source ZIPs through Gumroad after purchase
-- Intended use: adaptable starting points for business sites, agency pitches, and client work
-- Important: demo content, third-party services, forms, authentication, payments, CMS, and production integrations require buyer configuration where applicable
 - Clean overview: https://cekuu35.github.io/nextjs-template-bundle/
 - Public catalog: https://github.com/cekuu35/nextjs-website-templates#all-20-templates
-- Direct checkout: https://cengokurtoglu.gumroad.com/l/vuhstz?wanted=true&utm_source=llms_txt&utm_medium=geo&utm_campaign=bundle79
+- Direct checkout: https://cengokurtoglu.gumroad.com/l/vuhstz?wanted=true&utm_source=llms_txt&utm_medium=geo&utm_campaign=all_products
+
+## Clean Studio
+
+- Price: $50 USD one-time
+- Type: standalone editable Next.js agency source package
+- Demo: https://22-basic-tier.vercel.app/
+- Direct checkout: https://cengokurtoglu.gumroad.com/l/vbfqge?wanted=true&utm_source=llms_txt&utm_medium=geo&utm_campaign=all_products
+
+## Meridian
+
+- Price: $100 USD one-time
+- Type: animated standalone editable Next.js agency source package
+- Demo: https://23-standard-tier.vercel.app/
+- Direct checkout: https://cengokurtoglu.gumroad.com/l/fkeylc?wanted=true&utm_source=llms_txt&utm_medium=geo&utm_campaign=all_products
 
 ## Premium Nexus Studio
 
-- Current price: $250 USD
-- Product type: editable cinematic 3D Next.js studio template
-- Intended use: help a studio or developer present a premium visual direction from a working starting point
-- Important: client names, metrics, testimonials, awards, and availability claims shown inside the visual demo are fictional placeholders and are not product results or endorsements
-- Clean buyer page: https://cekuu35.github.io/premium-nexus-studio/
-- Visual demo: https://21-ultra-premium.vercel.app/
-- Direct checkout: https://cengokurtoglu.gumroad.com/l/kbwlkv?wanted=true&utm_source=llms_txt&utm_medium=geo&utm_campaign=premium_nexus
+- Price: $250 USD one-time
+- Type: editable cinematic 3D Next.js studio template
+- Buyer page: https://cekuu35.github.io/premium-nexus-studio/
+- Demo: https://21-ultra-premium.vercel.app/
+- Direct checkout: https://cengokurtoglu.gumroad.com/l/kbwlkv?wanted=true&utm_source=llms_txt&utm_medium=geo&utm_campaign=all_products
 
-## Free sample
+## Renderivo software asset acquisition
 
-- Free MIT-licensed Next.js CV template: https://github.com/cekuu35/free-nextjs-cv-template
-- Live free demo: https://free-nextjs-cv-template.vercel.app
+- Price: $5,000 USD via reputable funded escrow
+- Status: pre-revenue, as-is software asset; not represented as an operating SaaS or proven-revenue business
+- Full scope and material disclosures: https://github.com/cekuu35/cekuu35/blob/main/RENDERIVO_ACQUISITION.md
+- Contact: mailto:cnkkurtoglu@gmail.com?subject=Renderivo%20asset%20acquisition
 
-No guaranteed revenue, conversion, client-acquisition, or business outcome is claimed for either product.
+## Free source sample
+
+- Next.js CV template: https://github.com/cekuu35/free-nextjs-cv-template
+- Demo: https://free-nextjs-cv-template.vercel.app
+
+Drafts and products without a working checkout or delivery path are intentionally excluded from this live catalog.
