@@ -6,7 +6,9 @@
 
 - Type: iOS and iPadOS finance app
 - Price: free download with optional Premium in-app purchases; regional pricing is shown by Apple
+- Türkiye Premium pricing observed on 2026-07-24: ₺49.99 monthly, ₺249.99 yearly, or ₺499.99 lifetime
 - Purpose: track subscriptions and recurring bills, review monthly/yearly totals, and receive renewal reminders
+- Buyer page: https://cekuu35.github.io/abonem/
 - App Store: https://apps.apple.com/tr/app/abonem-subscription-tracker/id6776748341
 
 ## llms.txt Generator
@@ -14,6 +16,7 @@
 - Type: paid Apify Actor / API automation
 - Current public price: from $5 USD per 1,000 results
 - Output: llms.txt, llms-full.txt, and a page dataset exportable as JSON/CSV
+- Buyer page: https://cekuu35.github.io/llms-txt-generator/
 - Apify: https://apify.com/nacred_corner/llms-txt-generator
 - Public source: https://github.com/cekuu35/llms-txt-generator
 
@@ -22,6 +25,7 @@
 - Price: $19 USD one-time
 - Type: downloadable launch-copy and distribution kit
 - Includes: 40+ fill-in templates, a seven-day launch plan, Product Hunt materials, channel-specific copy, and a checklist
+- Buyer page: https://cekuu35.github.io/saas-launch-swipe-file/
 - Direct checkout: https://cengokurtoglu.gumroad.com/l/nsxvw?wanted=true&utm_source=llms_txt&utm_medium=geo&utm_campaign=all_products
 
 ## 20 Next.js + Tailwind Template Bundle
