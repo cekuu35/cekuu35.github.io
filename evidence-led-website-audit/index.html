@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>How to Build an Evidence-Led Website Audit Without Fake Precision</title>
+  <meta name="description" content="A practical eight-step method for building a repeatable website audit with explicit scope, evidence IDs, unknown states, transparent scoring, and comparable re-runs.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://cekuu35.github.io/evidence-led-website-audit/">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="How to Build an Evidence-Led Website Audit Without Fake Precision">
+  <meta property="og:description" content="Use explicit scope, evidence IDs, unknown states, and transparent scoring to make website audits reproducible and easier to defend.">
+  <meta property="og:url" content="https://cekuu35.github.io/evidence-led-website-audit/">
+  <style>
+    :root{color-scheme:dark;--bg:#070a12;--panel:#101624;--text:#f3f5fa;--muted:#b7c0d1;--line:#273249;--accent:#8ba7ff;--accent2:#79e4c5;--code:#0b1020}
+    *{box-sizing:border-box}
+    body{margin:0;background:radial-gradient(circle at 20% 0,#182342 0,transparent 36%),var(--bg);color:var(--text);font:17px/1.75 system-ui,-apple-system,Segoe UI,sans-serif}
+    main{width:min(820px,calc(100% - 32px));margin:auto;padding:56px 0 72px}
+    a{color:var(--accent)}
+    .eyebrow{color:var(--accent2);font-weight:750;letter-spacing:.11em;text-transform:uppercase;font-size:.78rem}
+    h1{font-size:clamp(2.25rem,6vw,4.2rem);line-height:1.04;letter-spacing:-.045em;margin:.5rem 0 1.2rem}
+    h2{font-size:1.55rem;line-height:1.25;margin:2.4rem 0 .65rem}
+    p,li{color:var(--muted)}
+    .lead{font-size:1.18rem}
+    .meta{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:14px 0;margin:28px 0;color:var(--muted);font-size:.92rem}
+    pre{overflow:auto;background:var(--code);border:1px solid var(--line);border-radius:14px;padding:18px;color:#dce5ff;font-size:.9rem;line-height:1.55}
+    code{font-family:ui-monospace,SFMono-Regular,Consolas,monospace}
+    .note{background:linear-gradient(145deg,rgba(139,167,255,.13),rgba(121,228,197,.045));border:1px solid #3a4d70;border-radius:16px;padding:18px 20px;margin:28px 0}
+    .cta{margin-top:44px;padding:26px;border:1px solid #5d76ff;border-radius:20px;background:linear-gradient(145deg,rgba(139,167,255,.16),rgba(121,228,197,.055))}
+    .button{display:inline-block;background:var(--accent);color:#07101f;text-decoration:none;font-weight:800;padding:12px 16px;border-radius:10px;margin-top:8px}
+    footer{border-top:1px solid var(--line);margin-top:48px;padding-top:22px;color:var(--muted);font-size:.9rem}
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"TechArticle",
+    "headline":"How to Build an Evidence-Led Website Audit Without Fake Precision",
+    "description":"A practical eight-step method for building a repeatable website audit with explicit scope, evidence IDs, unknown states, transparent scoring, and comparable re-runs.",
+    "author":{"@type":"Person","name":"Cenk Kurtoğlu","url":"https://github.com/cekuu35"},
+    "datePublished":"2026-07-25",
+    "dateModified":"2026-07-25",
+    "mainEntityOfPage":"https://cekuu35.github.io/evidence-led-website-audit/"
+  }
+  </script>
+</head>
+<body>
+  <main>
+    <a href="/">← All products and tools</a>
+    <div class="eyebrow">Free practical guide · website audits</div>
+    <h1>How to Build an Evidence-Led Website Audit Without Fake Precision</h1>
+    <p class="lead">A useful audit should let another reviewer move from a conclusion to the exact observation that supported it. This eight-step method makes that traceability explicit without pretending a score can predict rankings, citations, traffic, or revenue.</p>
+    <div class="meta">By Cenk Kurtoğlu, independent solo developer · Published July 25, 2026 · About 8 minutes</div>
+
+    <p>Many website audits produce a score first and an explanation second. That order creates trouble when a developer, technical SEO consultant, or agency has to answer a simple client question: “Why did this item pass?” A polished dashboard is not evidence. A checklist is not automatically reproducible. A number is useful only when its scope, inputs, rules, and unknowns are visible.</p>
+    <p>The goal here is deliberately narrower than “AI SEO.” It is to turn reviewed observations into a repeatable operational assessment, preserve enough evidence to inspect every conclusion, and make a later re-run comparable. “AI readiness” is an operational label used in this workflow, not a certification or industry standard. You can use a spreadsheet, JSON files, a database, or ordinary notes. The method matters more than the storage tool.</p>
+
+    <h2>1. Freeze the boundary before collecting data</h2>
+    <p>Record the canonical site URL, the observation date, allowed origins, and the exact page sample. State whether you are reviewing the full public site or a bounded sample. Keep authenticated pages, staging domains, and third-party properties outside the result unless they were explicitly included.</p>
+    <p>This boundary prevents a common failure: the audit starts with ten public pages, silently adds a staging URL and a help center, then presents the final percentage as if every page belonged to one comparable population.</p>
+
+    <h2>2. Give every observation a stable evidence ID</h2>
+    <p>Create an evidence ledger before scoring. Each record should identify the source, what you observed, when you observed it, and your confidence. A check may reference one or more evidence IDs. If the evidence is missing, the check should remain unknown instead of receiving guessed credit.</p>
+    <pre><code>{
+  "id": "robots-root",
+  "source": "https://example.com/robots.txt",
+  "observedAt": "2026-07-25T09:00:00Z",
+  "observation": "Returned HTTP 200 during the review",
+  "confidence": "high"
+}</code></pre>
+    <p>Keep observations factual. “Returned HTTP 200 during the review” is defensible. “Search engines can crawl the whole site” is a much broader inference and needs more evidence.</p>
+
+    <h2>3. Separate observed, failed, not applicable, and unknown</h2>
+    <p>A binary pass/fail model is often too blunt. Use at least four states:</p>
+    <ul>
+      <li><strong>Observed pass:</strong> the named condition was verified inside the audit boundary.</li>
+      <li><strong>Observed fail:</strong> the named condition was checked and did not meet the rule.</li>
+      <li><strong>Not applicable:</strong> the rule was deliberately excluded with a recorded reason.</li>
+      <li><strong>Unknown:</strong> the evidence was unavailable, incomplete, malformed, or outside scope.</li>
+    </ul>
+    <p>Unknown should fail closed in a completion score. That does not mean the site is broken. It means the audit cannot honestly award credit yet.</p>
+
+    <h2>4. Review discoverability with bounded claims</h2>
+    <p>Check whether <code>robots.txt</code> and a sitemap are reachable. For sampled pages, verify canonical URLs and intended indexability. Record response status, normalized URL, and the exact page where each directive was observed.</p>
+    <p>A limited crawl remains a limited crawl. A missing page in your sample is not proof that the page was deleted or excluded everywhere. The report should state what was checked rather than expanding the claim after the fact.</p>
+
+    <h2>5. Measure metadata coverage from raw page rows</h2>
+    <p>For each eligible sampled page, record whether it has a usable title, meta description, and H1. Calculate coverage as observed passes divided by eligible sampled pages. Preserve the raw rows so another reviewer can reproduce the percentage.</p>
+    <p>Keep uniqueness checks separate from presence checks. Ten pages can all have a title and still reuse the same one. Also keep malformed dates and duplicate normalized URLs visible; silently repairing them before scoring hides data-quality problems.</p>
+
+    <h2>6. Treat content and AI-workflow checks as operational controls</h2>
+    <p>Confirm that pages intended for discovery are indexable, contain useful primary content, and do not reuse the same title across the sample. A word-count threshold can flag a page for human review, but it is a workflow heuristic—not a quality or ranking judgment.</p>
+    <p>For AI workflow readiness, maintain a saved content inventory and a repeatable change-monitoring procedure. Treat <code>llms.txt</code> as optional and emerging. Record it as present and reviewed, intentionally not applicable, unfinished, or unknown. Publishing the file does not force a search engine, model, or agent to use it.</p>
+
+    <h2>7. Publish the scoring rules before the result</h2>
+    <p>If you use a score, define every check and weight first. A simple author-defined model might allocate 25 points each to discoverability, metadata, content hygiene, and AI workflow readiness. Award credit only for observed facts, make unknown values receive no guessed points, and label the weighting as your operational model rather than an external benchmark.</p>
+    <p>The important property is traceability: total score → area → individual check → evidence IDs → original observation. If that chain breaks, the number should not be presented as precise.</p>
+
+    <h2>8. Re-run the same sample and disclose changes</h2>
+    <p>After implementation, use the same scope, page sample, normalization rules, and scoring version. Save the before-and-after inputs, reports, evidence ledger, and observation dates. If the sample or rule set changes, disclose it instead of presenting the two scores as directly comparable.</p>
+    <p>Version the scoring definition as well as the data. A score can change because the site changed, because the evidence improved, or because the rules changed. Those are different events and should not be merged into one unexplained delta.</p>
+
+    <div class="note">
+      <strong>Honest limit:</strong> This workflow does not prove security, legal compliance, rankings, AI citations, recommendations, traffic, revenue, or the absence of defects. It creates a cleaner record of what was checked, what remains unknown, and what should be addressed next.
+    </div>
+
+    <div class="cta">
+      <div class="eyebrow">Want the repeatable files?</div>
+      <h2>AI-Ready Website Audit Kit</h2>
+      <p>I packaged this method as a $49 one-time kit with an author-defined 100-point Node.js scorer that requires evidence IDs for scored checks, a canonical evidence ledger, editable client report, 19-page playbook, sixteen deterministic and adversarial tests, and implementation templates. It requires Node.js 18+ and no third-party packages.</p>
+      <p>I am the independent solo developer who built and sells this kit; the link below is my product page. It includes no ranking, citation, traffic, or revenue promise.</p>
+      <a class="button" href="https://cengokurtoglu.gumroad.com/l/ai-ready-website-audit-kit?utm_source=cekuu35_github_io&amp;utm_medium=owned_content&amp;utm_campaign=ai_audit_kit_launch&amp;utm_content=evidence_first_audit">Review the exact scope on Gumroad — $49</a>
+    </div>
+
+    <footer>Built by <a href="https://github.com/cekuu35">Cenk Kurtoğlu</a> · <a href="/">Products and tools</a></footer>
+  </main>
+</body>
+</html>
+
