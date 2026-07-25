@@ -5,8 +5,15 @@
     <link>https://cekuu35.github.io/</link>
     <description>Verified apps, AI automation, downloadable kits, and editable source products by Cenk Kurtoğlu.</description>
     <language>en-us</language>
-    <lastBuildDate>Sat, 25 Jul 2026 00:29:26 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 25 Jul 2026 02:21:21 GMT</lastBuildDate>
     <atom:link href="https://cekuu35.github.io/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Perde Atölyesi Fiyatlama Pilotu — $249 / 5 Days</title>
+      <link>https://cekuu35.github.io/perde-fiyatlama-pilotu/?utm_source=rss&amp;utm_medium=syndication&amp;utm_campaign=curtain_pricing_pilot</link>
+      <guid isPermaLink="true">https://cekuu35.github.io/perde-fiyatlama-pilotu/</guid>
+      <pubDate>Sat, 25 Jul 2026 02:21:21 GMT</pubDate>
+      <description>A fixed-scope browser-based pricing pilot for curtain shops in Türkiye. Demo data is illustrative; final formulas and price tables are verified by the customer. Price: $249 USD. Duration: 5 days after written scope and required inputs are complete.</description>
+    </item>
     <item>
       <title>Next.js + Supabase Launch Checklist — 60 Pre-Launch Checks</title>
       <link>https://cekuu35.github.io/nextjs-supabase-launch-checklist/?utm_source=rss&amp;utm_medium=syndication&amp;utm_campaign=launch_checklist</link>
