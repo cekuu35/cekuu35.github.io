@@ -2,7 +2,18 @@
 
 > Live apps, AI automation, editable source packages, and disclosed software-asset offers. No revenue, conversion, or client-acquisition outcome is guaranteed.
 
-## Primary India offer: 20 Next.js + Tailwind Template Bundle
+## Current focus: AI-Ready Website Audit Kit
+
+- Price: $49 USD one-time
+- Type: downloadable developer toolkit for evidence-led website readiness audits
+- Includes: dependency-free Node.js scoring algorithm, regression tests, a 19-page playbook, evidence ledger, prioritization workflow, and editable client-report templates
+- Free evidence-led method: https://cekuu35.github.io/evidence-led-website-audit/
+- Product page: https://cengokurtoglu.gumroad.com/l/ai-ready-website-audit-kit
+- Direct checkout: https://cengokurtoglu.gumroad.com/l/ai-ready-website-audit-kit?wanted=true&utm_source=root_llms_txt&utm_medium=ai_discovery&utm_campaign=ai_ready_audit_kit
+- Limits: an operational workflow, not a certification; it does not guarantee rankings, AI citations, traffic, conversions, or revenue
+- Seller: built and maintained by an independent solo developer
+
+## Additional offer: 20 Next.js + Tailwind Template Bundle
 
 - Audience: India-based freelance developers and web agencies
 - Price: list $79 USD; verified $63.20 USD with LAUNCH20 while Gumroad accepts the code
