@@ -36,7 +36,7 @@
     "@type":"TechArticle",
     "headline":"How to Build an Evidence-Led Website Audit Without Fake Precision",
     "description":"A practical eight-step method for building a repeatable website audit with explicit scope, evidence IDs, unknown states, transparent scoring, and comparable re-runs.",
-    "author":{"@type":"Person","name":"Cenk Kurtoğlu","url":"https://github.com/cekuu35"},
+    "author":{"@type":"Person","name":"Cenk KurtoÄŸlu","url":"https://github.com/cekuu35"},
     "datePublished":"2026-07-25",
     "dateModified":"2026-07-25",
     "mainEntityOfPage":"https://cekuu35.github.io/evidence-led-website-audit/"
@@ -45,14 +45,14 @@
 </head>
 <body>
   <main>
-    <a href="/">← All products and tools</a>
-    <div class="eyebrow">Free practical guide · website audits</div>
+    <a href="/">â† All products and tools</a>
+    <div class="eyebrow">Free practical guide Â· website audits</div>
     <h1>How to Build an Evidence-Led Website Audit Without Fake Precision</h1>
     <p class="lead">A useful audit should let another reviewer move from a conclusion to the exact observation that supported it. This eight-step method makes that traceability explicit without pretending a score can predict rankings, citations, traffic, or revenue.</p>
-    <div class="meta">By Cenk Kurtoğlu, independent solo developer · Published July 25, 2026 · About 8 minutes</div>
+    <div class="meta">By Cenk KurtoÄŸlu, independent solo developer Â· Published July 25, 2026 Â· About 8 minutes</div>
 
-    <p>Many website audits produce a score first and an explanation second. That order creates trouble when a developer, technical SEO consultant, or agency has to answer a simple client question: “Why did this item pass?” A polished dashboard is not evidence. A checklist is not automatically reproducible. A number is useful only when its scope, inputs, rules, and unknowns are visible.</p>
-    <p>The goal here is deliberately narrower than “AI SEO.” It is to turn reviewed observations into a repeatable operational assessment, preserve enough evidence to inspect every conclusion, and make a later re-run comparable. “AI readiness” is an operational label used in this workflow, not a certification or industry standard. You can use a spreadsheet, JSON files, a database, or ordinary notes. The method matters more than the storage tool.</p>
+    <p>Many website audits produce a score first and an explanation second. That order creates trouble when a developer, technical SEO consultant, or agency has to answer a simple client question: â€œWhy did this item pass?â€ A polished dashboard is not evidence. A checklist is not automatically reproducible. A number is useful only when its scope, inputs, rules, and unknowns are visible.</p>
+    <p>The goal here is deliberately narrower than â€œAI SEO.â€ It is to turn reviewed observations into a repeatable operational assessment, preserve enough evidence to inspect every conclusion, and make a later re-run comparable. â€œAI readinessâ€ is an operational label used in this workflow, not a certification or industry standard. You can use a spreadsheet, JSON files, a database, or ordinary notes. The method matters more than the storage tool.</p>
 
     <h2>1. Freeze the boundary before collecting data</h2>
     <p>Record the canonical site URL, the observation date, allowed origins, and the exact page sample. State whether you are reviewing the full public site or a bounded sample. Keep authenticated pages, staging domains, and third-party properties outside the result unless they were explicitly included.</p>
@@ -67,7 +67,7 @@
   "observation": "Returned HTTP 200 during the review",
   "confidence": "high"
 }</code></pre>
-    <p>Keep observations factual. “Returned HTTP 200 during the review” is defensible. “Search engines can crawl the whole site” is a much broader inference and needs more evidence.</p>
+    <p>Keep observations factual. â€œReturned HTTP 200 during the reviewâ€ is defensible. â€œSearch engines can crawl the whole siteâ€ is a much broader inference and needs more evidence.</p>
 
     <h2>3. Separate observed, failed, not applicable, and unknown</h2>
     <p>A binary pass/fail model is often too blunt. Use at least four states:</p>
@@ -88,12 +88,12 @@
     <p>Keep uniqueness checks separate from presence checks. Ten pages can all have a title and still reuse the same one. Also keep malformed dates and duplicate normalized URLs visible; silently repairing them before scoring hides data-quality problems.</p>
 
     <h2>6. Treat content and AI-workflow checks as operational controls</h2>
-    <p>Confirm that pages intended for discovery are indexable, contain useful primary content, and do not reuse the same title across the sample. A word-count threshold can flag a page for human review, but it is a workflow heuristic—not a quality or ranking judgment.</p>
+    <p>Confirm that pages intended for discovery are indexable, contain useful primary content, and do not reuse the same title across the sample. A word-count threshold can flag a page for human review, but it is a workflow heuristicâ€”not a quality or ranking judgment.</p>
     <p>For AI workflow readiness, maintain a saved content inventory and a repeatable change-monitoring procedure. Treat <code>llms.txt</code> as optional and emerging. Record it as present and reviewed, intentionally not applicable, unfinished, or unknown. Publishing the file does not force a search engine, model, or agent to use it.</p>
 
     <h2>7. Publish the scoring rules before the result</h2>
     <p>If you use a score, define every check and weight first. A simple author-defined model might allocate 25 points each to discoverability, metadata, content hygiene, and AI workflow readiness. Award credit only for observed facts, make unknown values receive no guessed points, and label the weighting as your operational model rather than an external benchmark.</p>
-    <p>The important property is traceability: total score → area → individual check → evidence IDs → original observation. If that chain breaks, the number should not be presented as precise.</p>
+    <p>The important property is traceability: total score â†’ area â†’ individual check â†’ evidence IDs â†’ original observation. If that chain breaks, the number should not be presented as precise.</p>
 
     <h2>8. Re-run the same sample and disclose changes</h2>
     <p>After implementation, use the same scope, page sample, normalization rules, and scoring version. Save the before-and-after inputs, reports, evidence ledger, and observation dates. If the sample or rule set changes, disclose it instead of presenting the two scores as directly comparable.</p>
@@ -108,10 +108,10 @@
       <h2>AI-Ready Website Audit Kit</h2>
       <p>I packaged this method as a $49 one-time kit with an author-defined 100-point Node.js scorer that requires evidence IDs for scored checks, a canonical evidence ledger, editable client report, 19-page playbook, sixteen deterministic and adversarial tests, and implementation templates. It requires Node.js 18+ and no third-party packages.</p>
       <p>I am the independent solo developer who built and sells this kit; the link below is my product page. It includes no ranking, citation, traffic, or revenue promise.</p>
-      <a id="audit-kit-cta" class="button" href="https://cengokurtoglu.gumroad.com/l/ai-ready-website-audit-kit?utm_source=cekuu35_github_io&amp;utm_medium=owned_content&amp;utm_campaign=ai_audit_kit_launch&amp;utm_content=evidence_first_audit">Review the exact scope on Gumroad — $49</a>
+      <a id="audit-kit-cta" class="button" href="https://cengokurtoglu.gumroad.com/l/ai-ready-website-audit-kit?utm_source=cekuu35_github_io&amp;utm_medium=owned_content&amp;utm_campaign=ai_audit_kit_launch&amp;utm_content=evidence_first_audit">Review the exact scope on Gumroad â€” $49</a>
     </div>
 
-    <footer>Built by <a href="https://github.com/cekuu35">Cenk Kurtoğlu</a> · <a href="/">Products and tools</a></footer>
+    <footer>Built by <a href="https://github.com/cekuu35">Cenk KurtoÄŸlu</a> Â· <a href="/">Products and tools</a></footer>
   </main>
   <script>
     (() => {
@@ -131,6 +131,30 @@
           'owned_content',
           'ai_audit_kit_launch',
           'curated_directory_path'
+        ]),
+        JSON.stringify([
+          'llms_txt_generator_readme',
+          'referral',
+          'ai_audit_kit_launch',
+          'free_method'
+        ]),
+        JSON.stringify([
+          'github_profile',
+          'referral',
+          'ai_audit_kit_launch',
+          'free_method'
+        ]),
+        JSON.stringify([
+          'nextjs_templates_readme',
+          'referral',
+          'ai_audit_kit_launch',
+          'client_handoff'
+        ]),
+        JSON.stringify([
+          'linkedin_profile',
+          'social',
+          'ai_audit_kit_launch',
+          'evidence_method_post'
         ])
       ]);
 
