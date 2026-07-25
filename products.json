@@ -41,6 +41,18 @@
       "landing_page": "https://cekuu35.github.io/nextjs-supabase-launch-checklist/?utm_source=product_catalog&utm_medium=owned&utm_campaign=launch_checklist"
     },
     {
+      "name": "Perde Atölyesi Fiyatlama Pilotu",
+      "type": "productized_service",
+      "status": "available_by_inquiry",
+      "price": "$249 USD fixed pilot",
+      "duration": "5 days after written scope and required inputs are complete",
+      "area": "Türkiye",
+      "landing_page": "https://cekuu35.github.io/perde-fiyatlama-pilotu/?utm_source=product_catalog&utm_medium=owned&utm_campaign=curtain_pricing_pilot",
+      "demo": "https://perde-atolye-demo.vercel.app/?utm_source=product_catalog&utm_medium=owned&utm_campaign=curtain_pricing_pilot",
+      "contact": "cnkkurtoglu@gmail.com",
+      "disclosure": "Demo prices and coefficients are illustrative; final formulas and price tables are verified by the customer. No sales, profit, or error-free-operation guarantee."
+    },
+    {
       "name": "20 Next.js + Tailwind Template Bundle",
       "type": "source_bundle",
       "status": "live",
