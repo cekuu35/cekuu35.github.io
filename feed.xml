@@ -5,8 +5,15 @@
     <link>https://cekuu35.github.io/</link>
     <description>Verified apps, AI automation, downloadable kits, and editable source products by Cenk Kurtoğlu.</description>
     <language>en-us</language>
-    <lastBuildDate>Sat, 25 Jul 2026 02:21:21 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 25 Jul 2026 04:18:15 GMT</lastBuildDate>
     <atom:link href="https://cekuu35.github.io/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Free Next.js + Supabase Production Checklist — 10 Checks</title>
+      <link>https://cekuu35.github.io/nextjs-supabase-production-checklist/?utm_source=rss&amp;utm_medium=syndication&amp;utm_campaign=launch_checklist</link>
+      <guid isPermaLink="true">https://cekuu35.github.io/nextjs-supabase-production-checklist/</guid>
+      <pubDate>Sat, 25 Jul 2026 04:18:15 GMT</pubDate>
+      <description>A free, source-backed field guide covering secrets, RLS, auth redirects, authorization, metadata, production builds, and failure paths before a Next.js and Supabase launch.</description>
+    </item>
     <item>
       <title>Perde Atölyesi Fiyatlama Pilotu — $249 / 5 Days</title>
       <link>https://cekuu35.github.io/perde-fiyatlama-pilotu/?utm_source=rss&amp;utm_medium=syndication&amp;utm_campaign=curtain_pricing_pilot</link>
