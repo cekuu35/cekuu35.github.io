@@ -1,7 +1,7 @@
 {
   "$schema": "https://schema.org",
   "name": "Cenk Kurtoğlu verified digital products",
-  "updated": "2026-07-24",
+  "updated": "2026-07-25",
   "products": [
     {
       "name": "Abonem: Subscription Tracker",
@@ -27,6 +27,17 @@
       "price": "$19 USD one-time",
       "landing_page": "https://cekuu35.github.io/saas-launch-swipe-file/",
       "checkout": "https://cengokurtoglu.gumroad.com/l/nsxvw?wanted=true&utm_source=product_catalog&utm_medium=owned&utm_campaign=all_products"
+    },
+    {
+      "name": "Next.js + Supabase Launch Checklist",
+      "type": "downloadable_launch_checklist",
+      "status": "live",
+      "price": "$12 USD one-time",
+      "format": "8-page PDF (117 KB)",
+      "checks": 60,
+      "preview": "https://nextjs-supabase-checklist-preview.vercel.app/?utm_source=product_catalog&utm_medium=owned&utm_campaign=launch_checklist",
+      "checkout": "https://cengokurtoglu.gumroad.com/l/xjnmxt?utm_source=product_catalog&utm_medium=owned&utm_campaign=launch_checklist",
+      "disclosure": "Educational checklist; not an automated scan, penetration test, compliance review, or security guarantee."
     },
     {
       "name": "20 Next.js + Tailwind Template Bundle",
