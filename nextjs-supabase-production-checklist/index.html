@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Next.js + Supabase Production Checklist: 10 Checks Before Launch</title>
+  <meta name="description" content="A free, source-backed 10-step production checklist for Next.js and Supabase: secrets, RLS, auth redirects, authorization, metadata, testing, and failure paths.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://cekuu35.github.io/nextjs-supabase-production-checklist/">
+  <meta property="og:title" content="Next.js + Supabase Production Checklist: 10 Checks">
+  <meta property="og:description" content="Run these 10 source-backed checks before shipping a Next.js + Supabase app.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://cekuu35.github.io/nextjs-supabase-production-checklist/">
+  <style>
+    :root{color-scheme:dark;--bg:#07101f;--panel:#101c31;--line:#2d4569;--ink:#f7f9ff;--muted:#adbad0;--blue:#64a7ff;--violet:#8b74ff;--green:#5ee2a0}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 15% 0,rgba(90,162,255,.18),transparent 34rem),var(--bg);color:var(--ink);font:16px/1.65 Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+    a{color:var(--blue)}.shell{width:min(900px,calc(100% - 32px));margin:auto}.nav{display:flex;justify-content:space-between;gap:16px;align-items:center;padding:24px 0}.nav a{text-decoration:none}.badge{border:1px solid var(--line);border-radius:999px;padding:6px 11px;color:var(--muted);font-size:13px}
+    .hero{padding:66px 0 44px}.eyebrow{color:var(--green);font-size:13px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}.hero h1{font-size:clamp(40px,7vw,68px);line-height:1.04;letter-spacing:-.055em;margin:12px 0 20px}.lead{font-size:clamp(18px,2.4vw,22px);color:var(--muted);max-width:760px}.meta{color:var(--muted);font-size:14px;margin-top:22px}
+    .summary{border:1px solid var(--line);background:rgba(16,28,49,.74);border-radius:20px;padding:24px;margin:0 0 38px}.summary h2{margin-top:0}.summary ol{columns:2;gap:32px;padding-left:22px}.summary li{break-inside:avoid;margin:6px 0}
+    article{padding-bottom:40px}.check{display:grid;grid-template-columns:48px 1fr;gap:18px;border-top:1px solid var(--line);padding:30px 0}.number{display:grid;place-items:center;width:42px;height:42px;border-radius:12px;background:linear-gradient(135deg,var(--blue),var(--violet));font-weight:900}.check h2{margin:0 0 8px;font-size:clamp(22px,3vw,30px);letter-spacing:-.025em}.check p{color:var(--muted);margin:8px 0}.action{border-left:3px solid var(--green);padding-left:14px}.source{font-size:14px}
+    .cta{margin:30px 0 70px;padding:30px;border:1px solid #416da7;border-radius:22px;background:linear-gradient(145deg,rgba(39,79,133,.45),rgba(16,28,49,.86))}.cta h2{margin:0 0 8px;font-size:clamp(28px,4vw,42px)}.cta p{color:var(--muted)}.buttons{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}.button{display:inline-flex;min-height:48px;align-items:center;justify-content:center;padding:0 18px;border-radius:11px;text-decoration:none;font-weight:800;background:linear-gradient(135deg,var(--blue),var(--violet));color:#fff}.button.secondary{background:transparent;border:1px solid var(--line);color:var(--ink)}
+    footer{border-top:1px solid var(--line);padding:25px 0 60px;color:var(--muted);font-size:14px}
+    @media(max-width:650px){.nav{align-items:flex-start;flex-direction:column}.hero{padding-top:38px}.summary ol{columns:1}.check{grid-template-columns:1fr}.buttons{flex-direction:column}.button{width:100%}}
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"TechArticle",
+    "headline":"Next.js + Supabase Production Checklist: 10 Checks Before Launch",
+    "description":"A free, source-backed 10-step production checklist for Next.js and Supabase.",
+    "datePublished":"2026-07-25",
+    "dateModified":"2026-07-25",
+    "author":{"@type":"Person","name":"Cenk Kurtoğlu","url":"https://github.com/cekuu35"},
+    "publisher":{"@type":"Person","name":"Cenk Kurtoğlu"},
+    "mainEntityOfPage":"https://cekuu35.github.io/nextjs-supabase-production-checklist/"
+  }
+  </script>
+</head>
+<body>
+  <header class="shell nav">
+    <a href="/">← All verified products</a>
+    <span class="badge">Free 10-check field guide</span>
+  </header>
+  <main class="shell">
+    <section class="hero">
+      <div class="eyebrow">Next.js + Supabase · production readiness</div>
+      <h1>10 checks to run before your next production launch.</h1>
+      <p class="lead">A focused, source-backed review for developers shipping Next.js with Supabase. Each check includes a concrete action and points to the relevant official documentation.</p>
+      <p class="meta">Published July 25, 2026 · Educational guidance, not a security audit or guarantee</p>
+    </section>
+
+    <nav class="summary" aria-label="Checklist summary">
+      <h2>At a glance</h2>
+      <ol>
+        <li><a href="#keys">Protect secret keys</a></li>
+        <li><a href="#rls">Enable RLS</a></li>
+        <li><a href="#policies">Write explicit policies</a></li>
+        <li><a href="#user-test">Test as a normal user</a></li>
+        <li><a href="#redirects">Lock auth redirects</a></li>
+        <li><a href="#env">Review environment variables</a></li>
+        <li><a href="#authorization">Authorize every mutation</a></li>
+        <li><a href="#metadata">Ship metadata and crawl controls</a></li>
+        <li><a href="#production-build">Test the production build</a></li>
+        <li><a href="#failure-paths">Exercise failure paths</a></li>
+      </ol>
+    </nav>
+
+    <article>
+      <section class="check" id="keys"><div class="number">1</div><div><h2>Keep secret and service-role keys on the server</h2><p>Supabase publishable or legacy anon keys are designed for public clients when RLS protects the data. Secret and service-role keys grant elevated access and must never be exposed in browser code.</p><p class="action"><strong>Action:</strong> search client bundles and public environment variables for secret or service-role credentials, rotate any exposed key, and move privileged calls to a trusted server.</p><p class="source"><a href="https://supabase.com/docs/guides/getting-started/api-keys">Official Supabase API key guidance</a></p></div></section>
+
+      <section class="check" id="rls"><div class="number">2</div><div><h2>Enable RLS on every exposed table</h2><p>Tables reachable through Supabase's Data API need Row Level Security. Dashboard-created tables enable it by default, but tables created another way still need verification.</p><p class="action"><strong>Action:</strong> inventory every table in exposed schemas and confirm RLS is enabled before production traffic reaches it.</p><p class="source"><a href="https://supabase.com/docs/guides/database/postgres/row-level-security">Official Supabase RLS guide</a></p></div></section>
+
+      <section class="check" id="policies"><div class="number">3</div><div><h2>Write explicit, least-privilege policies</h2><p>Enabling RLS without policies blocks client access; broad policies can expose more rows or operations than intended. Separate read, insert, update, and delete rules where the permissions differ.</p><p class="action"><strong>Action:</strong> document which role can perform each operation, then make each policy express that rule directly.</p><p class="source"><a href="https://supabase.com/docs/guides/database/secure-data">Official Supabase data security guide</a></p></div></section>
+
+      <section class="check" id="user-test"><div class="number">4</div><div><h2>Test data access as a normal user</h2><p>Admin tools and service-role clients bypass controls that ordinary sessions must satisfy. A test that only uses privileged access cannot validate the customer path.</p><p class="action"><strong>Action:</strong> create two test users and verify that each can access their own allowed rows, cannot access the other's rows, and cannot call restricted operations.</p><p class="source"><a href="https://supabase.com/docs/guides/api/securing-your-api">Official Supabase API security guide</a></p></div></section>
+
+      <section class="check" id="redirects"><div class="number">5</div><div><h2>Set the production Site URL and allowed auth redirects</h2><p>OAuth, magic-link, confirmation, and password-reset flows depend on redirect configuration. Development wildcards should not silently become the production trust boundary.</p><p class="action"><strong>Action:</strong> set the production Site URL, allow only the redirect destinations you use, and run each email or OAuth flow against the real domain.</p><p class="source"><a href="https://supabase.com/docs/guides/auth/redirect-urls">Official Supabase redirect URL guide</a></p></div></section>
+
+      <section class="check" id="env"><div class="number">6</div><div><h2>Review the browser/server environment boundary</h2><p>Next.js variables prefixed with <code>NEXT_PUBLIC_</code> are inlined into browser JavaScript. Treat them as public and keep secrets in server-only variables.</p><p class="action"><strong>Action:</strong> list every production variable, mark it public or server-only, remove unused values, and confirm environment files are excluded from version control.</p><p class="source"><a href="https://nextjs.org/docs/app/guides/production-checklist">Official Next.js production checklist</a></p></div></section>
+
+      <section class="check" id="authorization"><div class="number">7</div><div><h2>Authorize every server-side mutation</h2><p>Hiding a button or redirecting a page improves the interface, but it does not authorize the underlying Server Action, Route Handler, or database operation.</p><p class="action"><strong>Action:</strong> authenticate and authorize inside every mutation path, then test direct requests without relying on the UI.</p><p class="source"><a href="https://nextjs.org/docs/app/guides/production-checklist">Official Next.js production checklist</a></p></div></section>
+
+      <section class="check" id="metadata"><div class="number">8</div><div><h2>Ship metadata and crawl controls intentionally</h2><p>Production pages need titles and descriptions; public products also benefit from Open Graph metadata, a sitemap, and robots directives. Private routes should not be made discoverable by accident.</p><p class="action"><strong>Action:</strong> inspect rendered metadata for important pages and verify <code>sitemap.xml</code> and <code>robots.txt</code> match the intended public surface.</p><p class="source"><a href="https://nextjs.org/docs/app/guides/production-checklist">Official Next.js production checklist</a></p></div></section>
+
+      <section class="check" id="production-build"><div class="number">9</div><div><h2>Test the production build, not only dev mode</h2><p>Development mode can hide differences in caching, bundling, environment variables, and runtime behavior. A successful local dev session is not a production verification.</p><p class="action"><strong>Action:</strong> run the production build and start commands, inspect build output, exercise critical routes, and review Lighthouse plus runtime logs.</p><p class="source"><a href="https://nextjs.org/docs/app/guides/production-checklist">Official Next.js production checklist</a></p></div></section>
+
+      <section class="check" id="failure-paths"><div class="number">10</div><div><h2>Exercise failure paths before customers do</h2><p>Launch readiness includes expired sessions, missing rows, rejected writes, unavailable services, slow requests, and unknown routes—not just the happy path.</p><p class="action"><strong>Action:</strong> trigger representative 401, 403, 404, validation, and dependency-failure cases; confirm the user gets a safe message and operators get useful logs.</p><p class="source"><a href="https://nextjs.org/docs/app/guides/production-checklist">Official Next.js production checklist</a></p></div></section>
+    </article>
+
+    <section class="cta">
+      <h2>Need the full review?</h2>
+      <p>The paid checklist expands this field guide to 60 practical checks across secrets, RLS, auth, performance, SEO, reliability, and go-live. It is one 8-page PDF delivered through Gumroad for $12 USD; Gumroad may show a localized currency equivalent.</p>
+      <div class="buttons">
+        <a class="button" href="/nextjs-supabase-launch-checklist/?utm_source=public_sample&amp;utm_medium=owned_content&amp;utm_campaign=launch_checklist">Preview the full checklist</a>
+        <a class="button secondary" href="https://gumroad.com/checkout?product=xjnmxt&amp;quantity=1&amp;utm_source=public_sample&amp;utm_medium=owned_content&amp;utm_campaign=launch_checklist">Buy for $12 on Gumroad</a>
+      </div>
+    </section>
+  </main>
+  <footer class="shell">Written by <a href="https://github.com/cekuu35">Cenk Kurtoğlu</a> · Source links point to official Next.js and Supabase documentation · <a href="/">All verified products</a></footer>
+</body>
+</html>
