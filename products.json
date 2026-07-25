@@ -37,7 +37,8 @@
       "checks": 60,
       "preview": "https://nextjs-supabase-checklist-preview.vercel.app/?utm_source=product_catalog&utm_medium=owned&utm_campaign=launch_checklist",
       "checkout": "https://cengokurtoglu.gumroad.com/l/xjnmxt?utm_source=product_catalog&utm_medium=owned&utm_campaign=launch_checklist",
-      "disclosure": "Educational checklist; not an automated scan, penetration test, compliance review, or security guarantee."
+      "disclosure": "Educational checklist; not an automated scan, penetration test, compliance review, or security guarantee.",
+      "landing_page": "https://cekuu35.github.io/nextjs-supabase-launch-checklist/?utm_source=product_catalog&utm_medium=owned&utm_campaign=launch_checklist"
     },
     {
       "name": "20 Next.js + Tailwind Template Bundle",
