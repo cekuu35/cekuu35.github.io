@@ -4,6 +4,20 @@
   "updated": "2026-07-25",
   "products": [
     {
+      "name": "20 Next.js + Tailwind Template Bundle",
+      "type": "source_bundle",
+      "status": "live",
+      "price": "$63.20 USD with LAUNCH20 (list $79; discount capped at 20 total redemptions; Gumroad confirms current code validity and final amount)",
+      "checkout": "https://cengokurtoglu.gumroad.com/l/vuhstz/LAUNCH20?wanted=true&utm_source=product_catalog&utm_medium=owned&utm_campaign=india_launch&utm_content=bundle_checkout",
+      "format": "One 17.7 MB ZIP with 20 editable TypeScript website starters",
+      "templates": 20,
+      "pages_per_template": "5–8",
+      "stack": "Next.js 15.1 App Router, React 19, Tailwind CSS 3.4",
+      "landing_page": "https://cekuu35.github.io/india-nextjs-templates/?utm_source=product_catalog&utm_medium=owned&utm_campaign=india_launch&utm_content=bundle_landing",
+      "source_overview": "https://github.com/cekuu35/nextjs-website-templates#all-20-templates",
+      "disclosure": "Frontend starter bundle, not a full-stack SaaS boilerplate. Forms, booking, cart, checkout, authentication, subscriptions, and similar actions remain demo UI until production services are integrated. No sales, revenue, or launch-outcome guarantee."
+    },
+    {
       "name": "Abonem: Subscription Tracker",
       "type": "ios_app",
       "status": "live",
@@ -61,14 +75,6 @@
       "demo": "https://perde-atolye-demo.vercel.app/?utm_source=product_catalog&utm_medium=owned&utm_campaign=curtain_pricing_pilot",
       "contact": "cnkkurtoglu@gmail.com",
       "disclosure": "Demo prices and coefficients are illustrative; final formulas and price tables are verified by the customer. No sales, profit, or error-free-operation guarantee."
-    },
-    {
-      "name": "20 Next.js + Tailwind Template Bundle",
-      "type": "source_bundle",
-      "status": "live",
-      "price": "$63.20 USD with LAUNCH20 (list $79; Gumroad confirms code validity)",
-      "url": "https://cekuu35.github.io/nextjs-template-bundle/",
-      "checkout": "https://cengokurtoglu.gumroad.com/l/vuhstz/LAUNCH20?wanted=true&utm_source=product_catalog&utm_medium=owned&utm_campaign=all_products"
     },
     {
       "name": "Clean Studio",
