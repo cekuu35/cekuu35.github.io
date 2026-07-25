@@ -2,6 +2,20 @@
 
 > Live apps, AI automation, editable source packages, and disclosed software-asset offers. No revenue, conversion, or client-acquisition outcome is guaranteed.
 
+## Primary India offer: 20 Next.js + Tailwind Template Bundle
+
+- Audience: India-based freelance developers and web agencies
+- Price: list $79 USD; verified $63.20 USD with LAUNCH20 while Gumroad accepts the code
+- Promotion limit: LAUNCH20 is limited to 20 total uses; no remaining-use count is claimed
+- Delivery: one 17.7 MB ZIP containing 20 editable TypeScript website starters
+- Stack: Next.js 15.1 App Router, React 19, Tailwind CSS 3.4, and TypeScript
+- India buyer page: https://cekuu35.github.io/india-nextjs-templates/
+- India product hub: https://cekuu35.github.io/india/
+- Public demo catalog and buyer guide: https://github.com/cekuu35/nextjs-website-templates
+- Direct checkout: https://cengokurtoglu.gumroad.com/l/vuhstz/LAUNCH20?wanted=true&utm_source=root_llms_txt&utm_medium=ai_discovery&utm_campaign=india_launch
+- Limitations: frontend marketing-site starters, not finished client sites or a full-stack SaaS boilerplate; replace placeholders, connect required production services, and test before delivery
+- Checkout, code validity, USD price, and ZIP size last verified anonymously: 2026-07-25
+
 ## Abonem: Subscription Tracker
 
 - Type: iOS and iPadOS finance app
@@ -27,14 +41,6 @@
 - Includes: 40+ fill-in templates, a seven-day launch plan, Product Hunt materials, channel-specific copy, and a checklist
 - Buyer page: https://cekuu35.github.io/saas-launch-swipe-file/
 - Direct checkout: https://cengokurtoglu.gumroad.com/l/nsxvw?wanted=true&utm_source=llms_txt&utm_medium=geo&utm_campaign=all_products
-
-## 20 Next.js + Tailwind Template Bundle
-
-- Price: list $79 USD; $63.20 USD with LAUNCH20 when Gumroad accepts the code
-- Includes: 20 niche-specific editable starter sites
-- Clean overview: https://cekuu35.github.io/nextjs-template-bundle/
-- Public catalog: https://github.com/cekuu35/nextjs-website-templates#all-20-templates
-- Direct checkout: https://cengokurtoglu.gumroad.com/l/vuhstz/LAUNCH20?wanted=true&utm_source=llms_txt&utm_medium=geo&utm_campaign=all_products
 
 ## Clean Studio
 
