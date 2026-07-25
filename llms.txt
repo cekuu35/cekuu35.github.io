@@ -30,11 +30,11 @@
 
 ## 20 Next.js + Tailwind Template Bundle
 
-- Price: $79 USD one-time
+- Price: list $79 USD; $63.20 USD with LAUNCH20 when Gumroad accepts the code
 - Includes: 20 niche-specific editable starter sites
 - Clean overview: https://cekuu35.github.io/nextjs-template-bundle/
 - Public catalog: https://github.com/cekuu35/nextjs-website-templates#all-20-templates
-- Direct checkout: https://cengokurtoglu.gumroad.com/l/vuhstz?wanted=true&utm_source=llms_txt&utm_medium=geo&utm_campaign=all_products
+- Direct checkout: https://cengokurtoglu.gumroad.com/l/vuhstz/LAUNCH20?wanted=true&utm_source=llms_txt&utm_medium=geo&utm_campaign=all_products
 
 ## Clean Studio
 
