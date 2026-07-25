@@ -39,8 +39,16 @@
     .panel{margin:20px 0;padding:28px}.panel ul{padding-left:1.25rem}
     .notice{border-left:3px solid var(--green);padding:15px 18px;background:rgba(97,212,155,.08);color:var(--muted)}
     .terms{font-size:.93rem}
+    .choice-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:20px}
+    .choice{display:flex;flex-direction:column;align-items:flex-start;border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,.025);padding:22px}
+    .choice p{margin:.35rem 0 1rem}.choice .button{margin-top:auto}
+    .choice-tag{color:var(--blue);font-size:.75rem;font-weight:850;letter-spacing:.08em;text-transform:uppercase}
+    .choice-price{margin:0 0 16px;color:var(--green);font-weight:900}
+    .checkout-note{margin-top:22px;border:1px solid rgba(97,212,155,.35);border-radius:16px;background:rgba(97,212,155,.07);padding:20px}
+    .checkout-note strong{display:block;color:var(--text);margin-bottom:4px}
+    .checkout-note p{margin:.35rem 0 0}
     footer{margin-top:44px;padding-top:24px;border-top:1px solid var(--line);color:var(--muted)}footer a{color:var(--text)}
-    @media(max-width:760px){main{padding-top:44px}.grid{grid-template-columns:1fr}}
+    @media(max-width:760px){main{padding-top:44px}.grid,.choice-grid{grid-template-columns:1fr}}
   </style>
   <script type="application/ld+json">
   {
@@ -76,6 +84,32 @@
     <article class="card"><strong>20 editable directions</strong><span>SaaS, agency, ecommerce, hospitality, healthcare, professional services, education and more.</span></article>
     <article class="card"><strong>Current source stack</strong><span>Next.js 15.1, React 19, Tailwind CSS 3.4 and TypeScript source ZIPs.</span></article>
     <article class="card"><strong>Commercial client work</strong><span>A commercial client-work license is included. Confirm its exact current scope in the Gumroad checkout terms.</span></article>
+  </section>
+
+  <section class="panel" aria-labelledby="offer-selector-title">
+    <div class="eyebrow">Choose by your next deliverable</div>
+    <h2 id="offer-selector-title">One broad website bundle, or one focused 3D direction?</h2>
+    <p>Choose the smaller commitment that matches the work in front of you. Both products are editable starting points; neither is a finished client deliverable or a promise of project results.</p>
+    <div class="choice-grid">
+      <article class="choice">
+        <span class="choice-tag">For recurring marketing-site work</span>
+        <h3>20-template bundle</h3>
+        <p>Choose this when you want multiple niche directions for future proposals and client websites, with Next.js, React, Tailwind CSS and TypeScript source.</p>
+        <div class="choice-price">$79 USD · one-time purchase</div>
+        <a class="button" href="https://cengokurtoglu.gumroad.com/l/vuhstz?wanted=true&amp;utm_source=india_owned&amp;utm_medium=landing&amp;utm_campaign=india_offer_selector_bundle">Choose all 20 — $79 USD</a>
+      </article>
+      <article class="choice">
+        <span class="choice-tag">For one premium 3D pitch or build</span>
+        <h3>Premium Nexus Studio</h3>
+        <p>Choose this when you need a live cinematic 3D direction to review first, then adapt the source to a studio showcase or client-specific experience.</p>
+        <div class="choice-price">$250 USD · one-time purchase</div>
+        <a class="button secondary" href="/premium-nexus-studio/?utm_source=india_owned&amp;utm_medium=landing&amp;utm_campaign=india_offer_selector_nexus">Review the live 3D offer — $250</a>
+      </article>
+    </div>
+    <div class="checkout-note" role="note">
+      <strong>India checkout note</strong>
+      <p>Prices are charged in USD, not at a fixed rupee amount. If your payment method converts the purchase to INR, its exchange rate and any provider fees can vary. Gumroad shows the final total and the payment methods available to you before you approve payment; review that amount before purchasing.</p>
+    </div>
   </section>
 
   <section class="panel">
