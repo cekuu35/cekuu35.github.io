@@ -1,6 +1,10 @@
-# Cenk Kurtoğlu — source products
+# Cenk Kurtoğlu — verified products and practical resources
 
-This repository powers a compact public storefront for Cenk's verified source-code offers.
+This repository powers a compact public storefront for Cenk's verified digital products, source-code offers, and clearly scoped service pilots.
+
+- [Free Next.js + Supabase Production Checklist — 10 source-backed checks](./NEXTJS_SUPABASE_PRODUCTION_CHECKLIST.md) — browser-readable actions with official documentation links and an optional paid upgrade.
+- [Next.js + Supabase Launch Checklist](https://cekuu35.github.io/nextjs-supabase-launch-checklist/?utm_source=github_pages_repo&utm_medium=referral&utm_campaign=launch_checklist) — **$12 one-time**, 60 checks in one 8-page PDF delivered through Gumroad; real pages can be previewed before buying.
+- [Perde Atölyesi Fiyatlama Pilotu](https://cekuu35.github.io/perde-fiyatlama-pilotu/?utm_source=github_pages_repo&utm_medium=referral&utm_campaign=curtain_pricing_pilot) — **$249 fixed / 5 days**; example formulas and prices are replaced only after customer verification.
 
 - [3D Studio Foundation](https://studio3d-foundation.anakinsky3535.chatgpt.site?utm_source=github&utm_medium=owned&utm_campaign=github_pages) — **$499 Developer License / $999 Assisted Launch**
 - [Premium Nexus Studio](https://cengokurtoglu.gumroad.com/l/kbwlkv?utm_source=github&utm_medium=owned&utm_campaign=nexus250) — **$250 one-time with Gumroad checkout**
