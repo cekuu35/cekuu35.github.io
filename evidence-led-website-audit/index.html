@@ -108,11 +108,44 @@
       <h2>AI-Ready Website Audit Kit</h2>
       <p>I packaged this method as a $49 one-time kit with an author-defined 100-point Node.js scorer that requires evidence IDs for scored checks, a canonical evidence ledger, editable client report, 19-page playbook, sixteen deterministic and adversarial tests, and implementation templates. It requires Node.js 18+ and no third-party packages.</p>
       <p>I am the independent solo developer who built and sells this kit; the link below is my product page. It includes no ranking, citation, traffic, or revenue promise.</p>
-      <a class="button" href="https://cengokurtoglu.gumroad.com/l/ai-ready-website-audit-kit?utm_source=cekuu35_github_io&amp;utm_medium=owned_content&amp;utm_campaign=ai_audit_kit_launch&amp;utm_content=evidence_first_audit">Review the exact scope on Gumroad — $49</a>
+      <a id="audit-kit-cta" class="button" href="https://cengokurtoglu.gumroad.com/l/ai-ready-website-audit-kit?utm_source=cekuu35_github_io&amp;utm_medium=owned_content&amp;utm_campaign=ai_audit_kit_launch&amp;utm_content=evidence_first_audit">Review the exact scope on Gumroad — $49</a>
     </div>
 
     <footer>Built by <a href="https://github.com/cekuu35">Cenk Kurtoğlu</a> · <a href="/">Products and tools</a></footer>
   </main>
+  <script>
+    (() => {
+      const cta = document.getElementById('audit-kit-cta');
+      if (!cta) return;
+
+      const keys = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content'];
+      const params = new URLSearchParams(window.location.search);
+
+      // Missing or duplicated attribution fields fail closed to the static fallback.
+      if (keys.some((key) => params.getAll(key).length !== 1)) return;
+
+      const incoming = keys.map((key) => params.get(key));
+      const allowed = new Set([
+        JSON.stringify([
+          'llms_txt_generator_landing',
+          'owned_content',
+          'ai_audit_kit_launch',
+          'curated_directory_path'
+        ])
+      ]);
+
+      if (!allowed.has(JSON.stringify(incoming))) return;
+
+      const target = new URL(cta.href);
+      if (
+        target.origin !== 'https://cengokurtoglu.gumroad.com' ||
+        target.pathname !== '/l/ai-ready-website-audit-kit'
+      ) return;
+
+      keys.forEach((key, index) => target.searchParams.set(key, incoming[index]));
+      cta.href = target.toString();
+    })();
+  </script>
 </body>
 </html>
 
