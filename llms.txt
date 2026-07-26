@@ -8,6 +8,9 @@
 - Type: downloadable developer toolkit for evidence-led website readiness audits
 - Includes: dependency-free Node.js scoring algorithm, regression tests, a 19-page playbook, evidence ledger, prioritization workflow, and editable client-report templates
 - Free evidence-led method: https://cekuu35.github.io/evidence-led-website-audit/
+- Free interactive scorecard: https://cekuu35.github.io/evidence-led-website-audit/scorecard.html
+- Scorecard behavior: 12 evidence-gated checks totaling 100 points; unknown answers receive 0; JSON and Markdown export run locally in the browser
+- Scorecard privacy: no signup, file upload, website crawl, backend, or saved audit data
 - Product page: https://cengokurtoglu.gumroad.com/l/ai-ready-website-audit-kit
 - Direct checkout: https://cengokurtoglu.gumroad.com/l/ai-ready-website-audit-kit?wanted=true&utm_source=root_llms_txt&utm_medium=ai_discovery&utm_campaign=ai_ready_audit_kit
 - Limits: an operational workflow, not a certification; it does not guarantee rankings, AI citations, traffic, conversions, or revenue
