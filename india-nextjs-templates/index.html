@@ -47,8 +47,13 @@
     .checkout-note{margin-top:22px;border:1px solid rgba(97,212,155,.35);border-radius:16px;background:rgba(97,212,155,.07);padding:20px}
     .checkout-note strong{display:block;color:var(--text);margin-bottom:4px}
     .checkout-note p{margin:.35rem 0 0}
+    .demo-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:20px}
+    .demo{display:block;border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.025);padding:16px;color:var(--text);text-decoration:none;font-weight:800}
+    .demo span{display:block;margin-top:3px;color:var(--muted);font-size:.84rem;font-weight:500}
+    .demo:hover,.demo:focus-visible{border-color:var(--accent);outline:none}
     footer{margin-top:44px;padding-top:24px;border-top:1px solid var(--line);color:var(--muted)}footer a{color:var(--text)}
-    @media(max-width:760px){main{padding-top:44px}.grid,.choice-grid{grid-template-columns:1fr}}
+    @media(max-width:900px){.demo-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media(max-width:760px){main{padding-top:44px}.grid,.choice-grid,.demo-grid{grid-template-columns:1fr}}
   </style>
   <script type="application/ld+json">
   {
@@ -96,6 +101,34 @@
     <div class="checkout-note" role="note">
       <strong>India checkout note</strong>
       <p>Prices are charged in USD, not at a fixed rupee amount. If your payment method converts the purchase to INR, its exchange rate and any provider fees can vary. Gumroad shows the final total and the payment methods available to you before you approve payment; review that amount before purchasing.</p>
+    </div>
+  </section>
+
+  <section class="panel" aria-labelledby="demo-catalog-title">
+    <div class="eyebrow">20 public live previews</div>
+    <h2 id="demo-catalog-title">Open a starting point directly</h2>
+    <p>Review the visual direction and page structure before buying. These are public frontend demos with fictional placeholder content and demo-only interactions.</p>
+    <div class="demo-grid">
+      <a class="demo" href="https://01-modern-saas.vercel.app" target="_blank" rel="noopener">Modern SaaS<span>SaaS / software</span></a>
+      <a class="demo" href="https://02-ai-startup.vercel.app" target="_blank" rel="noopener">AI Startup<span>AI / machine learning</span></a>
+      <a class="demo" href="https://15-mobile-app.vercel.app" target="_blank" rel="noopener">Mobile App Promo<span>App landing</span></a>
+      <a class="demo" href="https://03-digital-agency.vercel.app" target="_blank" rel="noopener">Digital Agency<span>Agency / creative</span></a>
+      <a class="demo" href="https://12-photography-portfolio.vercel.app" target="_blank" rel="noopener">Photography Portfolio<span>Portfolio / booking</span></a>
+      <a class="demo" href="https://free-nextjs-cv-template.vercel.app" target="_blank" rel="noopener">Personal CV<span>Resume / portfolio</span></a>
+      <a class="demo" href="https://04-restaurant-cafe.vercel.app" target="_blank" rel="noopener">Restaurant &amp; Cafe<span>Food / hospitality</span></a>
+      <a class="demo" href="https://10-restaurant-reservation.vercel.app" target="_blank" rel="noopener">Restaurant Reservation<span>Fine dining</span></a>
+      <a class="demo" href="https://17-hotel-booking.vercel.app" target="_blank" rel="noopener">Hotel Booking<span>Hotel / hospitality</span></a>
+      <a class="demo" href="https://06-fitness-gym.vercel.app" target="_blank" rel="noopener">Fitness &amp; Gym<span>Health / sports</span></a>
+      <a class="demo" href="https://09-dental-clinic.vercel.app" target="_blank" rel="noopener">Dental Clinic<span>Healthcare</span></a>
+      <a class="demo" href="https://11-barber-salon.vercel.app" target="_blank" rel="noopener">Barber &amp; Salon<span>Beauty / grooming</span></a>
+      <a class="demo" href="https://05-real-estate.vercel.app" target="_blank" rel="noopener">Real Estate<span>Property listings</span></a>
+      <a class="demo" href="https://18-construction.vercel.app" target="_blank" rel="noopener">Construction<span>B2B services</span></a>
+      <a class="demo" href="https://19-law-firm.vercel.app" target="_blank" rel="noopener">Law Firm<span>Professional services</span></a>
+      <a class="demo" href="https://08-online-course.vercel.app" target="_blank" rel="noopener">Online Course<span>Education</span></a>
+      <a class="demo" href="https://16-newsletter-creator.vercel.app" target="_blank" rel="noopener">Newsletter &amp; Creator<span>Content / media</span></a>
+      <a class="demo" href="https://07-ecommerce-store.vercel.app" target="_blank" rel="noopener">E-Commerce Store<span>Retail / shopping</span></a>
+      <a class="demo" href="https://13-event-conference.vercel.app" target="_blank" rel="noopener">Event &amp; Conference<span>Events / tickets</span></a>
+      <a class="demo" href="https://14-web3-crypto.vercel.app" target="_blank" rel="noopener">Web3 &amp; Crypto<span>Emerging tech</span></a>
     </div>
   </section>
 
