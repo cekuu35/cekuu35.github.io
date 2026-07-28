@@ -142,7 +142,10 @@ function renderResult(result) {
     <div class="upsell" aria-label="Paid Audit Kit">
       <h3>Turn this result into a reviewable client delivery.</h3>
       <p>The $49 kit adds strict JSON validation, a canonical evidence ledger, 16 regression tests, an editable client report, implementation templates, and a 19-page playbook.</p>
-      <a class="button" href="./sample-report.html?utm_source=scorecard_result&amp;utm_medium=owned_tool&amp;utm_campaign=ai_audit_kit_launch&amp;utm_content=result_sample_bridge">See the generated sample report →</a>
+      <div class="cta-actions">
+        <a class="button" href="./sample-report.html?utm_source=scorecard_result&amp;utm_medium=owned_tool&amp;utm_campaign=ai_audit_kit_launch&amp;utm_content=result_sample_bridge">See the generated sample report →</a>
+        <a class="button secondary" href="https://cengokurtoglu.gumroad.com/l/ai-ready-website-audit-kit?wanted=true&amp;utm_source=scorecard_result&amp;utm_medium=owned_tool&amp;utm_campaign=ai_audit_kit_launch&amp;utm_content=result_direct_purchase">Already reviewed it? Get the full Audit Kit — $49</a>
+      </div>
     </div>
   `;
   resultBox.hidden = false;
@@ -228,3 +231,4 @@ function init() {
 }
 
 if (typeof document !== 'undefined') init();
+
