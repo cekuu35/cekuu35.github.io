@@ -134,10 +134,11 @@ function renderResult(result) {
   const resultBox = document.getElementById('result');
   const topGaps = result.prioritizedGaps.slice(0, 5);
   resultBox.innerHTML = `
-    <div class="score-line"><strong>${result.score}</strong><span>/100</span><em class="band band-${result.gapBand}">${result.gapBand} gap band</em></div>
-    <div class="area-grid">${result.areas.map((area) => `<div><span>${escapeHtml(area.label)}</span><strong>${area.earned}/${area.possible}</strong></div>`).join('')}</div>
+    <h2 id="result-heading">Your transparent score</h2>
+    <div class="score-line"><strong>${result.score}</strong> <span>/100</span> <em class="band band-${result.gapBand}">${result.gapBand} gap band</em></div>
+    <div class="area-grid">${result.areas.map((area) => `<div><span>${escapeHtml(area.label)}</span> <strong>${area.earned}/${area.possible}</strong></div>`).join('')}</div>
     <h3>Largest evidence gaps</h3>
-    ${topGaps.length ? `<ol>${topGaps.map((gap) => `<li><strong>${escapeHtml(gap.label)}</strong><span>${gap.gap} point gap · ${escapeHtml(gap.evidenceRef || 'unknown evidence')}</span></li>`).join('')}</ol>` : '<p>No scoring gaps were recorded. Manual verification is still required.</p>'}
+    ${topGaps.length ? `<ol>${topGaps.map((gap) => `<li><strong>${escapeHtml(gap.label)}</strong> <span>${gap.gap} point gap · ${escapeHtml(gap.evidenceRef || 'unknown evidence')}</span></li>`).join('')}</ol>` : '<p>No scoring gaps were recorded. Manual verification is still required.</p>'}
     <div class="upsell" aria-label="Paid Audit Kit">
       <h3>Turn this result into a reviewable client delivery.</h3>
       <p>The $49 kit adds strict JSON validation, a canonical evidence ledger, 16 regression tests, an editable client report, implementation templates, and a 19-page playbook.</p>
