@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>llms.txt Explained: Do You Need One, and How to Create It</title>
+  <meta name="description" content="What llms.txt actually is, what publishing one does and does not do, how to decide whether your site needs one, and three practical ways to create it.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://cekuu35.github.io/llms-txt-guide/">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="llms.txt Explained: Do You Need One, and How to Create It">
+  <meta property="og:description" content="A practical, no-hype guide: the format, the honest limits, a decision framework, and three ways to generate the file.">
+  <meta property="og:url" content="https://cekuu35.github.io/llms-txt-guide/">
+  <meta property="og:image" content="https://cekuu35.github.io/llms-txt-guide/og-card.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="llms.txt Explained: Do You Need One, and How to Create It">
+  <meta name="twitter:image" content="https://cekuu35.github.io/llms-txt-guide/og-card.png">
+  <style>
+    :root{color-scheme:dark;--bg:#070a12;--panel:#101624;--text:#f3f5fa;--muted:#b7c0d1;--line:#273249;--accent:#8ba7ff;--accent2:#79e4c5;--code:#0b1020}
+    *{box-sizing:border-box}
+    body{margin:0;background:radial-gradient(circle at 20% 0,#182342 0,transparent 36%),var(--bg);color:var(--text);font:17px/1.75 system-ui,-apple-system,Segoe UI,sans-serif}
+    main{width:min(820px,calc(100% - 32px));margin:auto;padding:56px 0 72px}
+    a{color:var(--accent)}
+    .eyebrow{color:var(--accent2);font-weight:750;letter-spacing:.11em;text-transform:uppercase;font-size:.78rem}
+    h1{font-size:clamp(2.25rem,6vw,4.2rem);line-height:1.04;letter-spacing:-.045em;margin:.5rem 0 1.2rem}
+    h2{font-size:1.55rem;line-height:1.25;margin:2.4rem 0 .65rem}
+    p,li{color:var(--muted)}
+    .lead{font-size:1.18rem}
+    .meta{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:14px 0;margin:28px 0;color:var(--muted);font-size:.92rem}
+    pre{overflow:auto;background:var(--code);border:1px solid var(--line);border-radius:14px;padding:18px;color:#dce5ff;font-size:.9rem;line-height:1.55}
+    code{font-family:ui-monospace,SFMono-Regular,Consolas,monospace}
+    .note{background:linear-gradient(145deg,rgba(139,167,255,.13),rgba(121,228,197,.045));border:1px solid #3a4d70;border-radius:16px;padding:18px 20px;margin:28px 0}
+    .tool{display:grid;gap:12px;margin:30px 0;padding:22px;border:1px solid #3e5579;border-radius:18px;background:rgba(11,16,32,.72)}
+    .tool h2,.tool p{margin:0}
+    .tool .button{width:max-content}
+    .cta{margin-top:44px;padding:26px;border:1px solid #5d76ff;border-radius:20px;background:linear-gradient(145deg,rgba(139,167,255,.16),rgba(121,228,197,.055))}
+    .button{display:inline-block;background:var(--accent);color:#07101f;text-decoration:none;font-weight:800;padding:12px 16px;border-radius:10px;margin-top:8px}
+    .button.secondary{background:transparent;color:var(--accent);border:1px solid var(--line)}
+    .cta-actions{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+    footer{border-top:1px solid var(--line);margin-top:48px;padding-top:22px;color:var(--muted);font-size:.9rem}
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Article",
+    "headline":"llms.txt Explained: Do You Need One, and How to Create It",
+    "description":"What llms.txt actually is, what publishing one does and does not do, how to decide whether your site needs one, and three practical ways to create it.",
+    "author":{"@type":"Person","name":"Cenk Kurtoğlu","url":"https://github.com/cekuu35"},
+    "datePublished":"2026-07-29",
+    "mainEntityOfPage":"https://cekuu35.github.io/llms-txt-guide/"
+  }
+  </script>
+</head>
+<body>
+  <main>
+    <a href="/">← All products and tools</a>
+    <div class="eyebrow">Free practical guide · AI readability</div>
+    <h1>llms.txt Explained: Do You Need One, and How to Create It</h1>
+    <p class="lead">llms.txt gets pitched as everything from "robots.txt for AI" to a ranking shortcut. It is neither. This guide covers what the file actually is, what publishing one does and does not do, how to decide whether your site needs one at all, and three practical ways to create it.</p>
+    <div class="meta">By Cenk Kurtoğlu, independent solo developer · Published July 29, 2026 · About 7 minutes</div>
+
+    <h2>What llms.txt actually is</h2>
+    <p><code>llms.txt</code> is a convention proposed in 2024: a Markdown file served at your domain root (<code>https://example.com/llms.txt</code>) that gives language models and AI agents a curated, readable map of your site's important content. Where robots.txt tells crawlers what they may <em>not</em> do, llms.txt is the opposite gesture — a short, human-written index of what your site is and where its substantive pages live, in a format models parse well.</p>
+    <p>The conventional structure is simple: one H1 with the site or project name, a short blockquote summary, then a few H2 sections containing link lists with one-line descriptions. A companion convention, <code>llms-full.txt</code>, inlines the actual page content instead of linking to it, for consumers that want everything in one fetch.</p>
+    <pre><code># Project Name
+
+&gt; One-paragraph summary of what this site is and who it serves.
+
+## Products
+
+- [Product page](https://example.com/product/): what it is, price, what it includes
+- [Free tool](https://example.com/tool/): what it does, what it requires
+
+## Docs
+
+- [Getting started](https://example.com/docs/start/): setup in five steps
+</code></pre>
+    <p>A live example: this site's own <a href="/llms.txt">llms.txt</a> lists every product with its price, checkout path, and stated limits, so an AI assistant summarizing the site has current facts to work from instead of a guess.</p>
+
+    <h2>What publishing one does not do</h2>
+    <p>Honesty first, because this is where most llms.txt content oversells:</p>
+    <ul>
+      <li><strong>It is not a standard.</strong> It is a community convention. No major model provider has committed to fetching it on a schedule, and publishing the file does not force any search engine, model, or agent to use it.</li>
+      <li><strong>It is not a ranking or citation guarantee.</strong> There is no verified mechanism by which llms.txt improves search rankings or makes AI assistants cite you. Anyone claiming otherwise is selling something.</li>
+      <li><strong>It is not access control.</strong> It cannot stop a crawler from reading anything. If you want to restrict AI training crawlers, that conversation lives in robots.txt user-agent rules, not here.</li>
+    </ul>
+    <p>What it <em>does</em> do is narrower and still useful: when a model or agent does fetch it — some do today, ad hoc, and agent frameworks increasingly check for it — it finds your curated summary with current facts instead of reconstructing your site from whatever pages happen to be in context. For a site that sells things, that means correct prices and honest scope statements rather than hallucinated ones.</p>
+
+    <h2>Decide whether you need one — and document the decision</h2>
+    <p>A useful decision rule: llms.txt earns its keep when your site has <strong>facts that go stale</strong> (prices, availability, versions, terms) or <strong>structure a model would misread</strong> (many similar pages, mixed free/paid content, multiple products under one domain). A five-page portfolio with static content gains little; a storefront, documentation site, or product catalog gains more.</p>
+    <p>Either answer is legitimate. What matters operationally is that the decision is <em>documented</em> — "we publish llms.txt and regenerate it when the catalog changes" or "we reviewed the convention and decided it is not applicable because X." A recorded not-applicable decision is a complete, defensible outcome; an undocumented shrug is not. (This is exactly how the free <a href="/evidence-led-website-audit/scorecard.html?utm_source=llms_guide&amp;utm_medium=owned_content&amp;utm_campaign=ai_audit_kit_launch&amp;utm_content=guide_decision_check">evidence-led scorecard</a> treats it: the llms.txt check awards full credit for a documented decision either way, and zero for an unresolved one.)</p>
+
+    <h2>Three ways to create the file</h2>
+    <p><strong>1. By hand.</strong> For a small site this is a 30-minute job and produces the best file, because you curate it. Write the H1, the summary blockquote, and sections linking your genuinely important pages with one honest line each. Skip boilerplate pages; a curated 30-line file beats a 3,000-line sitemap dump.</p>
+    <p><strong>2. Generate it from a crawl.</strong> For larger sites, generating a first draft from the site itself is faster and catches pages you forgot. This is the job of my <a href="/llms-txt-generator/?utm_source=llms_guide&amp;utm_medium=owned_content&amp;utm_campaign=llms_generator_guide">llms.txt Generator</a>, a paid Apify Actor (from $5 per 1,000 results): point it at a domain, cap the page count, and it discovers same-domain pages, extracts main content, and writes <code>llms.txt</code>, an optional <code>llms-full.txt</code>, and a per-page dataset exportable as JSON or CSV. Start with a 10-page crawl on a site you control and inspect every output before publishing — generated drafts are a starting point for curation, not a replacement for it.</p>
+    <p><strong>3. Keep it fresh.</strong> A stale llms.txt actively misinforms — an old price in your llms.txt is worse than no file, because it presents wrong facts with confidence. Regenerate or re-edit the file whenever listed facts change, and put a reminder or change-monitoring step behind it. If the file will not be maintained, prefer the documented not-applicable decision over publishing something that will rot.</p>
+
+    <section class="tool" aria-labelledby="tool-title">
+      <div class="eyebrow">Paid Apify Actor · from $5 / 1,000 results</div>
+      <h2 id="tool-title">Generate a reviewable draft from your own site</h2>
+      <p>The llms.txt Generator crawls a domain you control, extracts main content, and produces llms.txt, llms-full.txt, and an exportable page dataset. Public source on GitHub; review every output before publishing. No ranking, citation, or traffic outcome is promised.</p>
+      <a class="button" href="https://apify.com/nacred_corner/llms-txt-generator?utm_source=llms_guide&amp;utm_medium=owned_content&amp;utm_campaign=llms_generator_guide&amp;utm_content=midpage_actor">Run it on Apify</a>
+    </section>
+
+    <h2>Publishing checklist</h2>
+    <ul>
+      <li>Serve the file at the domain root as plain text/Markdown: <code>/llms.txt</code> (and <code>/llms-full.txt</code> if used).</li>
+      <li>Read the whole file once as a stranger: is every fact current, every price right, every claim one you can defend?</li>
+      <li>Keep prices and terms consistent with the pages you link — the file is a promise that those pages agree with it.</li>
+      <li>Record the maintenance rule: what event triggers a regeneration, and who does it.</li>
+      <li>Re-check the file whenever products, prices, or scope statements change.</li>
+    </ul>
+
+    <div class="note">
+      <strong>Honest limit:</strong> llms.txt is a low-cost, low-certainty bet. The cost is an hour and a maintenance habit; the payoff — being represented accurately when an AI system does consult it — is real but not guaranteed by anyone. Treat it as hygiene, not strategy.
+    </div>
+
+    <div class="cta">
+      <div class="eyebrow">Where this fits in a bigger review</div>
+      <h2>llms.txt is one check of a hundred</h2>
+      <p>The documented-llms.txt-decision check is one of twelve checks in the free evidence-led website scorecard — alongside discoverability, metadata, and content hygiene — each requiring an evidence reference before it awards credit. It runs entirely in your browser; nothing is uploaded.</p>
+      <div class="cta-actions">
+        <a class="button" href="/evidence-led-website-audit/scorecard.html?utm_source=llms_guide&amp;utm_medium=owned_tool&amp;utm_campaign=ai_audit_kit_launch&amp;utm_content=guide_end_scorecard">Run the free 100-point scorecard</a>
+        <a class="button secondary" href="/client-website-audit-guide/?utm_source=llms_guide&amp;utm_medium=owned_content&amp;utm_campaign=ai_audit_kit_launch&amp;utm_content=guide_cross_link">How to audit a client's website</a>
+      </div>
+    </div>
+
+    <footer>Built by <a href="https://github.com/cekuu35">Cenk Kurtoğlu</a> · <a href="/llms-txt-generator/">llms.txt Generator</a> · <a href="/">Products and tools</a></footer>
+  </main>
+</body>
+</html>

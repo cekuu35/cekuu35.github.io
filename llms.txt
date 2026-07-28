@@ -34,6 +34,7 @@
 - Buyer page: https://cekuu35.github.io/llms-txt-generator/
 - Apify: https://apify.com/nacred_corner/llms-txt-generator
 - Public source: https://github.com/cekuu35/llms-txt-generator
+- Free guide (what llms.txt is, decision framework, publishing checklist): https://cekuu35.github.io/llms-txt-guide/
 
 ## Next.js + Supabase Launch Checklist
 
