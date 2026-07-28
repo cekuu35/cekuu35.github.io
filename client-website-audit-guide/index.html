@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>How to Do a Website Audit for a Client | Checklist</title>
+  <meta name="description" content="A practical process for auditing a client's website: scoping, evidence collection, transparent scoring, reporting, and pricing the engagement.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://cekuu35.github.io/client-website-audit-guide/">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="How to Do a Website Audit for a Client | Checklist">
+  <meta property="og:description" content="Scope the boundary, collect evidence, score with published rules, report for two readers, and price the engagement without promising outcomes.">
+  <meta property="og:url" content="https://cekuu35.github.io/client-website-audit-guide/">
+  <meta property="og:image" content="https://cekuu35.github.io/evidence-led-website-audit/sample-report-cover.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="How to Do a Website Audit for a Client | Checklist">
+  <meta name="twitter:image" content="https://cekuu35.github.io/evidence-led-website-audit/sample-report-cover.png">
+  <style>
+    :root{color-scheme:dark;--bg:#070a12;--panel:#101624;--text:#f3f5fa;--muted:#b7c0d1;--line:#273249;--accent:#8ba7ff;--accent2:#79e4c5;--code:#0b1020}
+    *{box-sizing:border-box}
+    body{margin:0;background:radial-gradient(circle at 20% 0,#182342 0,transparent 36%),var(--bg);color:var(--text);font:17px/1.75 system-ui,-apple-system,Segoe UI,sans-serif}
+    main{width:min(820px,calc(100% - 32px));margin:auto;padding:56px 0 72px}
+    a{color:var(--accent)}
+    .eyebrow{color:var(--accent2);font-weight:750;letter-spacing:.11em;text-transform:uppercase;font-size:.78rem}
+    h1{font-size:clamp(2.25rem,6vw,4.2rem);line-height:1.04;letter-spacing:-.045em;margin:.5rem 0 1.2rem}
+    h2{font-size:1.55rem;line-height:1.25;margin:2.4rem 0 .65rem}
+    p,li{color:var(--muted)}
+    .lead{font-size:1.18rem}
+    .meta{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:14px 0;margin:28px 0;color:var(--muted);font-size:.92rem}
+    pre{overflow:auto;background:var(--code);border:1px solid var(--line);border-radius:14px;padding:18px;color:#dce5ff;font-size:.9rem;line-height:1.55}
+    code{font-family:ui-monospace,SFMono-Regular,Consolas,monospace}
+    .note{background:linear-gradient(145deg,rgba(139,167,255,.13),rgba(121,228,197,.045));border:1px solid #3a4d70;border-radius:16px;padding:18px 20px;margin:28px 0}
+    .tool{display:grid;gap:12px;margin:30px 0;padding:22px;border:1px solid #3e5579;border-radius:18px;background:rgba(11,16,32,.72)}
+    .tool h2,.tool p{margin:0}
+    .tool .button{width:max-content}
+    .cta{margin-top:44px;padding:26px;border:1px solid #5d76ff;border-radius:20px;background:linear-gradient(145deg,rgba(139,167,255,.16),rgba(121,228,197,.055))}
+    .button{display:inline-block;background:var(--accent);color:#07101f;text-decoration:none;font-weight:800;padding:12px 16px;border-radius:10px;margin-top:8px}
+    .button.secondary{background:transparent;color:var(--accent);border:1px solid var(--line)}
+    .cta-actions{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+    footer{border-top:1px solid var(--line);margin-top:48px;padding-top:22px;color:var(--muted);font-size:.9rem}
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Article",
+    "headline":"How to Do a Website Audit for a Client: A Practical Checklist and Process",
+    "description":"A practical process for auditing a client's website: scoping the boundary, collecting evidence, scoring with published rules, reporting for two readers, and pricing the engagement.",
+    "author":{"@type":"Person","name":"Cenk Kurtoğlu","url":"https://github.com/cekuu35"},
+    "datePublished":"2026-07-29",
+    "mainEntityOfPage":"https://cekuu35.github.io/client-website-audit-guide/"
+  }
+  </script>
+</head>
+<body>
+  <main>
+    <a href="/">← All products and tools</a>
+    <div class="eyebrow">Free practical guide · client website audits</div>
+    <h1>How to Do a Website Audit for a Client: A Practical Checklist and Process</h1>
+    <p class="lead">A client audit succeeds or fails on one question: “Why should I trust this finding?” This guide walks through scoping, evidence collection, scoring, reporting, and pricing so every answer in your audit traces back to something the client can inspect.</p>
+    <div class="meta">By Cenk Kurtoğlu, independent solo developer · Published July 29, 2026 · About 9 minutes</div>
+
+    <p>Auditing your own site is forgiving. You know the history, you can re-check anything in seconds, and nobody asks you to defend a number. Auditing a client’s site is different. The client is paying for conclusions they cannot easily verify themselves, an implementer they hire later will challenge your findings, and a vague deliverable turns into an argument about scope. The process below is the one I use in my own <a href="/evidence-led-website-audit/">evidence-led audit method</a>, adapted for the specific pressures of client work: a written boundary, an evidence ledger, published scoring rules, a report written for two different readers, and a pricing structure that does not depend on promising outcomes you cannot control.</p>
+
+    <h2>1. Scope the engagement in writing before you open a crawler</h2>
+    <p>The most expensive audit mistakes happen before any data is collected. Agree these items in writing — an email the client confirms is enough:</p>
+    <ul>
+      <li><strong>Canonical domain and allowed origins.</strong> Which hostname is the site of record, and which subdomains are in or out.</li>
+      <li><strong>Page sample.</strong> The full public site, or a bounded sample (for example, the pages in the sitemap on the observation date). Name the sample; do not leave it implied.</li>
+      <li><strong>Observation window.</strong> The dates your findings describe. A site is a moving target; your audit is a snapshot, and the report should say so.</li>
+      <li><strong>Exclusions.</strong> Staging environments, authenticated areas, third-party properties, paid-media accounts — anything the client might assume is included but is not.</li>
+      <li><strong>Deliverables.</strong> Exactly what the client receives: a report, a prioritized gap list, raw evidence, a walkthrough call, a re-run. Listing deliverables is also the foundation of your price.</li>
+      <li><strong>What the audit does not claim.</strong> State plainly that the audit documents observed conditions and does not predict rankings, traffic, or revenue. Clients respect this more than you might expect, and it protects both sides.</li>
+    </ul>
+    <p>The scope document prevents the quiet failure where an audit starts with ten public pages, absorbs a help center and a staging URL mid-project, and then presents one percentage as if every page belonged to the same population.</p>
+
+    <h2>2. Agree on the checklist and scoring rules up front</h2>
+    <p>Send the client your checklist and scoring model <em>before</em> you start — not with the final report. Each check needs a name, a rule, and one of at least four states: <strong>observed pass</strong>, <strong>observed fail</strong>, <strong>not applicable</strong> (with a recorded reason), and <strong>unknown</strong> (evidence unavailable or outside scope). Unknown should earn zero credit rather than guessed credit. When the rules are agreed in advance, the final score is an application of a known procedure instead of a negotiation, and the conversation moves from “is this number fair?” to “what do we fix first?”</p>
+
+    <section class="tool" aria-labelledby="scorecard-title">
+      <div class="eyebrow">Free · private in your browser</div>
+      <h2 id="scorecard-title">Try a working example: the evidence-led 100-point scorecard</h2>
+      <p>If you want to see this checklist-plus-evidence structure running, the free scorecard implements it: enter coverage and an evidence reference for each check, and it awards no unsupported credit, keeps unknowns visible, and ranks the largest gaps. Nothing is uploaded.</p>
+      <a class="button" href="/evidence-led-website-audit/scorecard.html?utm_source=client_audit_guide&amp;utm_medium=owned_tool&amp;utm_campaign=ai_audit_kit_launch&amp;utm_content=midpage_scorecard">Open the free scorecard</a>
+    </section>
+
+    <h2>3. Collect evidence, not impressions</h2>
+    <p>Every conclusion in the final report should trace to an observation the client can inspect. The practical tool for this is an evidence ledger: one record per observation, created as you work, each with a stable ID.</p>
+    <pre><code>{
+  "id": "sitemap-root",
+  "source": "https://client-site.example/sitemap.xml",
+  "observedAt": "2026-07-29T10:00:00Z",
+  "observation": "Returned HTTP 200; 42 URLs listed",
+  "confidence": "high"
+}</code></pre>
+    <p>Three habits make the ledger worth its overhead in client work:</p>
+    <ul>
+      <li><strong>Record facts, not inferences.</strong> “Returned HTTP 200 during the review” is defensible. “Search engines can crawl the whole site” is a broader claim that one observation does not support.</li>
+      <li><strong>Timestamp everything.</strong> When the client’s developer says “that page has a title tag now,” you can answer “it did not on July 29 at 10:00 UTC” instead of arguing from memory.</li>
+      <li><strong>Keep raw material.</strong> Screenshots, response bodies, and the raw per-page rows behind any percentage. If your report says 70% of sampled pages have a meta description, another reviewer should be able to reproduce that figure from your rows.</li>
+    </ul>
+    <p>When evidence is missing, resist the urge to fill the gap with judgment. Mark the check unknown and say why. A client audit with visible unknowns reads as more credible, not less, because it shows the boundary of what was actually verified.</p>
+
+    <h2>4. Score with published rules — or skip the score</h2>
+    <p>A score is optional. If you use one, publish the model first: which checks exist, how they are weighted, and the fact that the weighting is your operational model rather than an industry standard. A simple structure allocates fixed points to a handful of areas — for example discoverability, metadata coverage, content hygiene, and operational readiness — and awards credit only for observed passes.</p>
+    <p>The property that matters is traceability: total score → area → individual check → evidence IDs → original observation. If any link in that chain breaks, present the finding qualitatively instead of numerically. A precise-looking number with an untraceable origin is the fastest way to lose a technical client’s trust.</p>
+
+    <h2>5. Write the report for two readers</h2>
+    <p>Nearly every client report has two audiences with opposite needs, and most weak reports serve only one of them.</p>
+    <ul>
+      <li><strong>The decision-maker</strong> needs one to two pages: what was reviewed, the top gaps in priority order, what each gap costs in effort to fix, and — explicitly — what was <em>not</em> verified. Lead with the boundary, not the score.</li>
+      <li><strong>The implementer</strong> needs the full detail: for each finding, the check name, its state, the evidence IDs behind it, why it matters operationally, a concrete suggested next step, and a rough effort size. An implementer who can jump from a finding to the exact observation that produced it will fix things instead of re-litigating them.</li>
+    </ul>
+    <p>Two report rules keep you honest. First, priority order should reflect impact on the client’s stated goals and effort to fix — and you should say that this ranking is your professional judgment, not a computed certainty. Second, never let the recommendations section promise outcomes. “Adding meta descriptions to these 12 pages closes the largest coverage gap in this audit” is accurate. “This will increase your traffic” is a claim your evidence does not support.</p>
+
+    <h2>6. Price the engagement on scope, not on promised outcomes</h2>
+    <p>Because a well-scoped audit has a defined sample, defined checks, and defined deliverables, it prices naturally as a <strong>fixed fee</strong>. Estimate your hours across collection, scoring, report writing, and the walkthrough call, apply your rate, and quote one number tied to the written scope. Three structural choices are worth considering:</p>
+    <ul>
+      <li><strong>Standalone diagnostic.</strong> The audit is the whole engagement. Cleanest to sell, and the report must stand alone without you attached to it.</li>
+      <li><strong>Audit credited toward implementation.</strong> Some or all of the audit fee is credited if the client hires you to fix what you found. This aligns incentives but disclose it in the report itself, since it means you benefit from finding work.</li>
+      <li><strong>Audit plus scheduled re-run.</strong> Sell the initial audit and a re-audit after an agreed implementation window as one package. The re-run is where the client sees progress, and it is much cheaper for you to produce because the scope and rules already exist.</li>
+    </ul>
+    <p>Whatever the structure, two rules hold. Scope changes reprice: adding a subdomain or doubling the sample is a new quote, which is exactly why the boundary from step one is written down. And never price against outcomes you do not control — an audit fee contingent on ranking or traffic movement converts your honest snapshot into a sales document.</p>
+
+    <h2>7. Re-run the same audit, and hand over the record</h2>
+    <p>The re-audit is only meaningful if it is comparable: same scope, same page sample, same normalization rules, same scoring version. Save the before-and-after inputs, reports, and evidence ledgers with their observation dates. If anything changed — the sample, a rule, a weight — disclose it rather than presenting the two scores as a clean delta. A score can move because the site changed, because the evidence improved, or because the rules changed, and those are different events.</p>
+    <p>Finally, hand the client the full record: ledger, raw rows, and scoring definition, not just the PDF. It signals that the audit survives inspection, and it makes you the obvious choice for the next re-run, because you are the only party who can produce a comparable one.</p>
+
+    <div class="note">
+      <strong>Honest limit:</strong> This process documents what was checked, what passed, and what remains unknown inside a stated boundary. It does not prove security, legal compliance, rankings, AI citations, traffic, revenue, or the absence of defects — and a client report should say so explicitly.
+    </div>
+
+    <div class="cta">
+      <div class="eyebrow">If you want the working files</div>
+      <h2>Start free, then decide</h2>
+      <p>I am Cenk Kurtoğlu, an independent solo developer, and I packaged this method as the AI-Ready Website Audit Kit: an author-defined 100-point Node.js scorer that requires evidence IDs for scored checks, a canonical evidence ledger, an editable client report, a 19-page playbook, sixteen deterministic and adversarial tests, and intake, llms.txt, and change-monitoring templates. It runs on Node.js 18+ with no third-party packages.</p>
+      <p>You do not need the kit to use this guide. Start with the free scorecard, read a <a href="/evidence-led-website-audit/sample-report.html?utm_source=client_audit_guide&amp;utm_medium=owned_content&amp;utm_campaign=ai_audit_kit_launch&amp;utm_content=sample_report">generated sample report</a> to judge the output format, and buy the kit only if maintaining these files yourself is worth more than $49 of your time. It includes no ranking, citation, traffic, or revenue promise.</p>
+      <div class="cta-actions">
+        <a class="button" href="/evidence-led-website-audit/scorecard.html?utm_source=client_audit_guide&amp;utm_medium=owned_tool&amp;utm_campaign=ai_audit_kit_launch&amp;utm_content=end_scorecard">Use the free 100-point scorecard</a>
+        <a class="button secondary" href="https://cengokurtoglu.gumroad.com/l/ai-ready-website-audit-kit?wanted=true&amp;utm_source=client_audit_guide&amp;utm_medium=owned_content&amp;utm_campaign=ai_audit_kit_launch&amp;utm_content=guide_end_checkout">Get the full Audit Kit — $49</a>
+      </div>
+    </div>
+
+    <footer>Built by <a href="https://github.com/cekuu35">Cenk Kurtoğlu</a> · <a href="/evidence-led-website-audit/">Evidence-led audit method</a> · <a href="/">Products and tools</a></footer>
+  </main>
+</body>
+</html>

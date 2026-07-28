@@ -1,0 +1,48 @@
+name: IndexNow ping
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '**/*.html'
+      - 'sitemap.xml'
+      - 'feed.xml'
+      - 'llms.txt'
+      - 'products.json'
+
+permissions:
+  contents: read
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Submit sitemap URLs to IndexNow
+        run: |
+          python3 - <<'EOF'
+          import json, re, urllib.request
+
+          KEY = 'd3f4140886c8d926a9928ea90f53aded'
+          HOST = 'cekuu35.github.io'
+
+          with open('sitemap.xml') as f:
+              urls = re.findall(r'<loc>(.*?)</loc>', f.read())
+          payload = {
+              'host': HOST,
+              'key': KEY,
+              'keyLocation': f'https://{HOST}/{KEY}.txt',
+              'urlList': urls,
+          }
+          req = urllib.request.Request(
+              'https://api.indexnow.org/indexnow',
+              data=json.dumps(payload).encode(),
+              headers={'Content-Type': 'application/json; charset=utf-8'},
+          )
+          try:
+              with urllib.request.urlopen(req, timeout=30) as resp:
+                  print(f'IndexNow response: {resp.status}')
+          except urllib.error.HTTPError as e:
+              print(f'IndexNow HTTP {e.code}: {e.read().decode()[:500]}')
+          print(f'Submitted {len(urls)} URLs')
+          EOF

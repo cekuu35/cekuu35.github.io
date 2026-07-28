@@ -124,10 +124,13 @@ function setEntries(entries) {
 }
 
 function readEntries() {
-  return Object.fromEntries(CHECKS.map((check) => [check.id, {
-    coverage: Number(document.getElementById(`coverage-${check.id}`).value),
-    evidenceRef: document.getElementById(`evidence-${check.id}`).value,
-  }]));
+  return Object.fromEntries(CHECKS.map((check) => {
+    const raw = document.getElementById(`coverage-${check.id}`).value.trim();
+    return [check.id, {
+      coverage: raw === '' ? NaN : Number(raw),
+      evidenceRef: document.getElementById(`evidence-${check.id}`).value,
+    }];
+  }));
 }
 
 function renderResult(result) {
@@ -174,14 +177,20 @@ function init() {
         </fieldset>`).join('')}
     </section>`).join('');
 
-  document.getElementById('load-example').addEventListener('click', () => setEntries(defaultEntries(true)));
+  let latest = null;
+  document.getElementById('load-example').addEventListener('click', () => {
+    setEntries(defaultEntries(true));
+    latest = null;
+    document.getElementById('result').hidden = true;
+    document.getElementById('form-error').hidden = true;
+  });
   document.getElementById('clear-scorecard').addEventListener('click', () => {
     setEntries(defaultEntries(false));
+    latest = null;
     document.getElementById('result').hidden = true;
     document.getElementById('form-error').hidden = true;
   });
 
-  let latest = null;
   form.addEventListener('submit', (event) => {
     event.preventDefault();
     const error = document.getElementById('form-error');
@@ -198,7 +207,7 @@ function init() {
   });
 
   document.getElementById('download-result').addEventListener('click', () => {
-    if (!latest) form.requestSubmit();
+    form.requestSubmit();
     if (!latest) return;
     const payload = {
       siteUrl: document.getElementById('site-url').value.trim() || null,
@@ -213,7 +222,7 @@ function init() {
   });
 
   document.getElementById('copy-report').addEventListener('click', async () => {
-    if (!latest) form.requestSubmit();
+    form.requestSubmit();
     if (!latest) return;
     const button = document.getElementById('copy-report');
     const report = toMarkdown(latest, {
@@ -223,10 +232,15 @@ function init() {
     try {
       await navigator.clipboard.writeText(report);
       button.textContent = 'Copied';
-      window.setTimeout(() => { button.textContent = 'Copy Markdown'; }, 1600);
     } catch {
-      button.textContent = 'Copy unavailable';
+      const anchor = document.createElement('a');
+      anchor.href = URL.createObjectURL(new Blob([report], { type: 'text/markdown' }));
+      anchor.download = 'evidence-led-scorecard.md';
+      anchor.click();
+      URL.revokeObjectURL(anchor.href);
+      button.textContent = 'Saved as file';
     }
+    window.setTimeout(() => { button.textContent = 'Copy Markdown'; }, 1600);
   });
 }
 
