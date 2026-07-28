@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Next.js + Supabase Launch Checklist — Real PDF Preview</title>
+  <meta name="description" content="Preview real pages from a 60-check, 8-page Next.js and Supabase launch-readiness PDF covering secrets, RLS, auth, performance and go-live.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://cekuu35.github.io/nextjs-supabase-checklist-preview/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Next.js + Supabase Launch Checklist — Real PDF Preview">
+  <meta property="og:description" content="Inspect real delivered pages before buying the 60-check, 8-page PDF.">
+  <meta property="og:url" content="https://cekuu35.github.io/nextjs-supabase-checklist-preview/">
+  <meta property="og:image" content="https://nextjs-supabase-checklist-preview.vercel.app/preview-cover.png">
+  <style>
+    :root{color-scheme:dark;--bg:#07101f;--panel:#101c31;--line:#2d4569;--ink:#f7f9ff;--muted:#adbad0;--blue:#5aa2ff;--blue2:#7b61ff;--green:#58d68d}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:radial-gradient(circle at 15% 0%,rgba(90,162,255,.18),transparent 31rem),radial-gradient(circle at 92% 16%,rgba(123,97,255,.14),transparent 25rem),var(--bg);color:var(--ink);font:16px/1.55 Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+    a{color:inherit}
+    a:focus-visible{outline:3px solid #b9c8ff;outline-offset:4px}
+    .skip{position:absolute;left:12px;top:-80px;z-index:10;background:#fff;color:#07101f;padding:10px 14px;border-radius:8px;font-weight:800}
+    .skip:focus{top:12px}
+    .shell{width:min(1120px,calc(100% - 32px));margin:0 auto}
+    header{padding:28px 0 12px}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{font-weight:800;letter-spacing:-.02em}
+    .badge{display:inline-flex;align-items:center;gap:8px;padding:7px 11px;border:1px solid var(--line);border-radius:999px;color:var(--muted);font-size:13px;background:rgba(16,28,49,.75)}
+    .dot{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 16px var(--green)}
+    .hero{padding:54px 0 48px;display:grid;grid-template-columns:1.08fr .92fr;gap:54px;align-items:center}
+    .eyebrow{margin:0 0 14px;color:var(--blue);font-weight:800;font-size:13px;letter-spacing:.12em;text-transform:uppercase}
+    h1{margin:0;max-width:760px;font-size:clamp(42px,6.4vw,74px);line-height:1.03;letter-spacing:-.055em}
+    .lead{max-width:690px;margin:24px 0 0;color:var(--muted);font-size:clamp(18px,2vw,22px)}
+    .actions{margin-top:30px;display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+    .button{display:inline-flex;justify-content:center;align-items:center;min-height:50px;padding:0 21px;border-radius:12px;font-weight:800;text-decoration:none;background:linear-gradient(135deg,var(--blue),var(--blue2));color:#fff;box-shadow:0 15px 45px rgba(79,126,255,.25)}
+    .button.secondary{background:transparent;border:1px solid var(--line);box-shadow:none;color:var(--muted)}
+    .price{font-weight:900;font-size:21px}
+    .hero-card{padding:12px;border:1px solid var(--line);border-radius:24px;background:rgba(16,28,49,.78);box-shadow:0 26px 80px rgba(0,0,0,.32)}
+    .hero-card img,figure img{display:block;width:100%;height:auto;background:#fff}
+    .hero-card img{border-radius:16px}
+    .proof{border-block:1px solid var(--line);background:rgba(8,19,36,.7)}
+    .proof-grid{display:grid;grid-template-columns:repeat(4,1fr)}
+    .stat{padding:22px 18px;border-right:1px solid var(--line)}
+    .stat:last-child{border-right:0}
+    .stat strong{display:block;font-size:22px}
+    .stat span{color:var(--muted);font-size:14px}
+    section{padding:66px 0}
+    h2{margin:0;font-size:clamp(30px,4vw,48px);letter-spacing:-.04em}
+    .section-copy{margin:14px 0 0;max-width:720px;color:var(--muted);font-size:18px}
+    .preview-grid{margin-top:34px;display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+    figure{margin:0;padding:10px;border-radius:20px;border:1px solid var(--line);background:var(--panel)}
+    figure img{border-radius:13px}
+    figcaption{padding:13px 8px 5px;color:var(--muted);font-size:14px}
+    .checks{margin-top:32px;display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+    .check{padding:20px;border:1px solid var(--line);border-radius:17px;background:rgba(16,28,49,.68)}
+    .check b{display:block;margin-bottom:7px}
+    .check p{margin:0;color:var(--muted)}
+    .cta{padding:34px;border-radius:24px;border:1px solid #416da7;background:linear-gradient(145deg,rgba(39,79,133,.48),rgba(16,28,49,.82));display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .cta p{margin:7px 0 0;color:var(--muted)}
+    .fine{margin:24px 0 0;color:#9eabc0;font-size:13px}
+    footer{padding:34px 0 80px;color:#8d99ad;font-size:13px}
+    @media(max-width:840px){.hero{grid-template-columns:1fr;padding-top:48px}.hero-card{max-width:560px}.proof-grid{grid-template-columns:repeat(2,1fr)}.stat:nth-child(2){border-right:0}.stat:nth-child(-n+2){border-bottom:1px solid var(--line)}.checks{grid-template-columns:1fr}.cta{align-items:flex-start;flex-direction:column}}
+    @media(max-width:610px){.shell{width:min(100% - 22px,1120px)}.nav{align-items:flex-start;flex-direction:column}.hero{gap:30px}.preview-grid{grid-template-columns:1fr}.actions{align-items:stretch;flex-direction:column}.button{width:100%}.price{text-align:center}}
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="shell">
+    <nav class="nav" aria-label="Primary">
+      <div class="brand">Next.js + Supabase Launch Checklist</div>
+      <div class="badge"><span class="dot" aria-hidden="true"></span> Real pages from the delivered PDF</div>
+    </nav>
+  </header>
+  <main id="main">
+    <div class="shell hero">
+      <div>
+        <p class="eyebrow">60-check launch-readiness review</p>
+        <h1>See the actual checklist before you buy.</h1>
+        <p class="lead">An 8-page PDF for solo developers and small teams shipping Next.js + Supabase. Review secrets, RLS, auth, performance, metadata, reliability and go-live.</p>
+        <div class="actions">
+          <a class="button" href="https://cengokurtoglu.gumroad.com/l/xjnmxt?utm_source=github_pages_preview&amp;utm_medium=owned_preview&amp;utm_campaign=nextjs_supabase_checklist&amp;utm_content=hero_product_page" rel="noopener">Get the checklist on Gumroad</a>
+          <a class="button secondary" href="#preview">View real pages</a>
+          <span class="price">$12</span>
+        </div>
+      </div>
+      <div class="hero-card">
+        <img src="https://nextjs-supabase-checklist-preview.vercel.app/preview-cover.png" width="1325" height="1325" alt="Real cover page of the Next.js and Supabase Production Checklist PDF">
+      </div>
+    </div>
+    <div class="proof">
+      <div class="shell proof-grid" aria-label="Product facts">
+        <div class="stat"><strong>60</strong><span>launch checks</span></div>
+        <div class="stat"><strong>8 pages</strong><span>single PDF</span></div>
+        <div class="stat"><strong>7 areas</strong><span>from secrets to go-live</span></div>
+        <div class="stat"><strong>$12</strong><span>one-time purchase</span></div>
+      </div>
+    </div>
+    <section id="preview" class="shell">
+      <h2>Real page previews</h2>
+      <p class="section-copy">These images are direct crops from the delivered PDF. They are not mockups or substitute content.</p>
+      <div class="preview-grid">
+        <figure>
+          <img src="https://nextjs-supabase-checklist-preview.vercel.app/preview-security.png" width="1325" height="1325" loading="lazy" alt="Security and secrets checklist page with example Next.js headers">
+          <figcaption>Page 2 — Security and secrets, including client/server boundaries and baseline headers.</figcaption>
+        </figure>
+        <figure>
+          <img src="https://nextjs-supabase-checklist-preview.vercel.app/preview-rls.png" width="1325" height="1325" loading="lazy" alt="Supabase Row Level Security checklist page with SQL policy example">
+          <figcaption>Page 3 — Supabase RLS checks, SQL policy examples and a normal-user quick test.</figcaption>
+        </figure>
+      </div>
+      <div class="checks" aria-label="Included review examples">
+        <div class="check"><b>Client/server boundary</b><p>Review what can reach the browser and keep service-role operations server-side.</p></div>
+        <div class="check"><b>RLS behavior</b><p>Enable policies on public tables and test access with a real non-admin account.</p></div>
+        <div class="check"><b>Production path</b><p>Check domains, environment variables, monitoring, backups and payment webhooks.</p></div>
+      </div>
+    </section>
+    <section class="shell">
+      <div class="cta">
+        <div>
+          <h2>Run it before your next deploy.</h2>
+          <p>Download the full 60-check, 8-page PDF through Gumroad.</p>
+        </div>
+        <a class="button" href="https://cengokurtoglu.gumroad.com/l/xjnmxt?wanted=true&amp;utm_source=github_pages_preview&amp;utm_medium=owned_preview&amp;utm_campaign=nextjs_supabase_checklist&amp;utm_content=post_proof_direct_purchase" rel="noopener">Get it for $12</a>
+      </div>
+      <p class="fine">This is an educational checklist, not an automated scan, penetration test, compliance review, or guarantee that an application is secure or bug-free. Adapt and test every example in your own environment.</p>
+    </section>
+  </main>
+  <footer class="shell">Independent product preview · Delivered as a PDF through Gumroad</footer>
+</body>
+</html>
