@@ -47,7 +47,7 @@
       "price": "$12 USD one-time",
       "format": "8-page PDF (117 KB)",
       "checks": 60,
-      "preview": "https://nextjs-supabase-checklist-preview.vercel.app/?utm_source=product_catalog&utm_medium=owned&utm_campaign=launch_checklist",
+      "preview": "https://cekuu35.github.io/nextjs-supabase-checklist-preview/?utm_source=product_catalog&utm_medium=owned&utm_campaign=launch_checklist",
       "checkout": "https://cengokurtoglu.gumroad.com/l/xjnmxt?utm_source=product_catalog&utm_medium=owned&utm_campaign=launch_checklist",
       "disclosure": "Educational checklist; not an automated scan, penetration test, compliance review, or security guarantee.",
       "landing_page": "https://cekuu35.github.io/nextjs-supabase-launch-checklist/?utm_source=product_catalog&utm_medium=owned&utm_campaign=launch_checklist"

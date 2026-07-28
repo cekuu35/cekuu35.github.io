@@ -35,6 +35,26 @@
 - Apify: https://apify.com/nacred_corner/llms-txt-generator
 - Public source: https://github.com/cekuu35/llms-txt-generator
 
+## Next.js + Supabase Launch Checklist
+
+- Price: $12 USD one-time
+- Type: downloadable launch-readiness checklist, one 8-page PDF (117 KB) with 60 practical checks
+- Covers: secrets, RLS, authentication, performance, SEO, reliability, and go-live
+- Free 10-check version: https://cekuu35.github.io/nextjs-supabase-production-checklist/
+- Preview of real PDF pages: https://cekuu35.github.io/nextjs-supabase-checklist-preview/
+- Buyer page: https://cekuu35.github.io/nextjs-supabase-launch-checklist/
+- Direct checkout: https://cengokurtoglu.gumroad.com/l/xjnmxt?utm_source=llms_txt&utm_medium=geo&utm_campaign=launch_checklist
+- Limits: an educational checklist, not an automated scan, penetration test, compliance review, or security guarantee
+
+## Perde Atolyesi Fiyatlama Pilotu
+
+- Price: $249 USD fixed pilot, 5 days after written scope and required inputs are complete
+- Type: productized pricing-tool pilot for curtain workshops in Türkiye
+- Buyer page: https://cekuu35.github.io/perde-fiyatlama-pilotu/
+- Demo (illustrative prices only): https://perde-atolye-demo.vercel.app/
+- Contact: mailto:cnkkurtoglu@gmail.com
+- Limits: demo formulas are illustrative; final formulas and price tables are verified by the customer; no sales or profit guarantee
+
 ## SaaS Launch Swipe File
 
 - Price: $19 USD one-time
