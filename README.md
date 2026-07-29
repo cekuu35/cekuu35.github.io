@@ -5,7 +5,7 @@ This repository powers a focused public storefront for two verified Gumroad deve
 ## Products
 
 - [AI-Ready Website Audit Kit](https://cengokurtoglu.gumroad.com/l/ai-ready-website-audit-kit?utm_source=github_pages_repo&utm_medium=referral&utm_campaign=ai_ready_audit_kit) — **$49 one-time**; an evidence-backed 100-point workflow with a dependency-free Node.js scorer, evidence ledger, 19-page playbook, regression tests, and editable client-report templates. Built by an independent solo developer; no ranking, AI-citation, traffic, or revenue guarantee.
-- [Next.js + Supabase Launch Checklist](https://cekuu35.github.io/nextjs-supabase-launch-checklist/?utm_source=github_pages_repo&utm_medium=referral&utm_campaign=launch_checklist) — **$12 one-time** (launch code `LAUNCH20` was verified at checkout as 20% off while Gumroad accepts it); 60 checks in one 8-page PDF delivered through Gumroad, with real pages previewable before buying.
+- [Next.js + Supabase Launch Checklist](https://cekuu35.github.io/nextjs-supabase-launch-checklist/?utm_source=github_pages_repo&utm_medium=referral&utm_campaign=launch_checklist) — **$12 one-time**; 60 checks in one 8-page PDF delivered through Gumroad, with real pages previewable before buying.
 
 ## Free tools and guides
 

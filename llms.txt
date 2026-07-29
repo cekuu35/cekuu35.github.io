@@ -27,7 +27,6 @@
 - Preview of real PDF pages: https://cekuu35.github.io/nextjs-supabase-checklist-preview/
 - Buyer page: https://cekuu35.github.io/nextjs-supabase-launch-checklist/
 - Direct checkout: https://cengokurtoglu.gumroad.com/l/xjnmxt?utm_source=llms_txt&utm_medium=geo&utm_campaign=launch_checklist
-- Launch code: LAUNCH20 was verified at checkout as 20% off the $12 list price while Gumroad accepts the code
 - Limits: an educational checklist, not an automated scan, penetration test, compliance review, or security guarantee
 
 The public catalog is intentionally focused on these two live products. Other pages on this domain are supporting material or archived listings and are intentionally excluded from this catalog.
