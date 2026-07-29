@@ -140,40 +140,68 @@
   </div>
   <script>
     (() => {
-      const cta = document.getElementById('kit-cta');
-      if (!cta) return;
-
-      const params = new URLSearchParams(window.location.search);
-      // A missing or duplicated utm_source fails closed to the static fallback.
-      if (params.getAll('utm_source').length !== 1) return;
-
-      const source = params.get('utm_source');
-      const allowed = new Set([
-        'evidence_guide',
-        'scorecard_result',
-        'client_audit_guide',
-        'homepage',
-        'llms_guide',
-        'report_example_guide',
-        'llms_txt_generator_landing',
-        'llms_txt_generator_readme',
-        'github_profile',
-        'nextjs_templates_readme',
-        'linkedin_profile',
-        'reddit',
-        'hackernews',
-        'producthunt',
-        'twitter',
-        'indiehackers',
-        'rss'
+      const keys = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content'];
+      const allowedTuples = new Set([
+        JSON.stringify(['llms_txt_generator_landing', 'owned_content', 'ai_audit_kit_launch', 'curated_directory_path']),
+        JSON.stringify(['llms_txt_generator_readme', 'referral', 'ai_audit_kit_launch', 'free_method']),
+        JSON.stringify(['github_profile', 'referral', 'ai_audit_kit_launch', 'free_method']),
+        JSON.stringify(['nextjs_templates_readme', 'referral', 'ai_audit_kit_launch', 'client_handoff']),
+        JSON.stringify(['linkedin_profile', 'social', 'ai_audit_kit_launch', 'evidence_method_post']),
+        JSON.stringify(['homepage', 'owned_tool', 'ai_audit_kit_launch', 'hero_scorecard']),
+        JSON.stringify(['homepage', 'owned_tool', 'ai_audit_kit_launch', 'interactive_scorecard']),
+        JSON.stringify(['homepage', 'owned_tool', 'ai_audit_kit_launch', 'free_strip_scorecard']),
+        JSON.stringify(['client_audit_guide', 'owned_tool', 'ai_audit_kit_launch', 'midpage_scorecard']),
+        JSON.stringify(['client_audit_guide', 'owned_content', 'ai_audit_kit_launch', 'sample_report']),
+        JSON.stringify(['client_audit_guide', 'owned_tool', 'ai_audit_kit_launch', 'end_scorecard']),
+        JSON.stringify(['report_example_guide', 'owned_content', 'ai_audit_kit_launch', 'live_sample']),
+        JSON.stringify(['report_example_guide', 'owned_tool', 'ai_audit_kit_launch', 'guide_scorecard']),
+        JSON.stringify(['report_example_guide', 'owned_content', 'ai_audit_kit_launch', 'end_sample']),
+        JSON.stringify(['llms_guide', 'owned_content', 'ai_audit_kit_launch', 'guide_decision_check']),
+        JSON.stringify(['llms_guide', 'owned_tool', 'ai_audit_kit_launch', 'guide_end_scorecard']),
+        JSON.stringify(['evidence_guide', 'owned_content', 'ai_audit_kit_launch', 'sample_report_bridge']),
+        JSON.stringify(['evidence_guide', 'owned_tool', 'ai_audit_kit_launch', 'interactive_scorecard']),
+        JSON.stringify(['sample_report', 'owned_preview', 'ai_audit_kit_launch', 'try_scorecard']),
+        JSON.stringify(['scorecard_tool', 'owned_tool', 'ai_audit_kit_launch', 'static_sample_bridge']),
+        JSON.stringify(['scorecard_result', 'owned_tool', 'ai_audit_kit_launch', 'result_sample_bridge'])
       ]);
-      if (!allowed.has(source)) return;
+      const params = new URLSearchParams(window.location.search);
+      const incoming = keys.map((key) => params.get(key));
+      const validTuple =
+        keys.every((key) => params.getAll(key).length === 1) &&
+        allowedTuples.has(JSON.stringify(incoming));
+      const ownedPaths = new Set([
+        '/evidence-led-website-audit/sample-report.html',
+        '/evidence-led-website-audit/scorecard.html'
+      ]);
 
-      const target = new URL(cta.href);
-      if (target.origin !== 'https://cengokurtoglu.gumroad.com') return;
+      const decorateAuditKitUrl = (href) => {
+        if (!validTuple) return href;
 
-      target.searchParams.set('utm_source', source);
-      cta.href = target.toString();
+        let target;
+        try {
+          target = new URL(href, window.location.href);
+        } catch {
+          return href;
+        }
+
+        const approvedOwnedTarget =
+          target.origin === 'https://cekuu35.github.io' &&
+          ownedPaths.has(target.pathname);
+        const approvedCheckoutTarget =
+          target.origin === 'https://cengokurtoglu.gumroad.com' &&
+          target.pathname === '/l/ai-ready-website-audit-kit';
+
+        if (!approvedOwnedTarget && !approvedCheckoutTarget) return href;
+
+        keys.forEach((key, index) => target.searchParams.set(key, incoming[index]));
+        return target.toString();
+      };
+
+      window.decorateAuditKitUrl = decorateAuditKitUrl;
+      document.querySelectorAll('a[href]').forEach((link) => {
+        const decorated = decorateAuditKitUrl(link.href);
+        if (decorated !== link.href) link.href = decorated;
+      });
     })();
   </script>
 </body>
