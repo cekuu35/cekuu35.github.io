@@ -1,6 +1,6 @@
 # Cenk Kurtoglu — Verified Digital Products
 
-> Live apps, AI automation, editable source packages, and disclosed software-asset offers. No revenue, conversion, or client-acquisition outcome is guaranteed.
+> Two verified Gumroad developer products plus free supporting guides and tools. No revenue, conversion, or client-acquisition outcome is guaranteed.
 
 ## Current focus: AI-Ready Website Audit Kit
 
@@ -13,28 +13,10 @@
 - Scorecard privacy: no signup, file upload, website crawl, backend, or saved audit data
 - Product page: https://cengokurtoglu.gumroad.com/l/ai-ready-website-audit-kit
 - Generated sample report and purchase bridge: https://cekuu35.github.io/evidence-led-website-audit/sample-report.html
+- Free guide — how to audit a client's website: https://cekuu35.github.io/client-website-audit-guide/
+- Free guide — what a good audit report contains: https://cekuu35.github.io/website-audit-report-example/
 - Limits: an operational workflow, not a certification; it does not guarantee rankings, AI citations, traffic, conversions, or revenue
 - Seller: built and maintained by an independent solo developer
-
-
-## Abonem: Subscription Tracker
-
-- Type: iOS and iPadOS finance app
-- Price: free download with optional Premium in-app purchases; regional pricing is shown by Apple
-- Türkiye Premium pricing observed on 2026-07-24: ₺49.99 monthly, ₺249.99 yearly, or ₺499.99 lifetime
-- Purpose: track subscriptions and recurring bills, review monthly/yearly totals, and receive renewal reminders
-- Buyer page: https://cekuu35.github.io/abonem/
-- App Store: https://apps.apple.com/tr/app/abonem-subscription-tracker/id6776748341
-
-## llms.txt Generator
-
-- Type: paid Apify Actor / API automation
-- Current public price: from $5 USD per 1,000 results
-- Output: llms.txt, llms-full.txt, and a page dataset exportable as JSON/CSV
-- Buyer page: https://cekuu35.github.io/llms-txt-generator/
-- Apify: https://apify.com/nacred_corner/llms-txt-generator
-- Public source: https://github.com/cekuu35/llms-txt-generator
-- Free guide (what llms.txt is, decision framework, publishing checklist): https://cekuu35.github.io/llms-txt-guide/
 
 ## Next.js + Supabase Launch Checklist
 
@@ -45,59 +27,7 @@
 - Preview of real PDF pages: https://cekuu35.github.io/nextjs-supabase-checklist-preview/
 - Buyer page: https://cekuu35.github.io/nextjs-supabase-launch-checklist/
 - Direct checkout: https://cengokurtoglu.gumroad.com/l/xjnmxt?utm_source=llms_txt&utm_medium=geo&utm_campaign=launch_checklist
+- Launch code: LAUNCH20 was verified at checkout as 20% off the $12 list price while Gumroad accepts the code
 - Limits: an educational checklist, not an automated scan, penetration test, compliance review, or security guarantee
 
-## Perde Atölyesi Fiyatlama Pilotu
-
-- Price: $249 USD fixed pilot, 5 days after written scope and required inputs are complete
-- Type: productized pricing-tool pilot for curtain workshops in Türkiye
-- Buyer page: https://cekuu35.github.io/perde-fiyatlama-pilotu/
-- Demo (illustrative prices only): https://perde-atolye-demo.vercel.app/
-- Contact: mailto:cnkkurtoglu@gmail.com
-- Limits: demo formulas are illustrative; final formulas and price tables are verified by the customer; no sales or profit guarantee
-
-## SaaS Launch Swipe File
-
-- Price: $19 USD one-time
-- Type: downloadable launch-copy and distribution kit
-- Includes: 40+ fill-in templates, a seven-day launch plan, Product Hunt materials, channel-specific copy, and a checklist
-- Buyer page: https://cekuu35.github.io/saas-launch-swipe-file/
-- Direct checkout: https://cengokurtoglu.gumroad.com/l/nsxvw?wanted=true&utm_source=llms_txt&utm_medium=geo&utm_campaign=all_products
-
-## Clean Studio
-
-- Price: $50 USD one-time
-- Type: standalone editable Next.js agency source package
-- Demo: https://22-basic-tier.vercel.app/
-- Limits: the visual demo contains fictional placeholder business claims that must be replaced
-- Direct checkout: https://cengokurtoglu.gumroad.com/l/vbfqge?wanted=true&utm_source=llms_txt&utm_medium=geo&utm_campaign=all_products
-
-## Meridian
-
-- Price: $100 USD one-time
-- Type: animated standalone editable Next.js agency source package
-- Demo: https://23-standard-tier.vercel.app/
-- Limits: the visual demo contains fictional placeholder business claims that must be replaced
-- Direct checkout: https://cengokurtoglu.gumroad.com/l/fkeylc?wanted=true&utm_source=llms_txt&utm_medium=geo&utm_campaign=all_products
-
-## Premium Nexus Studio
-
-- Price: $250 USD one-time
-- Type: editable cinematic 3D Next.js studio template
-- Buyer page: https://cekuu35.github.io/premium-nexus-studio/
-- Demo: https://21-ultra-premium.vercel.app/
-- Direct checkout: https://cengokurtoglu.gumroad.com/l/kbwlkv?wanted=true&utm_source=llms_txt&utm_medium=geo&utm_campaign=all_products
-
-## Renderivo software asset acquisition
-
-- Price: $10,000 USD via reputable funded escrow
-- Status: pre-revenue, as-is software asset; not represented as an operating SaaS or proven-revenue business
-- Full scope and material disclosures: https://github.com/cekuu35/cekuu35/blob/main/RENDERIVO_ACQUISITION.md
-- Contact: mailto:cnkkurtoglu@gmail.com?subject=Renderivo%20asset%20acquisition
-
-## Free source sample
-
-- Next.js CV template: https://github.com/cekuu35/free-nextjs-cv-template
-- Demo: https://free-nextjs-cv-template.vercel.app
-
-Drafts and products without a working checkout or delivery path are intentionally excluded from this live catalog.
+The public catalog is intentionally focused on these two live products. Other pages on this domain are supporting material or archived listings and are intentionally excluded from this catalog.
