@@ -1,3 +1,77 @@
+const ATTRIBUTION_KEYS = Object.freeze(['utm_source', 'utm_medium', 'utm_campaign', 'utm_content']);
+const ALLOWED_ATTRIBUTION_TUPLES = new Set([
+  JSON.stringify(['llms_txt_generator_landing', 'owned_content', 'ai_audit_kit_launch', 'curated_directory_path']),
+  JSON.stringify(['llms_txt_generator_readme', 'referral', 'ai_audit_kit_launch', 'free_method']),
+  JSON.stringify(['github_profile', 'referral', 'ai_audit_kit_launch', 'free_method']),
+  JSON.stringify(['nextjs_templates_readme', 'referral', 'ai_audit_kit_launch', 'client_handoff']),
+  JSON.stringify(['linkedin_profile', 'social', 'ai_audit_kit_launch', 'evidence_method_post']),
+  JSON.stringify(['homepage', 'owned_tool', 'ai_audit_kit_launch', 'hero_scorecard']),
+  JSON.stringify(['homepage', 'owned_tool', 'ai_audit_kit_launch', 'interactive_scorecard']),
+  JSON.stringify(['homepage', 'owned_tool', 'ai_audit_kit_launch', 'free_strip_scorecard']),
+  JSON.stringify(['client_audit_guide', 'owned_tool', 'ai_audit_kit_launch', 'midpage_scorecard']),
+  JSON.stringify(['client_audit_guide', 'owned_content', 'ai_audit_kit_launch', 'sample_report']),
+  JSON.stringify(['client_audit_guide', 'owned_tool', 'ai_audit_kit_launch', 'end_scorecard']),
+  JSON.stringify(['report_example_guide', 'owned_content', 'ai_audit_kit_launch', 'live_sample']),
+  JSON.stringify(['report_example_guide', 'owned_tool', 'ai_audit_kit_launch', 'guide_scorecard']),
+  JSON.stringify(['report_example_guide', 'owned_content', 'ai_audit_kit_launch', 'end_sample']),
+  JSON.stringify(['llms_guide', 'owned_content', 'ai_audit_kit_launch', 'guide_decision_check']),
+  JSON.stringify(['llms_guide', 'owned_tool', 'ai_audit_kit_launch', 'guide_end_scorecard']),
+  JSON.stringify(['evidence_guide', 'owned_content', 'ai_audit_kit_launch', 'sample_report_bridge']),
+  JSON.stringify(['evidence_guide', 'owned_tool', 'ai_audit_kit_launch', 'interactive_scorecard']),
+  JSON.stringify(['sample_report', 'owned_preview', 'ai_audit_kit_launch', 'try_scorecard']),
+  JSON.stringify(['scorecard_tool', 'owned_tool', 'ai_audit_kit_launch', 'static_sample_bridge']),
+  JSON.stringify(['scorecard_result', 'owned_tool', 'ai_audit_kit_launch', 'result_sample_bridge'])
+]);
+const ATTRIBUTION_OWNED_PATHS = new Set([
+  '/evidence-led-website-audit/sample-report.html',
+  '/evidence-led-website-audit/scorecard.html'
+]);
+
+export function decorateAuditKitUrl(
+  href,
+  pageUrl = typeof window !== 'undefined' ? window.location.href : null,
+) {
+  if (!pageUrl) return href;
+
+  let page;
+  try {
+    page = new URL(pageUrl);
+  } catch {
+    return href;
+  }
+
+  const incoming = ATTRIBUTION_KEYS.map((key) => page.searchParams.get(key));
+  const validTuple =
+    ATTRIBUTION_KEYS.every((key) => page.searchParams.getAll(key).length === 1) &&
+    ALLOWED_ATTRIBUTION_TUPLES.has(JSON.stringify(incoming));
+  if (!validTuple) return href;
+
+  let target;
+  try {
+    target = new URL(href, page);
+  } catch {
+    return href;
+  }
+
+  const approvedOwnedTarget =
+    target.origin === 'https://cekuu35.github.io' &&
+    ATTRIBUTION_OWNED_PATHS.has(target.pathname);
+  const approvedCheckoutTarget =
+    target.origin === 'https://cengokurtoglu.gumroad.com' &&
+    target.pathname === '/l/ai-ready-website-audit-kit';
+  if (!approvedOwnedTarget && !approvedCheckoutTarget) return href;
+
+  ATTRIBUTION_KEYS.forEach((key, index) => target.searchParams.set(key, incoming[index]));
+  return target.toString();
+}
+
+function applyAuditKitAttribution(root) {
+  root.querySelectorAll('a[href]').forEach((link) => {
+    const decorated = decorateAuditKitUrl(link.href);
+    if (decorated !== link.href) link.href = decorated;
+  });
+}
+
 export const CHECKS = Object.freeze([
   { id: 'robots', area: 'discoverability', points: 5, label: 'robots.txt was reachable', mode: 'binary' },
   { id: 'sitemap', area: 'discoverability', points: 10, label: 'A sitemap was reachable', mode: 'binary' },
@@ -255,4 +329,8 @@ function init() {
   });
 }
 
-if (typeof document !== 'undefined') init();
+if (typeof document !== 'undefined') {
+  window.decorateAuditKitUrl = decorateAuditKitUrl;
+  applyAuditKitAttribution(document);
+  init();
+}
