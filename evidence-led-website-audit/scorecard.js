@@ -52,7 +52,7 @@ export function calculateScore(entries) {
     return {
       ...check,
       coverage: entry.coverage,
-      evidenceRef: entry.evidenceRef.trim(),
+      evidenceRef: (typeof entry.evidenceRef === 'string' ? entry.evidenceRef : '').trim(),
       earned,
       gap: round(check.points - earned),
     };
@@ -178,6 +178,7 @@ function init() {
     </section>`).join('');
 
   let latest = null;
+  let programmaticSubmit = false;
   document.getElementById('load-example').addEventListener('click', () => {
     setEntries(defaultEntries(true));
     latest = null;
@@ -198,15 +199,18 @@ function init() {
       latest = calculateScore(readEntries());
       renderResult(latest);
       error.hidden = true;
-      document.getElementById('result').focus();
+      if (!programmaticSubmit) document.getElementById('result').focus();
     } catch (caught) {
       error.textContent = caught.message;
       error.hidden = false;
       latest = null;
+      document.getElementById('result').hidden = true;
     }
+    programmaticSubmit = false;
   });
 
   document.getElementById('download-result').addEventListener('click', () => {
+    programmaticSubmit = true;
     form.requestSubmit();
     if (!latest) return;
     const payload = {
@@ -222,6 +226,7 @@ function init() {
   });
 
   document.getElementById('copy-report').addEventListener('click', async () => {
+    programmaticSubmit = true;
     form.requestSubmit();
     if (!latest) return;
     const button = document.getElementById('copy-report');
