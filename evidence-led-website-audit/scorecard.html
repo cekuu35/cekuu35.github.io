@@ -123,61 +123,6 @@
     </section>
     <p class="fine">Author-defined operational model, version scorecard-1.0. Review every observation manually. The score is only as reliable as the declared scope and evidence.</p>
   </main>
-  <script>
-    (() => {
-      const keys = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content'];
-      const allowedTuples = new Set([
-        JSON.stringify(['llms_txt_generator_landing', 'owned_content', 'ai_audit_kit_launch', 'curated_directory_path']),
-        JSON.stringify(['llms_txt_generator_readme', 'referral', 'ai_audit_kit_launch', 'free_method']),
-        JSON.stringify(['github_profile', 'referral', 'ai_audit_kit_launch', 'free_method']),
-        JSON.stringify(['nextjs_templates_readme', 'referral', 'ai_audit_kit_launch', 'client_handoff']),
-        JSON.stringify(['linkedin_profile', 'social', 'ai_audit_kit_launch', 'evidence_method_post']),
-        JSON.stringify(['evidence_guide', 'owned_content', 'ai_audit_kit_launch', 'sample_report_bridge']),
-        JSON.stringify(['evidence_guide', 'owned_tool', 'ai_audit_kit_launch', 'interactive_scorecard']),
-        JSON.stringify(['sample_report', 'owned_preview', 'ai_audit_kit_launch', 'try_scorecard']),
-        JSON.stringify(['scorecard_tool', 'owned_tool', 'ai_audit_kit_launch', 'static_sample_bridge']),
-        JSON.stringify(['scorecard_result', 'owned_tool', 'ai_audit_kit_launch', 'result_sample_bridge'])
-      ]);
-      const params = new URLSearchParams(window.location.search);
-      const incoming = keys.map((key) => params.get(key));
-      const validTuple =
-        keys.every((key) => params.getAll(key).length === 1) &&
-        allowedTuples.has(JSON.stringify(incoming));
-      const ownedPaths = new Set([
-        '/evidence-led-website-audit/sample-report.html',
-        '/evidence-led-website-audit/scorecard.html'
-      ]);
-
-      const decorateAuditKitUrl = (href) => {
-        if (!validTuple) return href;
-
-        let target;
-        try {
-          target = new URL(href, window.location.href);
-        } catch {
-          return href;
-        }
-
-        const approvedOwnedTarget =
-          target.origin === 'https://cekuu35.github.io' &&
-          ownedPaths.has(target.pathname);
-        const approvedCheckoutTarget =
-          target.origin === 'https://cengokurtoglu.gumroad.com' &&
-          target.pathname === '/l/ai-ready-website-audit-kit';
-
-        if (!approvedOwnedTarget && !approvedCheckoutTarget) return href;
-
-        keys.forEach((key, index) => target.searchParams.set(key, incoming[index]));
-        return target.toString();
-      };
-
-      window.decorateAuditKitUrl = decorateAuditKitUrl;
-      document.querySelectorAll('a[href]').forEach((link) => {
-        const decorated = decorateAuditKitUrl(link.href);
-        if (decorated !== link.href) link.href = decorated;
-      });
-    })();
-  </script>
-  <script type="module" src="./scorecard.js?v=20260729-attribution"></script>
+  <script type="module" src="./scorecard.js?v=20260729-attribution2"></script>
 </body>
 </html>
