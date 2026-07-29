@@ -27,7 +27,7 @@
       "name": "llms.txt Generator",
       "type": "apify_actor",
       "status": "live",
-      "price": "$5 USD / 1,000 results",
+      "price": "From $5 USD / 1,000 results",
       "landing_page": "https://cekuu35.github.io/llms-txt-generator/",
       "url": "https://apify.com/nacred_corner/llms-txt-generator",
       "source": "https://github.com/cekuu35/llms-txt-generator"

@@ -47,7 +47,7 @@
 - Direct checkout: https://cengokurtoglu.gumroad.com/l/xjnmxt?utm_source=llms_txt&utm_medium=geo&utm_campaign=launch_checklist
 - Limits: an educational checklist, not an automated scan, penetration test, compliance review, or security guarantee
 
-## Perde Atolyesi Fiyatlama Pilotu
+## Perde Atölyesi Fiyatlama Pilotu
 
 - Price: $249 USD fixed pilot, 5 days after written scope and required inputs are complete
 - Type: productized pricing-tool pilot for curtain workshops in Türkiye
@@ -69,6 +69,7 @@
 - Price: $50 USD one-time
 - Type: standalone editable Next.js agency source package
 - Demo: https://22-basic-tier.vercel.app/
+- Limits: the visual demo contains fictional placeholder business claims that must be replaced
 - Direct checkout: https://cengokurtoglu.gumroad.com/l/vbfqge?wanted=true&utm_source=llms_txt&utm_medium=geo&utm_campaign=all_products
 
 ## Meridian
@@ -76,6 +77,7 @@
 - Price: $100 USD one-time
 - Type: animated standalone editable Next.js agency source package
 - Demo: https://23-standard-tier.vercel.app/
+- Limits: the visual demo contains fictional placeholder business claims that must be replaced
 - Direct checkout: https://cengokurtoglu.gumroad.com/l/fkeylc?wanted=true&utm_source=llms_txt&utm_medium=geo&utm_campaign=all_products
 
 ## Premium Nexus Studio
