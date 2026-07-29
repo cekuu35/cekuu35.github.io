@@ -131,12 +131,49 @@
         <h2>Turn reviewed evidence into a repeatable client delivery.</h2>
         <p>The $49 kit includes the dependency-free scorer, evidence ledger workflow, 16 tests, editable delivery templates, implementation checklist, and 19-page playbook.</p>
         <div class="actions" style="justify-content:center">
-          <a class="button" href="https://cengokurtoglu.gumroad.com/l/ai-ready-website-audit-kit?wanted=true&amp;utm_source=sample_report&amp;utm_medium=owned_preview&amp;utm_campaign=ai_audit_kit_launch&amp;utm_content=sample_page_cta">Get the full Audit Kit — $49</a>
+          <a id="kit-cta" class="button" href="https://cengokurtoglu.gumroad.com/l/ai-ready-website-audit-kit?wanted=true&amp;utm_source=sample_report&amp;utm_medium=owned_preview&amp;utm_campaign=ai_audit_kit_launch&amp;utm_content=sample_page_cta">Get the full Audit Kit — $49</a>
           <a class="button secondary" href="https://cekuu35.github.io/evidence-led-website-audit/">Read the free method</a>
         </div>
       </section>
     </main>
     <footer><a href="/">Products and tools</a> · <a href="https://cekuu35.github.io/evidence-led-website-audit/scorecard.html">Free scorecard</a> · Synthetic sample; no customer endorsement.</footer>
   </div>
+  <script>
+    (() => {
+      const cta = document.getElementById('kit-cta');
+      if (!cta) return;
+
+      const params = new URLSearchParams(window.location.search);
+      // A missing or duplicated utm_source fails closed to the static fallback.
+      if (params.getAll('utm_source').length !== 1) return;
+
+      const source = params.get('utm_source');
+      const allowed = new Set([
+        'evidence_guide',
+        'scorecard_result',
+        'client_audit_guide',
+        'homepage',
+        'llms_guide',
+        'llms_txt_generator_landing',
+        'llms_txt_generator_readme',
+        'github_profile',
+        'nextjs_templates_readme',
+        'linkedin_profile',
+        'reddit',
+        'hackernews',
+        'producthunt',
+        'twitter',
+        'indiehackers',
+        'rss'
+      ]);
+      if (!allowed.has(source)) return;
+
+      const target = new URL(cta.href);
+      if (target.origin !== 'https://cengokurtoglu.gumroad.com') return;
+
+      target.searchParams.set('utm_source', source);
+      cta.href = target.toString();
+    })();
+  </script>
 </body>
 </html>
