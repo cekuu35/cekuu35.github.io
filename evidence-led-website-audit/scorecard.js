@@ -20,7 +20,9 @@ const ALLOWED_ATTRIBUTION_TUPLES = new Set([
   JSON.stringify(['evidence_guide', 'owned_tool', 'ai_audit_kit_launch', 'interactive_scorecard']),
   JSON.stringify(['sample_report', 'owned_preview', 'ai_audit_kit_launch', 'try_scorecard']),
   JSON.stringify(['scorecard_tool', 'owned_tool', 'ai_audit_kit_launch', 'static_sample_bridge']),
-  JSON.stringify(['scorecard_result', 'owned_tool', 'ai_audit_kit_launch', 'result_sample_bridge'])
+  JSON.stringify(['scorecard_result', 'owned_tool', 'ai_audit_kit_launch', 'result_sample_bridge']),
+  JSON.stringify(['cold_email', 'email', 'ai_audit_kit_launch', 'fromzero_feedback_sample']),
+  JSON.stringify(['cold_email', 'email', 'ai_audit_kit_launch', 'causo'])
 ]);
 const ATTRIBUTION_OWNED_PATHS = new Set([
   '/evidence-led-website-audit/sample-report.html',
