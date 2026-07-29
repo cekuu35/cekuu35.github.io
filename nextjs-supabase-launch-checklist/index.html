@@ -162,6 +162,21 @@
   <footer class="shell">Independent product page by Cenk Kurtoğlu · <a href="/">All verified products</a></footer>
   <script>
     (() => {
+      const allowedUtmKeys = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'];
+      const incomingParams = new URLSearchParams(window.location.search);
+      const safeUtmValue = (value) => value && /^[A-Za-z0-9._~-]{1,100}$/.test(value) ? value : null;
+      const incomingAttribution = allowedUtmKeys
+        .map((key) => [key, safeUtmValue(incomingParams.get(key))])
+        .filter(([, value]) => value);
+
+      if (incomingAttribution.length) {
+        document.querySelectorAll('a[href^="https://cengokurtoglu.gumroad.com/l/xjnmxt"]').forEach((link) => {
+          const destination = new URL(link.href);
+          incomingAttribution.forEach(([key, value]) => destination.searchParams.set(key, value));
+          link.href = destination.toString();
+        });
+      }
+
       const checks = Array.from(document.querySelectorAll('[data-audit-check]'));
       const count = document.getElementById('audit-count');
       const render = () => { count.textContent = checks.filter((check) => check.checked).length + ' / ' + checks.length; };
