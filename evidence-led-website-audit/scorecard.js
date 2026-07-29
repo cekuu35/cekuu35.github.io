@@ -151,6 +151,12 @@ function renderResult(result) {
       </div>
     </div>
   `;
+  if (typeof window.decorateAuditKitUrl === 'function') {
+    resultBox.querySelectorAll('a[href]').forEach((link) => {
+      const decorated = window.decorateAuditKitUrl(link.href);
+      if (decorated !== link.href) link.href = decorated;
+    });
+  }
   resultBox.hidden = false;
 }
 
