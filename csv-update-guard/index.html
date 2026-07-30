@@ -87,11 +87,12 @@
     .metric.changed b { color: var(--amber); }
     .metric.removed b { color: var(--red); }
     .metric.same b { color: var(--blue); }
-    .risk-row { display: grid; grid-template-columns: 1.6fr .7fr .3fr; gap: 10px; align-items: center; padding: 13px 4px; border-bottom: 1px solid rgba(255,255,255,.075); font-size: 12px; }
-    .risk-row:first-of-type { margin-top: 14px; }
-    .risk-row:last-child { border-bottom: 0; }
-    .badge { justify-self: start; padding: 5px 7px; border-radius: 999px; color: #ffd5d0; background: rgba(255,138,123,.13); font-size: 9px; font-weight: 820; letter-spacing: .05em; text-transform: uppercase; }
-    .risk-count { justify-self: end; color: var(--faint); font-variant-numeric: tabular-nums; }
+    .sample-note { margin: 17px 0 11px; color: #d7ded8; font-size: 12px; line-height: 1.55; }
+    .sample-note strong { color: var(--ink); }
+    .patch { margin: 0; padding: 14px 15px; overflow-x: auto; border: 1px solid rgba(184,243,107,.22); border-radius: 12px; color: var(--green); background: rgba(3,7,4,.72); font: 650 13px/1.55 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    .sample-limit { margin: 10px 0 0; color: var(--faint); font-size: 10px; line-height: 1.45; }
+    .card-cta { display: inline-flex; align-items: center; justify-content: center; min-height: 41px; margin-top: 15px; padding: 0 15px; border: 1px solid rgba(184,243,107,.55); border-radius: 10px; color: var(--green); text-decoration: none; font-size: 12px; font-weight: 800; }
+    .card-cta:hover { background: rgba(184,243,107,.08); }
     section.content { padding: 96px 0; }
     .section-head { max-width: 700px; margin-bottom: 45px; }
     h2 { margin: 0 0 15px; font-size: clamp(34px, 4vw, 50px); line-height: 1.04; letter-spacing: -.048em; }
@@ -178,18 +179,19 @@
           </ul>
         </div>
 
-        <aside class="app-card" aria-label="Illustrative comparison result">
-          <div class="card-head"><span>Sample delta</span><span class="local">● Processed locally</span></div>
+        <aside class="app-card" aria-label="Bundled CSV sample result">
+          <div class="card-head"><span>Bundled sample result</span><span class="local">● Processed locally</span></div>
           <div class="metrics">
-            <div class="metric added"><b>34</b><span>Added</span></div>
-            <div class="metric changed"><b>18</b><span>Changed</span></div>
-            <div class="metric removed"><b>3</b><span>Removed</span></div>
-            <div class="metric same"><b>862</b><span>Unchanged</span></div>
+            <div class="metric added"><b>1</b><span>Added</span></div>
+            <div class="metric changed"><b>3</b><span>Changed</span></div>
+            <div class="metric removed"><b>1</b><span>Removed</span></div>
+            <div class="metric same"><b>1</b><span>Unchanged</span></div>
           </div>
-          <div class="risk-row"><strong>Blank overwrite risks</strong><span class="badge">Review</span><span class="risk-count">7</span></div>
-          <div class="risk-row"><strong>Duplicate record keys</strong><span class="badge">Review</span><span class="risk-count">2</span></div>
-          <div class="risk-row"><strong>Removed records</strong><span class="badge">Review</span><span class="risk-count">3</span></div>
-          <div class="risk-row"><strong>Formula-like values</strong><span class="badge">Check</span><span class="risk-count">4</span></div>
+          <p class="sample-note">The reviewer selected only <strong>SKU-200</strong> price <strong>25.00 → 27.00</strong> and only the <strong>price</strong> column.</p>
+          <pre class="patch" aria-label="Approved CSV patch"><code>sku,price
+SKU-200,27.00</code></pre>
+          <p class="sample-limit">Controlled bundled sample, not customer data or an import guarantee.</p>
+          <a class="card-cta" href="https://cengokurtoglu.gumroad.com/l/csv-update-guard?utm_source=github_pages&amp;utm_medium=owned&amp;utm_campaign=csv_update_guard_launch&amp;utm_content=real_sample_patch">Get CSV Update Guard for $9</a>
         </aside>
       </div>
     </section>
