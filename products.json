@@ -26,17 +26,6 @@
       "checkout": "https://cengokurtoglu.gumroad.com/l/xjnmxt?utm_source=product_catalog&utm_medium=owned&utm_campaign=launch_checklist",
       "disclosure": "Educational checklist; not an automated scan, penetration test, compliance review, or security guarantee.",
       "landing_page": "https://cekuu35.github.io/nextjs-supabase-launch-checklist/?utm_source=product_catalog&utm_medium=owned&utm_campaign=launch_checklist"
-    },
-    {
-      "name": "CSV Update Guard — Bulk Import Risk Checker",
-      "type": "downloadable_offline_csv_tool",
-      "status": "live",
-      "price": "$9 USD one-time",
-      "format": "Local browser app + sample CSV files + downloadable HTML risk report",
-      "requirements": "Modern browser; no install, account, upload, API, analytics, or subscription",
-      "checkout": "https://cengokurtoglu.gumroad.com/l/csv-update-guard?utm_source=product_catalog&utm_medium=owned&utm_campaign=csv_update_guard_launch",
-      "disclosure": "Highlights CSV update risks and generates a reviewed patch; destination-platform behavior varies, so keep a backup and test a small batch. It does not guarantee a successful import.",
-      "landing_page": "https://cekuu35.github.io/csv-update-guard/"
     }
   ]
 }
