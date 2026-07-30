@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="CSV Update Guard compares current and proposed CSV files locally so you can review bulk-update risks before importing.">
+  <title>CSV Update Guard — Review bulk CSV changes before import</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --page: #0a0e0c;
+      --surface: #111712;
+      --surface-2: #151d17;
+      --ink: #f3f6f1;
+      --muted: #a0aaa2;
+      --faint: #758078;
+      --line: rgba(255,255,255,.105);
+      --green: #b8f36b;
+      --green-ink: #071007;
+      --amber: #f6c66b;
+      --red: #ff8a7b;
+      --blue: #8eabff;
+      --shadow: 0 28px 90px rgba(0,0,0,.35);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--page);
+      font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      letter-spacing: -.018em;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; }
+    a:focus-visible { outline: 3px solid var(--green); outline-offset: 4px; }
+    .wrap { width: min(1160px, calc(100% - 40px)); margin-inline: auto; }
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 78px;
+      border-bottom: 1px solid var(--line);
+    }
+    .brand { display: flex; align-items: center; gap: 11px; font-weight: 770; letter-spacing: -.01em; }
+    .mark { display: grid; place-items: center; width: 31px; height: 31px; border-radius: 9px; color: var(--green-ink); background: var(--green); font-weight: 900; box-shadow: 0 0 0 5px rgba(184,243,107,.07); }
+    .nav-note { color: var(--muted); font-size: 14px; }
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 88px 0 104px;
+      border-bottom: 1px solid var(--line);
+      background:
+        radial-gradient(circle at 86% 7%, rgba(184,243,107,.12), transparent 29%),
+        radial-gradient(circle at 8% 84%, rgba(88,109,255,.09), transparent 31%);
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      opacity: .19;
+      background-image: linear-gradient(rgba(255,255,255,.10) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.10) 1px, transparent 1px);
+      background-size: 64px 64px;
+      mask-image: linear-gradient(135deg, #000, transparent 67%);
+    }
+    .hero-grid { position: relative; display: grid; grid-template-columns: 1fr .92fr; gap: 70px; align-items: center; }
+    .eyebrow { display: flex; align-items: center; gap: 10px; color: var(--green); font-size: 13px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+    .eyebrow::before { content: ""; width: 26px; height: 2px; background: currentColor; }
+    h1 { max-width: 700px; margin: 19px 0 25px; font-size: clamp(48px, 6.2vw, 78px); line-height: .98; letter-spacing: -.062em; }
+    .hero-copy { max-width: 640px; margin: 0; color: var(--muted); font-size: clamp(18px, 2vw, 22px); line-height: 1.53; }
+    .cta-row { display: flex; flex-wrap: wrap; align-items: center; gap: 16px; margin-top: 35px; }
+    .button { display: inline-flex; align-items: center; justify-content: center; min-height: 51px; padding: 0 22px; border: 1px solid var(--green); border-radius: 12px; color: var(--green-ink); background: var(--green); text-decoration: none; font-weight: 800; box-shadow: 0 12px 30px rgba(184,243,107,.12); transition: transform .18s ease, box-shadow .18s ease; }
+    .button:hover { transform: translateY(-2px); box-shadow: 0 16px 34px rgba(184,243,107,.18); }
+    .price-note { color: var(--muted); font-size: 14px; }
+    .price-note strong { color: var(--ink); }
+    .trust { display: flex; flex-wrap: wrap; gap: 9px; margin: 25px 0 0; padding: 0; list-style: none; }
+    .trust li { padding: 8px 10px; border: 1px solid var(--line); border-radius: 999px; color: #c9d1cb; background: rgba(255,255,255,.035); font-size: 12px; font-weight: 650; }
+    .app-card { padding: 22px; border: 1px solid rgba(255,255,255,.14); border-radius: 23px; background: linear-gradient(160deg, rgba(255,255,255,.085), rgba(255,255,255,.025)); box-shadow: var(--shadow), inset 0 1px rgba(255,255,255,.08); }
+    .card-head { display: flex; justify-content: space-between; gap: 20px; align-items: center; margin-bottom: 19px; font-size: 13px; font-weight: 720; }
+    .local { color: var(--green); font-size: 11px; }
+    .metrics { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+    .metric { min-width: 0; padding: 13px 11px; border: 1px solid rgba(255,255,255,.08); border-radius: 12px; background: rgba(6,10,8,.49); }
+    .metric b { display: block; margin-bottom: 3px; font-size: 20px; font-variant-numeric: tabular-nums; }
+    .metric span { display: block; overflow: hidden; color: var(--faint); font-size: 9px; font-weight: 720; letter-spacing: .06em; text-overflow: ellipsis; text-transform: uppercase; }
+    .metric.added b { color: var(--green); }
+    .metric.changed b { color: var(--amber); }
+    .metric.removed b { color: var(--red); }
+    .metric.same b { color: var(--blue); }
+    .risk-row { display: grid; grid-template-columns: 1.6fr .7fr .3fr; gap: 10px; align-items: center; padding: 13px 4px; border-bottom: 1px solid rgba(255,255,255,.075); font-size: 12px; }
+    .risk-row:first-of-type { margin-top: 14px; }
+    .risk-row:last-child { border-bottom: 0; }
+    .badge { justify-self: start; padding: 5px 7px; border-radius: 999px; color: #ffd5d0; background: rgba(255,138,123,.13); font-size: 9px; font-weight: 820; letter-spacing: .05em; text-transform: uppercase; }
+    .risk-count { justify-self: end; color: var(--faint); font-variant-numeric: tabular-nums; }
+    section.content { padding: 96px 0; }
+    .section-head { max-width: 700px; margin-bottom: 45px; }
+    h2 { margin: 0 0 15px; font-size: clamp(34px, 4vw, 50px); line-height: 1.04; letter-spacing: -.048em; }
+    .section-head p, .muted { color: var(--muted); line-height: 1.65; }
+    .problem-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+    .problem { min-height: 190px; padding: 24px; border: 1px solid var(--line); border-radius: 18px; background: var(--surface); }
+    .problem .num { color: var(--green); font-size: 12px; font-weight: 800; letter-spacing: .09em; }
+    .problem h3 { margin: 28px 0 10px; font-size: 20px; }
+    .problem p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.55; }
+    .workflow { padding: 28px; border: 1px solid var(--line); border-radius: 22px; background: var(--surface); }
+    .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; margin: 0; padding: 0; list-style: none; }
+    .steps li { position: relative; padding: 18px 22px; border-right: 1px solid var(--line); }
+    .steps li:last-child { border-right: 0; }
+    .steps b { display: block; margin-bottom: 9px; color: var(--green); font-size: 13px; }
+    .steps span { color: #cbd3cd; font-size: 14px; line-height: 1.5; }
+    .features { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+    .feature { display: grid; grid-template-columns: 38px 1fr; gap: 14px; padding: 22px; border: 1px solid var(--line); border-radius: 17px; background: var(--surface); }
+    .feature-icon { display: grid; place-items: center; width: 38px; height: 38px; border-radius: 11px; color: var(--green-ink); background: var(--green); font-weight: 900; }
+    .feature h3 { margin: 2px 0 7px; font-size: 17px; }
+    .feature p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.55; }
+    .privacy { display: grid; grid-template-columns: .9fr 1.1fr; gap: 58px; align-items: center; padding: 56px; border: 1px solid rgba(184,243,107,.23); border-radius: 25px; background: linear-gradient(135deg, rgba(184,243,107,.07), rgba(255,255,255,.025)); }
+    .privacy p { color: var(--muted); line-height: 1.65; }
+    .privacy-list { margin: 0; padding: 0; list-style: none; }
+    .privacy-list li { display: flex; gap: 12px; align-items: flex-start; padding: 14px 0; border-bottom: 1px solid var(--line); color: #d7ded8; }
+    .privacy-list li:last-child { border-bottom: 0; }
+    .check { color: var(--green); font-weight: 900; }
+    .limits { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .limit-card { padding: 26px; border: 1px solid var(--line); border-radius: 18px; background: var(--surface); }
+    .limit-card h3 { margin: 0 0 13px; font-size: 18px; }
+    .limit-card p, .limit-card li { color: var(--muted); font-size: 14px; line-height: 1.6; }
+    .limit-card ul { margin: 0; padding-left: 19px; }
+    .final { padding: 74px 0 90px; text-align: center; border-top: 1px solid var(--line); background: linear-gradient(to bottom, #0a0e0c, #101711); }
+    .final h2 { max-width: 760px; margin-inline: auto; }
+    .final p { max-width: 620px; margin: 15px auto 28px; color: var(--muted); line-height: 1.6; }
+    .fineprint { margin-top: 24px !important; color: var(--faint) !important; font-size: 12px; }
+    footer { padding: 26px 0 34px; border-top: 1px solid var(--line); color: var(--faint); font-size: 12px; line-height: 1.6; }
+    @media (max-width: 850px) {
+      .hero { padding: 66px 0 78px; }
+      .hero-grid, .privacy { grid-template-columns: 1fr; }
+      .hero-grid { gap: 50px; }
+      .problem-grid { grid-template-columns: 1fr; }
+      .steps { grid-template-columns: 1fr 1fr; }
+      .steps li { border-bottom: 1px solid var(--line); }
+      .steps li:nth-child(2) { border-right: 0; }
+      .steps li:nth-child(3), .steps li:nth-child(4) { border-bottom: 0; }
+      .privacy { padding: 36px; }
+    }
+    @media (max-width: 590px) {
+      .wrap { width: min(100% - 28px, 1160px); }
+      .nav-note { display: none; }
+      .hero { padding-top: 54px; }
+      h1 { font-size: 46px; }
+      .metrics { grid-template-columns: 1fr 1fr; }
+      .features, .limits, .steps { grid-template-columns: 1fr; }
+      .steps li, .steps li:nth-child(2), .steps li:nth-child(3) { border-right: 0; border-bottom: 1px solid var(--line); }
+      .steps li:last-child { border-bottom: 0; }
+      .privacy { padding: 27px; }
+      .risk-row { grid-template-columns: 1.4fr .7fr .2fr; font-size: 11px; }
+      .cta-row { align-items: stretch; flex-direction: column; }
+      .button { width: 100%; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .button { transition: none; } }
+  </style>
+</head>
+<body>
+  <header class="wrap nav">
+    <div class="brand"><span class="mark" aria-hidden="true">✓</span> CSV Update Guard</div>
+    <div class="nav-note">Local-first bulk import review</div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow">Bulk import risk checker</div>
+          <h1>Know what your CSV update will change.</h1>
+          <p class="hero-copy">Compare a current export with a proposed update before you import. CSV Update Guard surfaces risky blank overwrites, duplicate keys, removals, column drift, and unintended changes — entirely on your device.</p>
+          <div class="cta-row">
+            <a class="button" href="https://cengokurtoglu.gumroad.com/l/csv-update-guard?utm_source=github_pages&amp;utm_medium=owned&amp;utm_campaign=csv_update_guard_launch&amp;utm_content=landing_cta">Get CSV Update Guard for $9</a>
+            <span class="price-note"><strong>One-time payment.</strong> No subscription.</span>
+          </div>
+          <ul class="trust" aria-label="Product highlights">
+            <li>Works offline</li><li>No uploads</li><li>No account</li><li>Original files stay unchanged</li>
+          </ul>
+        </div>
+
+        <aside class="app-card" aria-label="Illustrative comparison result">
+          <div class="card-head"><span>Sample delta</span><span class="local">● Processed locally</span></div>
+          <div class="metrics">
+            <div class="metric added"><b>34</b><span>Added</span></div>
+            <div class="metric changed"><b>18</b><span>Changed</span></div>
+            <div class="metric removed"><b>3</b><span>Removed</span></div>
+            <div class="metric same"><b>862</b><span>Unchanged</span></div>
+          </div>
+          <div class="risk-row"><strong>Blank overwrite risks</strong><span class="badge">Review</span><span class="risk-count">7</span></div>
+          <div class="risk-row"><strong>Duplicate record keys</strong><span class="badge">Review</span><span class="risk-count">2</span></div>
+          <div class="risk-row"><strong>Removed records</strong><span class="badge">Review</span><span class="risk-count">3</span></div>
+          <div class="risk-row"><strong>Formula-like values</strong><span class="badge">Check</span><span class="risk-count">4</span></div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="content wrap">
+      <div class="section-head">
+        <h2>Bulk updates hide expensive mistakes in plain sight.</h2>
+        <p>A spreadsheet can look reasonable while still blanking existing fields, matching the wrong records, dropping rows, or changing more columns than intended. A deliberate comparison turns an opaque import into a reviewable change set.</p>
+      </div>
+      <div class="problem-grid">
+        <article class="problem"><span class="num">01</span><h3>Blank is not always “leave unchanged”</h3><p>Some importers treat a blank cell as an instruction to erase an existing value. The checker calls those transitions out for review.</p></article>
+        <article class="problem"><span class="num">02</span><h3>Keys decide which record changes</h3><p>Missing or duplicate keys can make a bulk operation ambiguous. See key problems before relying on the file.</p></article>
+        <article class="problem"><span class="num">03</span><h3>Large files defeat spot checks</h3><p>A concise delta summary helps you focus on rows and fields that changed instead of scanning the whole export manually.</p></article>
+      </div>
+    </section>
+
+    <section class="content wrap">
+      <div class="section-head">
+        <h2>A focused review flow.</h2>
+        <p>Everything runs in a modern browser. No installation server, API key, or connected account is required.</p>
+      </div>
+      <div class="workflow">
+        <ol class="steps">
+          <li><b>01</b><span>Choose the current export and proposed update.</span></li>
+          <li><b>02</b><span>Select the record key used to match rows.</span></li>
+          <li><b>03</b><span>Review deltas, warnings, and before/after values.</span></li>
+          <li><b>04</b><span>Export a reviewed patch and an HTML evidence report.</span></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="content wrap">
+      <div class="section-head">
+        <h2>Made for the moment before “Import.”</h2>
+        <p>The tool stays narrow on purpose: compare two ordinary CSV files, explain the meaningful differences, and help you prepare a smaller reviewed patch.</p>
+      </div>
+      <div class="features">
+        <article class="feature"><span class="feature-icon" aria-hidden="true">Δ</span><div><h3>Added, removed, changed, unchanged</h3><p>Get a clear record-level summary based on the key column you choose.</p></div></article>
+        <article class="feature"><span class="feature-icon" aria-hidden="true">∅</span><div><h3>Blank-overwrite review</h3><p>See where a proposed blank replaces a value from the current file.</p></div></article>
+        <article class="feature"><span class="feature-icon" aria-hidden="true">≡</span><div><h3>Key and column checks</h3><p>Detect missing keys, duplicate keys, and structural column differences.</p></div></article>
+        <article class="feature"><span class="feature-icon" aria-hidden="true">!</span><div><h3>Formula-like value warnings</h3><p>Flag spreadsheet-style formula prefixes for deliberate review.</p></div></article>
+        <article class="feature"><span class="feature-icon" aria-hidden="true">✓</span><div><h3>Reviewed patch export</h3><p>Select the rows and columns you intend to update; blank overwrites require explicit acknowledgement.</p></div></article>
+        <article class="feature"><span class="feature-icon" aria-hidden="true">↧</span><div><h3>Portable evidence report</h3><p>Download a standalone HTML summary of the comparison for review or recordkeeping.</p></div></article>
+      </div>
+    </section>
+
+    <section class="content wrap">
+      <div class="privacy">
+        <div>
+          <div class="eyebrow">Local by design</div>
+          <h2>Your CSVs stay in your browser.</h2>
+          <p>CSV Update Guard has no file-upload service, account system, analytics, or API dependency. You can open the included tool locally and disconnect from the internet while you work.</p>
+        </div>
+        <ul class="privacy-list">
+          <li><span class="check" aria-hidden="true">✓</span><span>Files are processed on the device running the browser.</span></li>
+          <li><span class="check" aria-hidden="true">✓</span><span>The original files are read for comparison, not modified.</span></li>
+          <li><span class="check" aria-hidden="true">✓</span><span>No account, login, API key, or recurring payment is required.</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="content wrap">
+      <div class="section-head"><h2>Useful guardrails, not a platform-specific guarantee.</h2></div>
+      <div class="limits">
+        <article class="limit-card"><h3>What it handles</h3><ul><li>Ordinary delimited CSV text files supported by the included parser.</li><li>Record matching with a key column you select.</li><li>Comparison, risk highlighting, selected patch export, and report export.</li></ul></article>
+        <article class="limit-card"><h3>What still needs your judgment</h3><ul><li>Every destination has its own import rules and required fields.</li><li>The tool cannot validate undocumented business logic inside another platform.</li><li>Keep a backup and use the destination's own preview or validation step when available.</li></ul></article>
+      </div>
+    </section>
+
+    <section class="final">
+      <div class="wrap">
+        <h2>Turn the next bulk update into a change set you can inspect.</h2>
+        <p>Compare first, review the risky fields, and export only the rows and columns you intend to change.</p>
+        <a class="button" href="https://cengokurtoglu.gumroad.com/l/csv-update-guard?utm_source=github_pages&amp;utm_medium=owned&amp;utm_campaign=csv_update_guard_launch&amp;utm_content=landing_cta">Buy CSV Update Guard — $9</a>
+        <p class="fineprint">One-time payment · no subscription · local/offline browser tool</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">CSV Update Guard is an independent tool and is not affiliated with, endorsed by, or sponsored by Shopify, Recharge, or any CRM, ecommerce, inventory, or email platform. Always review your destination's import documentation before updating production data.</div>
+  </footer>
+</body>
+</html>
+
