@@ -130,5 +130,32 @@
     </section>
   </main>
   <footer class="shell">Independent product preview · Delivered as a PDF through Gumroad</footer>
+  <script>
+    (() => {
+      const keys = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content'];
+      const approvedTuple = ['gumroad_profile', 'owned_storefront', 'focused_catalog', 'checklist_preview'];
+      const params = new URLSearchParams(window.location.search);
+      const validTuple = keys.every(
+        (key, index) => params.getAll(key).length === 1 && params.get(key) === approvedTuple[index],
+      );
+      if (!validTuple) return;
+
+      document.querySelectorAll('a[href]').forEach((link) => {
+        let target;
+        try {
+          target = new URL(link.href, window.location.href);
+        } catch {
+          return;
+        }
+        if (
+          target.origin !== 'https://cengokurtoglu.gumroad.com' ||
+          target.pathname !== '/l/xjnmxt'
+        ) return;
+
+        keys.forEach((key, index) => target.searchParams.set(key, approvedTuple[index]));
+        link.href = target.toString();
+      });
+    })();
+  </script>
 </body>
 </html>
