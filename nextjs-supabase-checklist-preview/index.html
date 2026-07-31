@@ -147,13 +147,13 @@
       <div class="runtime-proof" aria-labelledby="runtime-proof-title">
         <p class="eyebrow">Free runnable control proof</p>
         <h3 id="runtime-proof-title">Inspect one RLS failure—and the policy fix.</h3>
-        <p class="runtime-proof-copy">The separate public fixture reproduces a synthetic cross-tenant read/write leak. Its broken branch reports <strong>1 passed / 4 failed</strong>; its fixed branch reports <strong>5 passed</strong>. The tested branches differ only in <code>db/policies.sql</code>.</p>
+        <p class="runtime-proof-copy">The separate public fixture reproduces a synthetic cross-tenant read/write leak. Its broken branch reports <strong>1 passed / 4 failed</strong>; its fixed branch reports <strong>5 passed / 0 failed</strong>. The test file, harness, package and CI workflow are byte-identical; the fixed state adds <code>db/policies.sql</code>.</p>
         <div class="proof-signatures" aria-label="Verified test signatures">
           <span class="proof-signature fail"><strong>Broken:</strong> 1 passed / 4 failed</span>
-          <span class="proof-signature pass"><strong>Fixed:</strong> 5 passed</span>
+          <span class="proof-signature pass"><strong>Fixed:</strong> 5 passed / 0 failed</span>
         </div>
         <a class="button secondary" href="https://github.com/cekuu35/supabase-rls-leak-demo" rel="noopener noreferrer">Open the public RLS fixture</a>
-        <p class="fine">Free and separate from the PDF. It is a synthetic PGlite control fixture, not a live Supabase Auth, UI or API test, penetration test, certification, or security guarantee.</p>
+        <p class="fine">Free and separate from the PDF. It is a synthetic PGlite control fixture for database-level policy behavior. It does not emulate Supabase Auth, PostgREST/Data API, network controls or production configuration, and it is not a penetration test, certification, or security guarantee.</p>
       </div>
     </section>
     <section class="shell">
@@ -197,5 +197,4 @@
   </script>
 </body>
 </html>
-
 
