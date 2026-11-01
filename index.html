@@ -97,10 +97,11 @@
   <main>
     <div class="eyebrow">Two verified developer tools · Live Gumroad checkout</div>
     <h1>Ship production apps and deliver evidence-led website audits with focused tools.</h1>
-    <p class="lead">Inspect the real output first, then choose a focused production-launch checklist or website-audit workflow. Both have live Gumroad checkout.</p>
+    <p class="lead">Inspect the real output first: a runnable RLS isolation repro, a production-launch checklist, and an evidence-led website-audit workflow. Live Gumroad checkout on every one.</p>
     <div class="actions hero-actions" aria-label="Purchase options">
       <a class="button" href="https://cengokurtoglu.gumroad.com/l/xjnmxt?utm_source=homepage&amp;utm_medium=owned&amp;utm_campaign=launch_checklist&amp;utm_content=hero_direct_product">Get the Checklist — $12</a>
       <a class="button secondary" href="https://cengokurtoglu.gumroad.com/l/ai-ready-website-audit-kit?utm_source=homepage&amp;utm_medium=owned&amp;utm_campaign=ai_ready_audit_kit&amp;utm_content=hero_direct_product">Get the Audit Kit — $49</a>
+      <a class="button" href="https://cengokurtoglu.gumroad.com/l/supabase-rls-audit-kit?utm_source=homepage&amp;utm_medium=owned&amp;utm_campaign=rls_pack&amp;utm_content=hero_direct_product">Get the RLS Audit Pack — $39</a>
     </div>
     <div class="trust" aria-label="Product standards">
       <span class="tag">Live checkout</span>
@@ -145,6 +146,40 @@
         </div>
       </article>
     </section>
+
+    <h2 class="section-title">Supabase &amp; PostgreSQL security</h2>
+    <div class="grid">
+      <article class="primary">
+        <div class="eyebrow">Supabase / Postgres — $39 one-time</div>
+        <h2>Multi-Tenant RLS Self-Audit Pack</h2>
+        <div class="price">$39 one-time</div>
+        <p>Nine read-only SQL checks plus a two-actor probe: RLS-off tables, tables reachable by the anon key, permissive policies that negate restrictive ones, write paths with no WITH CHECK, and the missing-grant class introduced on 30 October 2026.</p>
+        <ul>
+          <li>The audit script self-tests against a broken fixture before it touches your database</li>
+          <li>Every finding ships with the SQL that proves it and the fix to paste</li>
+          <li>MIT, no credentials needed beyond read-only access</li>
+        </ul>
+        <div class="actions">
+          <a class="button" href="https://cengokurtoglu.gumroad.com/l/supabase-rls-audit-kit?utm_source=homepage&amp;utm_medium=owned&amp;utm_campaign=rls_pack&amp;utm_content=catalog_checkout">Review &amp; buy on Gumroad — $39</a>
+          <a class="button secondary" href="https://github.com/cekuu35/supabase-rls-leak-demo?utm_source=homepage&amp;utm_medium=owned&amp;utm_campaign=rls_pack&amp;utm_content=fixture_link">Run the repro yourself (no Docker)</a>
+        </div>
+      </article>
+
+      <article class="primary">
+        <div class="eyebrow">Supabase 30 October change — $19 one-time</div>
+        <h2>October 30 Migration Kit</h2>
+        <div class="price">$19 one-time</div>
+        <p>Grants-by-role, the same-migration embedding pattern, the ALTER DEFAULT PRIVILEGES caveat that catches teams twice, and the audit query that lists every table &times; role &times; privilege combination that is missing.</p>
+        <ul>
+          <li>For the class of failure where a migrated table's first Data API call returns 42501 — including with service_role</li>
+          <li>Rollback block included; verified against the changelog's own semantics</li>
+          <li>Same grant check CI-ready</li>
+        </ul>
+        <div class="actions">
+          <a class="button" href="https://cengokurtoglu.gumroad.com/l/supabase-oct30-migration-kit?utm_source=homepage&amp;utm_medium=owned&amp;utm_campaign=oct30_kit&amp;utm_content=catalog_checkout">Review &amp; buy on Gumroad — $19</a>
+        </div>
+      </article>
+    </div>
 
     <h2 class="section-title">Free guides &amp; tools</h2>
     <div class="trust" aria-label="Free guides and tools" style="margin:0 0 10px">
